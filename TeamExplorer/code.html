@@ -1,104 +1,114 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
-	<title>Team Explorer</title>
-	<link rel="stylesheet" href="styles.css" type="text/css" />
-	<script type="text/javascript" src="scripts.js"></script>
-	<style type="text/css" >
-		form {
-			padding-bottom: 12px;
-		}
-		form input {
-			font-family: 'Segoe UI';
-			font-size: 12px;
-			margin-bottom: 4px;
-		}
-		form a {
-			text-decoration: none;
-		}
-	</style>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <title>Team Explorer</title>
+    <link rel="stylesheet" href="styles.css" type="text/css" />
+    <script type="text/javascript" src="scripts.js"></script>
+    <style type="text/css" >
+        form {
+            padding-bottom: 12px;
+        }
+        form input {
+            font-family: 'Segoe UI';
+            font-size: 12px;
+            margin-bottom: 4px;
+        }
+        form a {
+            text-decoration: none;
+        }
+    </style>
 </head>
 
 <body>
-	<div id="captionBar">
-		<span>Team Explorer</span>
-		<div style="float: right">
-			<span class="dingbat">6</span>
-			<span class="symbol">&#xE141</span>
-			<span class="symbol">&#xE0A4</span>
-		</div>
-	</div>
-	<table id="toolBar">
-		<tr>
-			<td class="symbol button">&#xE0B3</td>
-			<td class="symbol button">&#xE0AF</td>
-			<td class="symbol button separator">|</td>
-			<td class="symbol button">&#xE10F</td>
-			<td class="symbol button">&#xE117</td>
-			<td class="search"><input type="text" /></td>
-		</tr>
-	</table>
-	<div id="context">
-		<a href="connect.html">
-			SlateLabs <span class="subdued">JimLamb</span>
-			<span class="symbol right">&#x1F50C</span>
-		</a>
-	</div>
-	<ul id="navigation">
-		<li><a href="index.html">Home</a></li>
-		<li><a href="code.html" class="active" title="Pending changes">Code</a></li>
-		<li><a href="build.html">Build</a></li>
-		<li><a href="work.html">Work</a></li>
-		<li><a href="#" class="symbol right">&#xE10C</a></li>
-	</ul>
-	<div id="content">
-		<form style="margin: 0 8px 0 4px;">
-			<input style="margin-left: 1px; width: 100%" type="text" /><br />
-			<input type="button" value="Check in" class="button" />
-			<a href="#">Shelve <span class="dingbat">6</span></a> <span class="separator subdued">|</span> <a href="#">Actions <span class="dingbat">6</span></a>
-		</form>
-		<div class="section">
-			<p class="heading"><a href="#" onclick="toggle_visibility('relatedWorkItems');"><span class="symbol">&nbsp;&#x25E2&nbsp;</span> Related Work Items</a></p>
-			<div id="relatedWorkItems">
-				<p class="actions">
-					<a href="#">Queries <span class="dingbat">6</span></a> 
-					<span class="subdued separator">|</span> 
-					<a href="#">Add work item by Id <span class="dingbat">6</span></a></p>
-				<p class="subdued hint">Drag work items here to link them to the check-in.</p>
-			</div>
-		</div>
-		<div class="section">
-			<p class="heading"><a href="#" onclick="toggle_visibility('includedChanges');"><span class="symbol">&nbsp;&#x25E2&nbsp;</span> Included Changes</a></p>
-			<div id="includedChanges">
-				<p class="actions">
-					<a href="#">Exclude all</a> 
-					<span class="subdued separator">|</span> 
-					<a href="#">Show all <span class="dingbat">6</span></a></p>
-				<p class="subdued hint">There are no pending changes.</p>
-			</div>
-		</div>
-		<div class="section">
-			<p class="heading"><a href="#" onclick="toggle_visibility('excludedChanges');"><span class="symbol">&nbsp;&#x25E2&nbsp;</span> Excluded Changes</a></p>
-			<div id="excludedChanges">
-				<p class="actions">
-					<a href="#">Include all</a> 
-					<span class="subdued separator">|</span> 
-					<a href="#">Show all <span class="dingbat">6</span></a></p>
-				<p class="subdued hint">There are no pending changes.</p>
-			</div>
-		</div>
-		<div class="section">
-			<p class="heading"><a href="#" onclick="toggle_visibility('untrackedChanges');"><span class="symbol">&nbsp;&#x25E2&nbsp;</span> Untracked Changes</a></p>
-			<div id="untrackedChanges">
-				<p class="actions">
-					<a href="#">Add all</a> 
-					<span class="subdued separator">|</span> 
-					<a href="#">Ignore <span class="dingbat">6</span></a></p>
-				<p class="subdued hint">No untracked changes detected.</p>
-			</div>
-		</div>
-	</div>
+    <div id="captionBar">
+        <span>Team Explorer</span>
+        <div style="float: right">
+            <span class="dingbat">6</span>
+            <span class="symbol">&#xE141</span>
+            <span class="symbol">&#xE0A4</span>
+        </div>
+    </div>
+    <table id="toolBar">
+        <tr>
+            <td class="symbol button">&#xE0B3</td>
+            <td class="symbol button">&#xE0AF</td>
+            <td class="symbol button separator">|</td>
+            <td class="symbol button">&#xE10F</td>
+            <td class="symbol button">&#xE117</td>
+            <td class="search"><input type="text" /></td>
+        </tr>
+    </table>
+    <div id="context">
+        <a href="connect.html">
+            <strong>SlateLabs</strong> <span class="subdued">JimLamb</span>
+            <span class="symbol right">&#x1F50C</span>
+        </a>
+    </div>
+    <ul id="navigation">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="code.html" class="active" title="Changes">Code</a></li>
+        <li><a href="build.html">Build</a></li>
+        <li><a href="work.html">Work</a></li>
+        <li><a href="#" class="symbol right">&#xE10C</a></li>
+    </ul>
+    <div id="branch">
+        <a href="branches.html" title="Active branch">
+            <span class="subdued">Branch:</span> <strong>master</strong>
+            <span class="symbol right">&#x2325</span>
+        </a>
+    </div>
+    <div id="content">
+        <form style="margin: 4px 8px 0 4px;">
+            <input style="margin-left: 1px; width: 100%" type="text" /><br />
+            <input type="button" value="Commit" class="button" />
+            <a href="#">Sync</a>
+            <span class="separator subdued">|</span> 
+            <a href="commits.html">View Commits</a>
+            <span class="separator subdued">|</span>
+            <a href="#">Actions <span class="dingbat">6</span></a>
+        </form>
+        <div class="section">
+            <p class="heading"><a href="#" onclick="toggle_visibility('relatedWorkItems');"><span class="symbol">&nbsp;&#x25E2&nbsp;</span> Related Work Items</a></p>
+            <div id="relatedWorkItems">
+                <p class="actions">
+                    <a href="#">Queries <span class="dingbat">6</span></a> 
+                    <span class="subdued separator">|</span> 
+                    <a href="#">Add work item by Id <span class="dingbat">6</span></a></p>
+                <p class="subdued hint">Drag work items here to link them to the check-in.</p>
+            </div>
+        </div>
+        <div class="section">
+            <p class="heading"><a href="#" onclick="toggle_visibility('includedChanges');"><span class="symbol">&nbsp;&#x25E2&nbsp;</span> Included Changes</a></p>
+            <div id="includedChanges">
+                <p class="actions">
+                    <a href="#">Exclude all</a> 
+                    <span class="subdued separator">|</span> 
+                    <a href="#">Show all <span class="dingbat">6</span></a></p>
+                <p class="subdued hint">There are no pending changes.</p>
+            </div>
+        </div>
+        <div class="section">
+            <p class="heading"><a href="#" onclick="toggle_visibility('excludedChanges');"><span class="symbol">&nbsp;&#x25E2&nbsp;</span> Excluded Changes</a></p>
+            <div id="excludedChanges">
+                <p class="actions">
+                    <a href="#">Include all</a> 
+                    <span class="subdued separator">|</span> 
+                    <a href="#">Show all <span class="dingbat">6</span></a></p>
+                <p class="subdued hint">Drag changes here to exclude from the commit.</p>
+            </div>
+        </div>
+        <div class="section">
+            <p class="heading"><a href="#" onclick="toggle_visibility('untrackedChanges');"><span class="symbol">&nbsp;&#x25E2&nbsp;</span> Untracked Changes</a></p>
+            <div id="untrackedChanges">
+                <p class="actions">
+                    <a href="#">Add all</a> 
+                    <span class="subdued separator">|</span> 
+                    <a href="#">Ignore <span class="dingbat">6</span></a></p>
+                <p class="subdued hint">No untracked changes detected.</p>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>

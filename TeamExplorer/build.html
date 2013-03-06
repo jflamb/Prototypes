@@ -1,80 +1,80 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
-	<title>Team Explorer</title>
-	<link rel="stylesheet" href="styles.css" type="text/css" />
-	<script type="text/javascript" src="scripts.js"></script>
-	<style type="text/css" >
-	</style>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <title>Team Explorer</title>
+    <link rel="stylesheet" href="styles.css" type="text/css" />
+    <script type="text/javascript" src="scripts.js"></script>
+    <style type="text/css" >
+    </style>
 </head>
 
 <body>
-	<div id="captionBar">
-		<span>Team Explorer</span>
-		<div style="float: right">
-			<span class="dingbat">6</span>
-			<span class="symbol">&#xE141</span>
-			<span class="symbol">&#xE0A4</span>
-		</div>
-	</div>
-	<table id="toolBar">
-		<tr>
-			<td class="symbol button">&#xE0B3</td>
-			<td class="symbol button">&#xE0AF</td>
-			<td class="symbol button separator">|</td>
-			<td class="symbol button">&#xE10F</td>
-			<td class="symbol button">&#xE117</td>
-			<td class="search"><input type="text" /></td>
-		</tr>
-	</table>
-	<div id="context">
-		<a href="connect.html">
-			SlateLabs <span class="subdued">JimLamb</span>
-			<span class="symbol right">&#x1F50C</span>
-		</a>
-	</div>
-	<ul id="navigation">
-		<li><a href="index.html">Home</a></li>
-		<li><a href="code.html" title="Pending changes">Code</a></li>
-		<li><a href="build.html" class="active">Build</a></li>
-		<li><a href="work.html">Work</a></li>
-		<li><a href="#" class="symbol right">&#xE10C</a></li>
-	</ul>
-	<div id="content">
-		<p class="actions" style="margin: 0 0 10px 4px;">
-			<a href="#">Explore</a> 
-			<span class="subdued separator">|</span>
-			<a href="#">Manage&nbsp;Queue</a>
-			<span class="subdued separator">|</span>
-			<a href="#">Controllers&hellip;</a>
-			<span class="subdued separator">|</span>
-			<a href="#">Qualities&hellip;</a>
-		</p>
-		<div class="section">
-			<p class="heading"><a href="#" onclick="toggle_visibility('myBuilds');"><span class="symbol">&nbsp;&#x25E2&nbsp;</span> My Builds</a></p>
-			<div id="myBuilds">
-				<p class="subdued hint">You haven't queued or triggered any builds recently.</p>
-			</div>
-		</div>
-		<div class="section">
-			<p class="heading"><a href="#" onclick="toggle_visibility('favoriteDefinitions');"><span class="symbol">&nbsp;&#x25E2&nbsp;</span> My Favorite Build Definitions</a></p>
-			<div id="favoriteDefinitions">
-				<p class="subdued hint">Drop a build definition here to make it a favorite.</p>
-			</div>
-		</div>
-		<div class="section">
-			<p class="heading"><a href="#" onclick="toggle_visibility('allDefinitions');"><span class="symbol">&nbsp;&#x25E2&nbsp;</span> All Build Definitions</a></p>
-			<div id="allDefinitions">
-				<p class="actions">
-					<a href="#">New Build Definition&hellip;</a>
-					<span class="subdued separator">|</span>
-					<a href="#">Security&hellip;</a>
-				</p>
-				<p class="subdued hint">There are no pending changes.</p>
-			</div>
-		</div>
-	</div>
+    <div id="captionBar">
+        <span>Team Explorer</span>
+        <div style="float: right">
+            <span class="dingbat">6</span>
+            <span class="symbol">&#xE141</span>
+            <span class="symbol">&#xE0A4</span>
+        </div>
+    </div>
+    <table id="toolBar">
+        <tr>
+            <td class="symbol button">&#xE0B3</td>
+            <td class="symbol button">&#xE0AF</td>
+            <td class="symbol button separator">|</td>
+            <td class="symbol button">&#xE10F</td>
+            <td class="symbol button">&#xE117</td>
+            <td class="search"><input type="text" /></td>
+        </tr>
+    </table>
+    <div id="context">
+        <a href="connect.html">
+            <strong>SlateLabs</strong> <span class="subdued">JimLamb</span>
+            <span class="symbol right">&#x1F50C</span>
+        </a>
+    </div>
+    <ul id="navigation">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="code.html" title="Pending changes">Code</a></li>
+        <li><a href="build.html" class="active">Build</a></li>
+        <li><a href="work.html">Work</a></li>
+        <li><a href="#" class="symbol right">&#xE10C</a></li>
+    </ul>
+    <div id="content">
+        <p class="actions" style="margin: 0 0 10px 4px;">
+            <a href="#">Explore</a> 
+            <span class="subdued separator">|</span>
+            <a href="#">Manage&nbsp;Queue</a>
+            <span class="subdued separator">|</span>
+            <a href="#">Controllers&hellip;</a>
+            <span class="subdued separator">|</span>
+            <a href="#">Qualities&hellip;</a>
+        </p>
+        <div class="section">
+            <p class="heading"><a href="#" onclick="toggle_visibility('myBuilds');"><span class="symbol">&nbsp;&#x25E2&nbsp;</span> My Builds</a></p>
+            <div id="myBuilds">
+                <p class="subdued hint">You haven't queued or triggered any builds recently.</p>
+            </div>
+        </div>
+        <div class="section">
+            <p class="heading"><a href="#" onclick="toggle_visibility('favoriteDefinitions');"><span class="symbol">&nbsp;&#x25E2&nbsp;</span> My Favorite Build Definitions</a></p>
+            <div id="favoriteDefinitions">
+                <p class="subdued hint">Drop a build definition here to make it a favorite.</p>
+            </div>
+        </div>
+        <div class="section">
+            <p class="heading"><a href="#" onclick="toggle_visibility('allDefinitions');"><span class="symbol">&nbsp;&#x25E2&nbsp;</span> All Build Definitions</a></p>
+            <div id="allDefinitions">
+                <p class="actions">
+                    <a href="#">New Build Definition&hellip;</a>
+                    <span class="subdued separator">|</span>
+                    <a href="#">Security&hellip;</a>
+                </p>
+                <p class="subdued hint">There are no pending changes.</p>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>

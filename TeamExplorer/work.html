@@ -1,118 +1,118 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
-	<title>Team Explorer</title>
-	<link rel="stylesheet" href="styles.css" type="text/css" />
-	<script type="text/javascript" src="scripts.js"></script>
-	<style type="text/css" >
-		form {
-			padding-bottom: 12px;
-		}
-		form input {
-			font-family: 'Segoe UI';
-			font-size: 12px;
-			margin-bottom: 4px;
-		}
-		form a {
-			text-decoration: none;
-		}
-		input.button {
-			padding: 4px 12px;
-			margin: 0 8px 0 0;
-		}
-	</style>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <title>Team Explorer</title>
+    <link rel="stylesheet" href="styles.css" type="text/css" />
+    <script type="text/javascript" src="scripts.js"></script>
+    <style type="text/css" >
+        form {
+            padding-bottom: 12px;
+        }
+        form input {
+            font-family: 'Segoe UI';
+            font-size: 12px;
+            margin-bottom: 4px;
+        }
+        form a {
+            text-decoration: none;
+        }
+        input.button {
+            padding: 4px 12px;
+            margin: 0 8px 0 0;
+        }
+    </style>
 </head>
 
 <body>
-	<div id="captionBar">
-		<span>Team Explorer</span>
-		<div style="float: right">
-			<span class="dingbat">6</span>
-			<span class="symbol">&#xE141</span>
-			<span class="symbol">&#xE0A4</span>
-		</div>
-	</div>
-	<table id="toolBar">
-		<tr>
-			<td class="symbol button">&#xE0B3</td>
-			<td class="symbol button">&#xE0AF</td>
-			<td class="symbol button separator">|</td>
-			<td class="symbol button">&#xE10F</td>
-			<td class="symbol button">&#xE117</td>
-			<td class="search"><input type="text" /></td>
-		</tr>
-	</table>
-	<div id="context">
-		<a href="connect.html">
-			SlateLabs <span class="subdued">JimLamb</span>
-			<span class="symbol right">&#x1F50C</span>
-		</a>
-	</div>
-	<ul id="navigation">
-		<li><a href="index.html">Home</a></li>
-		<li><a href="code.html" title="Pending changes">Code</a></li>
-		<li><a href="build.html">Build</a></li>
-		<li><a href="work.html" class="active">Work</a></li>
-		<li><a href="#" class="symbol right">&#xE10C</a></li>
-	</ul>
-	<div id="content">
-		<div class="section">
-			<p class="heading"><a href="#" onclick="toggle_visibility('inProgress');">
-				<span class="symbol">&nbsp;&#x25E2&nbsp;</span> In Progress Work</a></p>
-			<div id="inProgress">
-				<p class="actions" style="margin-top: 8px;">
-					<input type="button" class="button" value="Suspend" />
-					<a href="#">Request review</a>
-					<span class="subdued separator">|</span>
-					<a href="#">Finish</a>
-					<span class="subdued separator">|</span>
-					<a href="#">Actions <span class="dingbat">6</span></a>
-				</p>			
-				<p class="subdued hint">You haven't queued or triggered any builds recently.</p>
-			</div>
-		</div>
-		<div class="section">
-			<p class="heading"><a href="#" onclick="toggle_visibility('suspendedWork');">
-				<span class="symbol">&nbsp;&#x25E2&nbsp;</span> Suspended Work</a></p>
-			<div id="suspendedWork">
-				<p class="actions">
-					<a href="#">Resume</a>
-					<span class="subdued separator">|</span>
-					<a href="#">Merge with Work In Progress</a>
-				</p>			
-				<p class="subdued hint">Drop a build definition here to make it a favorite.</p>
-			</div>
-		</div>
-		<div class="section">
-			<p class="heading"><a href="#" onclick="toggle_visibility('availableWork');">
-				<span class="symbol">&nbsp;&#x25E2&nbsp;</span> Available Work Items</a></p>
-			<div id="availableWork">
-				<p class="actions">
-					<a href="#">Start</a>
-					<span class="subdued separator">|</span>
-					<a href="#">New <span class="dingbat">6</span></a>
-					<span class="subdued separator">|</span>
-					<a href="#">Open query</a>
-					<span class="subdued separator">|</span>
-					<a href="#">All iterations <span class="dingbat">6</span></a>
-				</p>
-				<p class="subdued hint">There are no pending changes.</p>
-			</div>
-		</div>
-		<div class="section">
-			<p class="heading"><a href="#" onclick="toggle_visibility('codeReviews');">
-				<span class="symbol">&nbsp;&#x25E2&nbsp;</span> Code Reviews</a></p>
-			<div id="codeReviews">
-				<p class="actions">
-					<a href="#">My code reviews &amp; requests <span class="dingbat">6</span></a>
-					<span class="subdued separator">|</span>
-					<a href="#">Open query</a>
-				</p>
-				<p class="subdued hint">There are no pending changes.</p>
-			</div>
-		</div>
-	</div>
+    <div id="captionBar">
+        <span>Team Explorer</span>
+        <div style="float: right">
+            <span class="dingbat">6</span>
+            <span class="symbol">&#xE141</span>
+            <span class="symbol">&#xE0A4</span>
+        </div>
+    </div>
+    <table id="toolBar">
+        <tr>
+            <td class="symbol button">&#xE0B3</td>
+            <td class="symbol button">&#xE0AF</td>
+            <td class="symbol button separator">|</td>
+            <td class="symbol button">&#xE10F</td>
+            <td class="symbol button">&#xE117</td>
+            <td class="search"><input type="text" /></td>
+        </tr>
+    </table>
+    <div id="context">
+        <a href="connect.html">
+            <strong>SlateLabs</strong> <span class="subdued">JimLamb</span>
+            <span class="symbol right">&#x1F50C</span>
+        </a>
+    </div>
+    <ul id="navigation">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="code.html" title="Changes">Code</a></li>
+        <li><a href="build.html">Build</a></li>
+        <li><a href="work.html" class="active">Work</a></li>
+        <li><a href="#" class="symbol right">&#xE10C</a></li>
+    </ul>
+    <div id="content">
+        <div class="section">
+            <p class="heading"><a href="#" onclick="toggle_visibility('inProgress');">
+                <span class="symbol">&nbsp;&#x25E2&nbsp;</span> In Progress Work</a></p>
+            <div id="inProgress">
+                <p class="actions" style="margin-top: 8px;">
+                    <input type="button" class="button" value="Suspend" />
+                    <a href="#">Request review</a>
+                    <span class="subdued separator">|</span>
+                    <a href="#">Finish</a>
+                    <span class="subdued separator">|</span>
+                    <a href="#">Actions <span class="dingbat">6</span></a>
+                </p>			
+                <p class="subdued hint">You haven't queued or triggered any builds recently.</p>
+            </div>
+        </div>
+        <div class="section">
+            <p class="heading"><a href="#" onclick="toggle_visibility('suspendedWork');">
+                <span class="symbol">&nbsp;&#x25E2&nbsp;</span> Suspended Work</a></p>
+            <div id="suspendedWork">
+                <p class="actions">
+                    <a href="#">Resume</a>
+                    <span class="subdued separator">|</span>
+                    <a href="#">Merge with Work In Progress</a>
+                </p>			
+                <p class="subdued hint">Drop a build definition here to make it a favorite.</p>
+            </div>
+        </div>
+        <div class="section">
+            <p class="heading"><a href="#" onclick="toggle_visibility('availableWork');">
+                <span class="symbol">&nbsp;&#x25E2&nbsp;</span> Available Work Items</a></p>
+            <div id="availableWork">
+                <p class="actions">
+                    <a href="#">Start</a>
+                    <span class="subdued separator">|</span>
+                    <a href="#">New <span class="dingbat">6</span></a>
+                    <span class="subdued separator">|</span>
+                    <a href="#">Open query</a>
+                    <span class="subdued separator">|</span>
+                    <a href="#">All iterations <span class="dingbat">6</span></a>
+                </p>
+                <p class="subdued hint">There are no pending changes.</p>
+            </div>
+        </div>
+        <div class="section">
+            <p class="heading"><a href="#" onclick="toggle_visibility('codeReviews');">
+                <span class="symbol">&nbsp;&#x25E2&nbsp;</span> Code Reviews</a></p>
+            <div id="codeReviews">
+                <p class="actions">
+                    <a href="#">My code reviews &amp; requests <span class="dingbat">6</span></a>
+                    <span class="subdued separator">|</span>
+                    <a href="#">Open query</a>
+                </p>
+                <p class="subdued hint">There are no pending changes.</p>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>

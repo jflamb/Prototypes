@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <title>Team Explorer</title>
+    <link rel="stylesheet" href="styles.css" type="text/css" />
+    <script type="text/javascript" src="scripts.js"></script>
+    <style type="text/css" >
+        form {
+            padding-bottom: 12px;
+        }
+        form input {
+            font-family: 'Segoe UI';
+            font-size: 12px;
+            margin-bottom: 4px;
+        }
+        form a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="captionBar">
+        <span>Team Explorer</span>
+        <div style="float: right">
+            <span class="dingbat">6</span>
+            <span class="symbol">&#xE141</span>
+            <span class="symbol">&#xE0A4</span>
+        </div>
+    </div>
+    <table id="toolBar">
+        <tr>
+            <td class="symbol button">&#xE0B3</td>
+            <td class="symbol button">&#xE0AF</td>
+            <td class="symbol button separator">|</td>
+            <td class="symbol button">&#xE10F</td>
+            <td class="symbol button">&#xE117</td>
+            <td class="search"><input type="text" /></td>
+        </tr>
+    </table>
+    <div id="context">
+        <a href="connect.html">
+            <strong>SlateLabs</strong> <span class="subdued">JimLamb</span>
+            <span class="symbol right">&#x1F50C</span>
+        </a>
+    </div>
+    <ul id="navigation">
+        <li><a href="code.html" title="Changes">Code</a></li>
+        <li>|</li>
+        <li><a href="commits.html" class="active">Branches</a></li>
+        <li><a href="#" class="symbol right">&#xE10C</a></li>
+    </ul>
+    <div id="content">
+        <form style="margin: 0 8px 0 4px;">
+            <a href="#">New Branch <span class="dingbat">6</span></a>
+            <span class="separator subdued">|</span> 
+            <a href="#">Merge <span class="dingbat">6</span></a>
+            <span class="separator subdued">|</span>
+            <a href="#">Actions <span class="dingbat">6</span></a>
+        </form>
+        <div class="section">
+            <p class="heading"><a href="#" onclick="toggle_visibility('publishedBranches');"><span class="symbol">&nbsp;&#x25E2&nbsp;</span> Published Branches</a></p>
+            <div id="publishedBranches">
+                <ul class="tiles">
+                    <li>
+                        <a href="javascript:history.back();" class="selected">
+                            <img src="http://en.gravatar.com/userimage/16948269/ae054dbad79b4b436920c597aa4ab749.jpeg" alt="Last modified by Jim Lamb" 
+                                style="border: 0; float: left; padding: 1px; margin-right: 8px; vertical-align: middle;" 
+                                width="32" height="32" />
+                            <span class="label"><span style="font-family: 'Segoe UI Symbol';">&#xE0E7</span>&nbsp;<strong>Master</strong></span><br />
+                            <span class="subdued">Jim Lamb 23 min ago</span>
+                        </a>
+                        <a href="javascript:history.back();">
+                            <img src="https://secure.gravatar.com/avatar/6857db6b426c36caa9617fff0accbf28.jpeg" alt="Last modified by Jamie Cool" 
+                                style="border: 0; float: left; padding: 1px; margin-right: 8px; vertical-align: middle;" 
+                                width="32" height="32" />
+                            <span class="label"><strong>Development</strong></span><br />
+                            <span class="subdued">Jamie Cool 15 min ago</span>
+                        </a>
+                        <a href="javascript:history.back();">
+                            <img src="http://m.c.lnkd.licdn.com/media/p/1/000/099/1a7/1fb8c50.jpg" alt="Last modified by Matt Mitrik" 
+                                style="border: 0; float: left; padding: 1px; margin-right: 8px; vertical-align: middle;" 
+                                width="32" height="32" />
+                            <span class="label"><strong>Test</strong></span><br />
+                            <span class="subdued">Matt Mitrik yesterday</span>
+                        </a>
+                    </li>			
+                </ul>
+            </div>
+        </div>
+        <div class="section">
+            <p class="heading"><a href="#" onclick="toggle_visibility('unpublishedBranches');"><span class="symbol">&nbsp;&#x25E2&nbsp;</span> Unpublished Branches</a></p>
+            <div id="unpublishedBranches">
+                <p class="actions">
+                    <span class="subdued">Publish</span> 
+                <p class="subdued hint">There are no unpublished branches.</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

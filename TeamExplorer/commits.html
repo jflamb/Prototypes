@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <title>Team Explorer</title>
+    <link rel="stylesheet" href="styles.css" type="text/css" />
+    <script type="text/javascript" src="scripts.js"></script>
+    <style type="text/css" >
+        form {
+            padding-bottom: 12px;
+        }
+        form input {
+            font-family: 'Segoe UI';
+            font-size: 12px;
+            margin-bottom: 4px;
+        }
+        form a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="captionBar">
+        <span>Team Explorer</span>
+        <div style="float: right">
+            <span class="dingbat">6</span>
+            <span class="symbol">&#xE141</span>
+            <span class="symbol">&#xE0A4</span>
+        </div>
+    </div>
+    <table id="toolBar">
+        <tr>
+            <td class="symbol button">&#xE0B3</td>
+            <td class="symbol button">&#xE0AF</td>
+            <td class="symbol button separator">|</td>
+            <td class="symbol button">&#xE10F</td>
+            <td class="symbol button">&#xE117</td>
+            <td class="search"><input type="text" /></td>
+        </tr>
+    </table>
+    <div id="context">
+        <a href="connect.html">
+            <strong>SlateLabs</strong> <span class="subdued">JimLamb</span>
+            <span class="symbol right">&#x1F50C</span>
+        </a>
+    </div>
+    <ul id="navigation">
+        <li><a href="code.html" title="Changes">Code</a></li>
+        <li>|</li>
+        <li><a href="commits.html" class="active">Commits</a></li>
+        <li><a href="#" class="symbol right">&#xE10C</a></li>
+    </ul>
+    <div id="branch">
+        <a href="branches.html" title="Active branch">
+            <span class="subdued">Branch:</span> <strong>master</strong>
+            <span class="symbol right">&#x2325</span>
+            <!--
+            <span class="symbol right">&#x10C33</span>
+            -->
+        </a>
+    </div>
+    <div id="content">
+        <form style="margin: 8px 8px 0 4px;">
+            <!--
+            <a href="#" title="Select a branch">master <span class="dingbat">6</span></a><br />
+            -->
+            <input type="button" value="Sync" class="button" />
+            <a href="#">Pull</a>
+            <span class="separator subdued">|</span> 
+            <a href="#">Push</a>
+            <span class="separator subdued">|</span> 
+            <a href="branches.html">View Branches</a>
+            <span class="separator subdued">|</span>
+            <a href="#">Actions <span class="dingbat">6</span></a>
+        </form>
+        <div class="section">
+            <p class="heading"><a href="#" onclick="toggle_visibility('incomingCommits');"><span class="symbol">&nbsp;&#x25E2&nbsp;</span> Incoming Commits</a></p>
+            <div id="incomingCommits">
+                <p class="actions">
+                    <a href="#">Fetch</a> 
+                    <span class="subdued separator">|</span> 
+                    <a href="#">Pull</a></p>
+                <p class="subdued hint">There are no incoming commits.</p>
+            </div>
+        </div>
+        <div class="section">
+            <p class="heading"><a href="#" onclick="toggle_visibility('outgoingCommits');"><span class="symbol">&nbsp;&#x25E2&nbsp;</span> Outgoing Commits</a></p>
+            <div id="outgoingCommits">
+                <p class="actions">
+                    <a href="#">Push</a> 
+                <p class="subdued hint">There are no outgoing commits.</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

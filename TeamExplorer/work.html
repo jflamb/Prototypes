@@ -57,6 +57,13 @@
         <li><a href="#" class="symbol right">&#xE10C</a></li>
     </ul>
     <div id="content">
+        <p class="actions" style="margin: 0 0 10px 4px;">
+            <a href="#">Queries</a> 
+            <span class="subdued separator">|</span>
+            <a href="#">New&nbsp;Query&hellip;</a>
+            <span class="subdued separator">|</span>
+            <a href="#">New work item <span class="dingbat">6</span></a>
+        </p>
         <div class="section">
             <p class="heading"><a href="#" onclick="toggle_visibility('inProgress');">
                 <span class="symbol">&nbsp;&#x25E2&nbsp;</span> In Progress Work</a></p>
@@ -69,7 +76,7 @@
                     <span class="subdued separator">|</span>
                     <a href="#">Actions <span class="dingbat">6</span></a>
                 </p>			
-                <p class="subdued hint">You haven't queued or triggered any builds recently.</p>
+                <p class="subdued hint">Drag a work item here to get started.</p>
             </div>
         </div>
         <div class="section">
@@ -77,11 +84,11 @@
                 <span class="symbol">&nbsp;&#x25E2&nbsp;</span> Suspended Work</a></p>
             <div id="suspendedWork">
                 <p class="actions">
-                    <a href="#">Resume</a>
+                    <span class="subdued">Resume</span>
                     <span class="subdued separator">|</span>
                     <a href="#">Merge with Work In Progress</a>
                 </p>			
-                <p class="subdued hint">Drop a build definition here to make it a favorite.</p>
+                <p class="subdued hint">No suspended work.</p>
             </div>
         </div>
         <div class="section">
@@ -89,7 +96,7 @@
                 <span class="symbol">&nbsp;&#x25E2&nbsp;</span> Available Work Items</a></p>
             <div id="availableWork">
                 <p class="actions">
-                    <a href="#">Start</a>
+                    <span class="subdued">Start</span>
                     <span class="subdued separator">|</span>
                     <a href="#">New <span class="dingbat">6</span></a>
                     <span class="subdued separator">|</span>
@@ -97,7 +104,7 @@
                     <span class="subdued separator">|</span>
                     <a href="#">All iterations <span class="dingbat">6</span></a>
                 </p>
-                <p class="subdued hint">There are no pending changes.</p>
+                <p class="subdued hint">0 items found.</p>
             </div>
         </div>
         <div class="section">
@@ -109,7 +116,7 @@
                     <span class="subdued separator">|</span>
                     <a href="#">Open query</a>
                 </p>
-                <p class="subdued hint">There are no pending changes.</p>
+                <p class="subdued hint">No code reviews.</p>
             </div>
         </div>
     </div>

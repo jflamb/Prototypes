@@ -1,0 +1,264 @@
+﻿body {
+    background-color: #F6F6F6;
+	font-family: "Segoe UI";
+	font-size: 12px;
+	margin: 0;
+	padding: 0;
+}
+
+#captionBar {
+	background-color: #007acc;
+	color: #fff;
+	padding: .3em .5em .5em .5em;
+}
+
+#toolBar {
+	background-color: #F2F2F2;
+	padding: 3px 3px 4px 2px;
+	width: 100%;
+}
+
+	#toolBar td.button {
+		text-align: center;
+		width: 20px;
+	}
+	
+	#toolBar td.separator {
+		color: #888;
+		width: 8px;
+	}
+	
+	#toolBar td.search {
+		padding: 0 4px;
+		width: 100%;
+	}
+	
+	#toolBar td.search input {
+		border: 0;
+		width: 100%;
+		font-family: 'Segoe UI';
+		font-size: 14px;
+	}
+	
+ul#navigation {
+	list-style-type: none;
+	margin: 0;
+	padding: 4px 0 8px 0;
+}
+
+	ul#navigation li {
+		display: inline;
+	}
+	
+		ul#navigation li a {
+			text-decoration: none;
+			color: #888;
+			padding: 6px 4px;
+			font-weight: 200;
+			font-size: 16px;
+		}
+		
+		ul#navigation li a.active {
+			color: #000;
+			font-weight: 600;
+		}
+		
+		ul#navigation li a:hover {
+			color: #007acc;
+		}
+
+		ul#navigation li a.active:hover {
+			color: #000;
+		}
+		
+div.section {
+	padding-bottom: 12px;
+}
+
+	div.section p.heading {
+		margin: 0;
+		padding: 0;
+	}
+	
+		div.section p.heading a:first-child {
+			border-top: solid 1px #ccc;
+			color: #000;
+			display: block;
+			text-decoration: none;
+		}
+
+		div.section p.heading a:first-child:hover {
+			border-top: solid 1px #007acc;
+		}
+	
+		div.section p.actions {
+    		margin: 0;
+			padding: 0 0 0 19px;
+		}
+		
+		div.section p.hint {
+			margin: 6px 0 0 0;
+			padding: 0 0 0 19px;
+		}
+		
+		p.actions a {
+			text-decoration: none;
+		}
+	
+		p.actions a:hover {
+			text-decoration: underline;
+		}
+
+ul.tiles { 
+	list-style-type: none; 
+	padding: 0 0 0 16px;
+	margin: 6px 0 0 0;
+}
+
+	ul.tiles li {
+		display: inline;
+	}
+
+	ul.tiles li a {
+        border: solid 1px #F6F6F6;
+		color: #000;
+		display: inline-block;
+		padding: 4px;
+		width: 180px;
+		text-decoration: none;
+	}
+
+	ul.tiles li a:hover {
+		background-color: #DCEBFC;
+		border: solid 1px #B8D6FB;
+		color: #007ACC;
+	}
+
+    ul.tiles li span.dynamic {
+        background-color: #007acc;
+    }
+
+    ul.tiles li span.static {
+	    background-color: #595959;
+    }
+
+	ul.tiles li span.symbol { 
+	    color: #fff;
+	    float: left;
+	    font-size: 18px;
+	    padding: 5px 4px 5px 4px; 
+	    margin-right: 8px;
+        text-align: center;
+        vertical-align: middle;
+        width: 26px;
+	}
+	
+	ul.tiles li span.label {
+        /* font-size: 14px; */
+	}
+	
+.dingbat {
+	font-family: Webdings;
+}
+
+.right {
+	float: right; 
+	padding-right: 8px;
+}
+
+.symbol {
+	font-family: 'Segoe UI Symbol';
+}
+
+.separator {
+	padding: 0 4px;
+}
+
+.subdued {
+	color: #888;
+}
+
+#context a {
+	background-color: #D8D8D8;
+	color: #000;
+	display: block;
+	padding: 4px 0 4px 4px;
+	text-decoration: none;
+}
+
+#context a:hover {
+	background-color: #333;
+	color: #fff;
+}
+
+#contextPopup {
+	background-color: #333; /* #fff; */
+	color: #fff;
+	border-bottom: solid 1px #ccc;
+	display: none;
+	padding: 0;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 100%;
+}
+
+	#contextPopup h2 {
+		background-color: #000;
+		font-size: 12px;
+		font-weight: 600;
+		margin: 0;
+		padding: 4px 0 4px 4px;
+	}
+	
+	#contextPopup ul {
+		list-style-type: none;
+		margin: 4px 0 8px 0;
+		padding: 0;
+	}
+	
+		#contextPopup ul li {
+			display: inline-block;
+			width: 180px;
+		}
+		
+			#contextPopup ul li a {
+				background-color: inherit;
+				border: solid 1px #333;
+				color: #fff;
+				padding: 3px;
+			}
+			
+			#contextPopup ul li a:hover {
+				background-color: #000; /* #DCEBFC; */
+				border: solid 1px #000; /* #B8D6FB; */
+				color: #fff; /* #007ACC; */
+			}
+
+	#contextPopup p.actions {
+		background-color: #000;	
+		margin: 0;
+		padding: 4px;
+	}
+	
+	#contextPopup p.actions a {
+		color: #007acc;
+		display: inline;
+		background-color: inherit;
+		padding: 0;
+	}
+	
+	#contextPopup p.actions a:hover {
+		text-decoration: underline;
+	}
+
+a:visited {
+	color: #007acc;
+}
+
+input.button {
+	font-family: 'Segoe UI';
+	font-size: 12px;
+	padding: 4px 12px;
+	margin: 0 8px 0 0;
+}

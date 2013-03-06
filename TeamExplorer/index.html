@@ -1,0 +1,170 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+	<title>Team Explorer</title>
+	<link rel="stylesheet" href="styles.css" type="text/css" />
+	<script type="text/javascript" src="scripts.js"></script>
+	<style type="text/css" >
+	</style>
+</head>
+
+<body>
+	<div id="captionBar">
+		<span>Team Explorer</span>
+		<div style="float: right">
+			<span class="dingbat">6</span>
+			<span class="symbol">&#xE141</span>
+			<span class="symbol">&#xE0A4</span>
+		</div>
+	</div>
+	<table id="toolBar">
+		<tr>
+			<td class="symbol button">&#xE0B3</td>
+			<td class="symbol button">&#xE0AF</td>
+			<td class="symbol button separator">|</td>
+			<td class="symbol button">&#xE10F</td>
+			<td class="symbol button">&#xE117</td>
+			<td class="search"><input type="text" /></td>
+		</tr>
+	</table>
+	<div id="context">
+		<a href="connect.html">
+			SlateLabs <span class="subdued">JimLamb</span>
+			<span class="symbol right">&#x1F50C</span>
+		</a>
+<!--			
+		<div id="contextPopup">
+			<h2>VSOnline</h2>
+			<ul class="tiles">
+				<li>
+					<a href="#">
+				        <span class="symbol static">&#xE14C</span>
+				        <span class="label">Active Bugs</span><br />
+                        <span class="subdued">5 active</span>
+			        </a>
+		        </li>
+			</ul>
+			<ul>
+				<li><a href="#">MetroWine <span class="subdued">Contoso</span></a></li>
+				<li><a href="#">Winery <span class="subdued">Contoso</span></a></li>
+				<li><a href="#">FarmersMarket <span class="subdued">JimLamb</span></a></li>
+				<li><a href="#">Zippy <span class="subdued">JimLamb</span></a></li>
+			</ul>
+			<h2>VstfDevDiv</h2>
+			<ul>
+				<li><a href="#">DevDiv <span class="subdued">DevDiv2</span></a></li>
+			</ul>
+			<h2>VstsPioneer</h2>
+			<ul>
+				<li><a href="#">DevDiv <span class="subdued">VSTSDF</span></a></li>
+			</ul>
+			<p class="actions">
+				<a href="#">Connect to Team Projects&hellip;</a> 
+				<span class="separator subdued">|</span> 
+				<a href="#">New Team Project&hellip;</a>
+			</p>
+		</div>
+-->
+	</div>
+	<ul id="navigation">
+		<li><a href="#" class="active">Home</a></li>
+		<li><a href="code.html" title="Pending changes">Code</a></li>
+		<li><a href="build.html">Build</a></li>
+		<li><a href="work.html">Work</a></li>
+		<li><a href="#" class="symbol right">&#xE10C</a></li>
+	</ul>
+	<div id="content">
+		<div class="section">
+			<p class="heading"><a href="#" onclick="toggle_visibility('projectContent');"><span class="symbol">&nbsp;&#x25E2&nbsp;</span> Team Project</a></p>
+			<div id="projectContent">
+				<p class="actions"><a href="#">Web Access</a> <span class="subdued separator">|</span> <a href="#">Settings</a></p>
+				<ul class="tiles">
+					<li>
+						<a href="work.html">
+					        <span class="symbol dynamic">&#xE136</span>
+					        <span class="label">My Work</span><br />
+	                        <span class="subdued">7 work items</span>
+				        </a>
+			        </li>			
+					<li>
+						<a href="code.html">
+					        <span class="symbol dynamic">&#xE090</span>
+					        <span class="label">Pending Changes</span><br />
+	                        <span class="subdued">2 edits</span>
+				        </a>
+			        </li>
+					<li>
+						<a href="#">
+					        <span class="symbol static">&#xE1F0</span>
+					        <span class="label">Source Control Explorer</span><br />
+	                        <span class="subdued">New document window</span>
+				        </a>
+			        </li>
+					<li>
+						<a href="#">
+					        <span class="symbol static">&#x1F4CB</span>
+					        <span class="label">Work Items</span><br />
+	                        <span class="subdued">&nbsp;</span>
+				        </a>
+			        </li>
+					<li>
+						<a href="build.html">
+					        <span class="symbol static">&#x1F4E5</span>
+					        <span class="label">Builds</span><br />
+	                        <span class="subdued">&nbsp;</span>
+				        </a>
+			        </li>
+				</ul>
+			</div>
+		</div>
+		<div class="section">
+			<p class="heading"><a href="#" onclick="toggle_visibility('solutionsContent');"><span class="symbol">&nbsp;&#x25E2&nbsp;</span> Solutions</a></p>
+			<div id="solutionsContent">
+				<p class="actions"><a href="#">Open from Source Control</a> <span class="subdued separator">|</span> <a href="#">Explore</a></p>
+				<ul class="tiles">
+					<li>
+						<a href="#">
+					        <img src="http://www.fileinfo.com/images/icons/files/128/sln-2272.png" alt="Visual Studio Solution" 
+					        	style="border: 0; float: left; padding: 1px; margin-right: 8px; vertical-align: middle;" 
+					        	width="32" height="32" />
+					        <span class="label">DayBreaker.sln</span><br />
+	                        <span class="subdued">Dev</span>
+				        </a>
+			        </li>			
+				</ul>
+			</div>
+		</div>
+		<div class="section">
+			<p class="heading"><a href="#" onclick="toggle_visibility('favoritesContent');"><span class="symbol">&nbsp;&#x25E2&nbsp;</span> Team Favorites</a></p>
+			<div id="favoritesContent">
+				<p class="actions"><a href="#">Refresh</a></p>
+				<ul class="tiles">
+					<li>
+						<a href="#">
+					        <span class="symbol static">&#xE14C</span>
+					        <span class="label">Active Bugs</span><br />
+	                        <span class="subdued">5 active</span>
+				        </a>
+			        </li>
+					<li>
+						<a href="#">
+					        <span class="symbol static">&#xE12F</span>
+					        <span class="label">Sprint Backlog</span><br />
+	                        <span class="subdued">10 done, 2 new, 2 to do</span>
+				        </a>
+			        </li>
+					<li>
+						<a href="#">
+					        <span class="symbol static">&#x1F4E5</span>
+					        <span class="label">DayBreaker.CI</span><br />
+	                        <span class="subdued">Succeeded for Jim Lamb</span>
+				        </a>
+			        </li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

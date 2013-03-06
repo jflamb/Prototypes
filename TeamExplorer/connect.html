@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+	<title>Team Explorer</title>
+	<link rel="stylesheet" href="styles.css" type="text/css" />
+	<script type="text/javascript" src="scripts.js"></script>
+	<style type="text/css" >
+		ul.tiles li a img {
+			border: 0; 
+			float: left; 
+			padding: 1px; 
+			margin-right: 8px; 
+			vertical-align: middle;
+			width: 32px;
+			height: 32px;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="captionBar">
+		<span>Team Explorer</span>
+		<div style="float: right">
+			<span class="dingbat">6</span>
+			<span class="symbol">&#xE141</span>
+			<span class="symbol">&#xE0A4</span>
+		</div>
+	</div>
+	<table id="toolBar">
+		<tr>
+			<td class="symbol button">&#xE0B3</td>
+			<td class="symbol button">&#xE0AF</td>
+			<td class="symbol button separator">|</td>
+			<td class="symbol button">&#xE10F</td>
+			<td class="symbol button">&#xE117</td>
+			<td class="search"><input type="text" /></td>
+		</tr>
+	</table>
+	<ul id="navigation">
+		<li><a href="#" class="active">Connect</a></li>
+	</ul>
+	<div id="content">
+		<p class="actions" style="margin: 0 0 10px 4px;">
+			<a href="#">Configure Team Projects&hellip;</a>
+			<span class="subdued separator">|</span>
+			<a href="#">New Team Project&hellip;</a>
+		</p>
+		<div class="section">
+			<p class="heading"><a href="#" onclick="toggle_visibility('tfService');"><span class="symbol">&nbsp;&#x25E2&nbsp;</span> Team Foundation Service</a></p>
+			<div id="tfService">
+				<ul class="tiles">
+					<li>
+						<a href="index.html">
+					        <img src="http://git-scm.com/images/logos/downloads/Git-Icon-1788C.png" alt="Git Repository" />
+					        <span class="label">FarmersMarket</span><br />
+	                        <span class="subdued">jimlamb.visualstudio.com</span>
+				        </a>
+			        </li>			
+					<li>
+						<a href="index.html">
+					        <img src="http://img.informer.com/icons/png/32/3809/3809679.png" alt="Team Foundation Version Control" />
+					        <span class="label">SlateLabs</span><br />
+	                        <span class="subdued">jimlamb.visualstudio.com</span>
+				        </a>
+			        </li>			
+					<li>
+						<a href="index.html">
+					        <img src="http://img.informer.com/icons/png/32/3809/3809679.png" alt="Team Foundation Version Control" />
+					        <span class="label">TfsSdk</span><br />
+	                        <span class="subdued">jimlamb.visualstudio.com</span>
+				        </a>
+			        </li>			
+				</ul>
+			</div>
+		</div>
+
+		<div class="section">
+			<p class="heading"><a href="#" onclick="toggle_visibility('vstsPioneer');"><span class="symbol">&nbsp;&#x25E2&nbsp;</span> vstsPioneer</a></p>
+			<div id="vstsPioneer">
+				<ul class="tiles">
+					<li>
+						<a href="index.html">
+					        <img src="http://img.informer.com/icons/png/32/3809/3809679.png" alt="Team Foundation Version Control" />
+					        <span class="label">DevDiv</span><br />
+	                        <span class="subdued">VSTSDF</span>
+				        </a>
+			        </li>			
+				</ul>
+			</div>
+		</div>
+
+		<div class="section">
+			<p class="heading"><a href="#" onclick="toggle_visibility('localGitRepos');"><span class="symbol">&nbsp;&#x25E2&nbsp;</span> Local Git Repositories</a></p>
+			<div id="localGitRepos">
+				<ul class="tiles">
+					<li>
+						<a href="index.html">
+					        <img src="http://git-scm.com/images/logos/downloads/Git-Icon-1788C.png" alt="Git Repository" />
+					        <span class="label">NuGet Gallery</span><br />
+	                        <span class="subdued">Documents\GitHub</span>
+				        </a>
+			        </li>			
+				</ul>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

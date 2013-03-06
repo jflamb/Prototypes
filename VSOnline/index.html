@@ -1,0 +1,602 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Team Foundation Service</title>
+    <script type="text/javascript">
+        (function () {
+            if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+                var msViewportStyle = document.createElement("style");
+                msViewportStyle.appendChild(
+                    document.createTextNode("@-ms-viewport{width:auto!important}")
+                );
+                document.getElementsByTagName("head")[0].appendChild(msViewportStyle);
+            }
+        })();
+    </script>
+    <style type="text/css">
+        @-webkit-viewport { width: device-width }
+        @-moz-viewport { width: device-width }
+        @-o-viewport { width: device-width }
+        @-ms-viewport {
+            width: device-width;
+            zoom: 1.0;
+            min-zoom: 1.0;
+        }
+        @viewport { width: device-width }
+
+        html {
+            min-width: 320px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        html, body {
+            height: 100%;
+        }
+
+        #container {
+            min-height: 100%;
+            margin-bottom: -10em;
+            position: relative;
+        }
+
+        body {
+            font-family: "Segoe UI", Arial, Helv;
+            margin: 0;
+            font-size: 100%;
+        }
+
+        #bar {
+            background-color: #007ACC;
+            color: white;
+            overflow: hidden;
+            padding: 0 0 0 .5em;
+        }
+
+            #bar img {
+                vertical-align: top;
+            }
+
+            #bar p {
+                margin: 0;
+                padding: .2em 0;
+            }
+
+                #bar p a {
+                    color: inherit;
+                    text-decoration: none;
+                    margin: 0;
+                    padding: .2em .5em;
+                }
+
+                    #bar p a.button {
+                    }
+
+                    #bar p a.notification {
+                        background-color: #094BB4;
+                    }
+
+                    #bar p a:hover {
+                        background-color: #0E639C;
+                    }
+
+                #bar p#context {
+                    float: left;
+                }
+
+                #bar p#identity {
+                    text-align: right;
+                }
+
+        img {
+            border: 0;
+        }
+
+        strong {
+            font-weight: 600;
+        }
+
+        .subdued {
+            color: #BBB;
+        }
+
+        .icon-webdings {
+            font-family: Webdings;
+            font-weight: normal;
+        }
+
+        .icon-segoe-symbol {
+            font-family: 'Segoe UI Symbol';
+            font-weight: normal;
+        }
+
+        #navigation {
+            background-color: #EEE;
+            clear: both;
+            margin: 0;
+            padding: .5em 0 .7em 0;
+        }
+
+            #navigation ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+            }
+
+                #navigation ul li {
+                    display: inline;
+                    margin: 0 1em;
+                }
+
+                    #navigation ul li a {
+                        color: #666;
+                        font-weight: 200;
+                        text-transform: uppercase;
+                        text-decoration: none;
+                        padding-bottom: .4em;
+                    }
+
+                        #navigation ul li a:hover {
+                            color: #007ACC;
+                            border-bottom: solid .4em #DDD;
+                        }
+
+                        #navigation ul li a.active {
+                            color: #007ACC;
+                            font-weight: 600;
+                            border-bottom: solid .4em #007ACC;
+                        }
+
+        #content {
+            margin: 0;
+            padding: 0;
+        }
+
+            #content div p {
+                margin: 0 0 0 0 ;
+                padding: 0 1em 1em 1em;
+            }
+
+            #content #start {
+            }
+
+            #content #col1, #content #col2, #content #col3 {
+                float: left;
+                width: 33.33%;
+            }
+
+                #content #col1 h2, #content #col2 h2 {
+                    margin-right: 1em;
+                    margin-left: 0;
+                }
+
+                #content #col1 h2, #content #col2 h2, #content #col3 h2 {
+                    background-color: #eee;
+                    font-size: 100%;
+                    margin-top: 1em;
+                    margin-bottom: .7em;
+                    padding: .3em 1em;
+                }
+
+            #content a.icon-link {
+                font-weight: 600;
+                padding-left: .5em;
+            }
+
+            #content a.icon-link:hover {
+            }
+
+            #content a {
+                text-decoration: none;
+            }
+
+            #content a:hover {
+                text-decoration: underline;
+            }
+
+        ul#steps {
+            list-style-type: none;
+            margin: .5em 0 0 1em;
+            padding: 0;
+        }
+
+            ul#steps li {
+                display: inline-block;
+                width: 25%;
+                margin: .5em 0;
+                vertical-align: top;
+                overflow: hidden;
+            }
+            ul#steps li a {
+                background-color: #fff;
+                display: inline-block;
+                color: #000;
+                height: 7em;
+                padding: .5em .7em;
+                margin-right: 1em;
+                text-decoration: none;
+            }
+
+            ul#steps li a:hover {
+                background-color: #eee;
+                text-decoration: none;
+            }
+
+            ul#steps li h2 {
+                font-size: 100%;
+            }
+
+            ul#steps li p, ul#steps li h2 {
+                margin: 0;
+                padding: 0 0 .5em 0;
+            }
+
+            ul#steps li p {
+                font-size: 90%;
+            }
+
+        #content a.button {
+            background-color: #007ACC;
+            color: #fff;
+            font-weight: 600;
+            padding: .4em .6em;
+            text-decoration: none;
+        }
+
+        #content a.button:hover {
+            background-color: #0E639C;
+        }
+
+        div.clearfooter {
+            height: 10em;
+            clear: both;
+        }
+
+        #footer {
+            height: 10em;
+            position: relative;
+            background-color: #333;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        #footer ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        #footer ul.categories {
+            font-size: 90%;
+            padding: 1em 1em 0 1em;
+        }
+
+            #footer ul.categories>li {
+                display: inline-block;
+                width: 25%;
+                vertical-align: top;
+                overflow: hidden;
+            }
+
+        #footer ul.items {
+            padding: 1em 0 1em 0;
+        }
+
+            #footer ul.items li {
+                display: block;
+            }
+
+                #footer ul.items li a {
+                    color: #3388C2;
+                    text-decoration: none;
+                }
+
+                    #footer ul.items li a:hover {
+                        text-decoration: underline;
+                    }
+
+        #content table {
+            border-top: solid 1px #DDD;
+            width: 100%;
+            padding: .5em 1em 1em 1em;
+            border-spacing: 0;
+            /* border-collapse: collapse; */
+        }
+
+            #content table tr th {
+                font-weight: normal;
+                padding-bottom: .5em;
+            }
+
+            #content table tr td {
+            }
+
+            #content table tr th:first-child {
+                text-align: left;
+                color: #999;
+            }
+
+            #content table tr th:last-child {
+                text-align: right;
+            }
+
+            #content table tr td img {
+                width: 2.2em;
+                height: 2.2em;
+            }
+
+            #content table tr td:first-child {
+                width: 40%; 
+            }
+
+            #content table tr td:last-child {
+                width: 50%;
+            }
+
+            #content table tr td.add {
+                width: 10%;
+            }
+
+                #content table tr td.add a {
+                    padding: .5em;
+                }
+
+                    #content table tr td.add a:hover {
+                        background-color: blue;
+                        color: white;
+                    }
+
+            #content table tr td.balance {
+                text-align: right;
+                padding-left: .5em;
+            }
+
+            #content table tr td.balance {
+                background-color: #eee;
+                padding: .5em .5em .5em 0;
+                color: #BBB;
+            }
+
+        /* Large desktop */
+        @media (min-width: 1200px) {
+
+        }
+
+        /* Portrait tablet to landscape and desktop */
+        @media (min-width: 768px) and (max-width: 979px) {
+            ul#steps li a {
+                height: 9em;
+            }
+        }
+
+        /* Landscape phone to portrait tablet */
+        @media (max-width: 767px) {
+            #content #col1, #content #col2, #content #col3 {
+                float: none;
+                width: auto;
+            }
+            #content #col1 h2, #content #col2 h2 {
+                margin-right: 0;
+            }
+            ul#steps li a {
+                height: 11em;
+            }
+        }
+
+        /* Landscape phones and down */
+        @media (max-width: 480px) {
+            #container {
+                min-height: inherit;
+                margin-bottom: 0;
+                position: inherit;
+            }
+            #bar p#context {
+                float: none;
+            }
+            #navigation ul li {
+                display: inherit;
+                margin: 0;
+                padding: 0 0 .5em 0;
+            }
+            #navigation ul li a {
+                padding-left: .5em;
+                /* margin-left: .5em; */
+                border-left: solid .5em transparent;
+            }
+            #navigation ul li a:hover {
+                border-left: solid .5em #DDD;
+                border-bottom: 0;
+            }
+            #navigation ul li a.active {
+                border-left: solid .5em #007ACC;
+                border-bottom: 0;
+                margin-left: 0;
+            }
+            #content #col1 h2, #content #col2 h2 {
+                margin-right: 0;
+            }
+            ul#steps li {
+                display: inline;
+            }
+            ul#steps li a {
+                height: auto;
+                margin-bottom: 1em;
+            }
+            div.clearfooter {
+                display: none;
+            }
+            #footer {
+                height: auto;
+                position: inherit;
+            }
+            #footer ul.categories>li {
+                display: inherit;
+                width: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="bar">
+            <p id="context">
+                <a href="#" class="button">
+                    <img src="images/vslogo-small.png" />
+                    Team Foundation Service 
+                </a>
+                <span class="subdued">/</span>
+                <a href="#" class="button">
+                    <strong>Contoso</strong>&nbsp;<span class="icon-webdings">6</span>
+                </a>
+            </p>
+            <p id="identity">
+                <a href="#" class="button">&nbsp;Jim Lamb <span class="icon-webdings">6</span>
+                </a>
+                <span class="subdued">|</span>
+                <a href="#" class="button">
+                    <span class="icon-segoe-symbol">&#xE115;</span>
+                </a>
+                <a href="#" class="notification">
+                    <span class="icon-segoe-symbol">&#x1F4E3;</span>
+                </a>
+            </p>
+        </div>
+        <div id="navigation">
+            <ul>
+                <li>
+                    <a href="#" class="active">Account</a>
+                </li>
+                <li>
+                    <a href="#">Rooms</a>
+                </li>
+                <li>
+                    <a href="#">Users</a>
+                </li>
+                <li>
+                    <a href="#">Feedback</a>
+                </li>
+            </ul>
+        </div>
+        <div id="content">
+            <div id="start" style="background-color: #DDD; padding: .5em 0; margin: 1em 0 0 0;">
+                <p style="padding: 0 1em;">
+                    <a href="#" style="float: right" title="Hide this notice forever">
+                        <span style="color: #333" class="icon-segoe-symbol">&#xE0E1;</span>
+                    </a>
+                    If you're still new to things, we've provided a few walkthroughs to get you started.
+                </p>
+                <ul id="steps">
+                    <li>
+                        <a href="#">
+                            <h2>Download the tools</h2>
+                            <p>Download and install the software to connect to your team project.</p>
+                        </a>                    
+                    <li>
+                        <a href="#">
+                            <h2>Create a new Team Project</h2>
+                            <p>Create a new TFVC or Git repo and learn to sync your code to your account.</p>
+                        </a>
+                    <li>
+                        <a href="#">
+                            <h2>Invite collaborators</h2>
+                            <p>Add users to your account so you can collaborate on projects with each other.</p>
+                        </a>
+                    <li>
+                        <a href="#">
+                            <h2>Plan your first sprint</h2>
+                            <p>Create a backlog and schedule your first sprint with our agile planning tools.</p>
+                        </a>
+                </ul>
+            </div>
+            <div style="clear: both"></div>
+            <div id="col1">
+                <h2>Recent</h2>
+                <p>Nothing here because you haven’t created your first project yet! Choose a repository type and click the corresponding button to get rolling.</p>
+                <p style="padding-top: .5em;">
+                    <a href="#" class="button"><span class="icon-segoe-symbol">&#xE1DA</span> New project <span class="icon-webdings">6</span></a>
+                    <a href="#" style="margin-left: 1em;">About version control</a>
+                </p> 
+                <div style="background-color: #eee; border-top: solid 1px #ddd; margin-top: .5em; padding: .5em 0 .5em 0;">
+                    <p>Want to get a conversation going? Create a discussion room for you and your team to chat.</p>
+                    <p><a href="#" class="button"><span class="icon-segoe-symbol">&#x1F4AC</span> New room&nbsp;</a></p>
+                </div>
+            </div>
+            <div id="col2">
+                <h2>Favorites</h2>
+                <p>Nothing here because you haven’t created your first project yet! Choose a repository type and click the corresponding button to get rolling.</p>
+            </div>
+            <div id="col3">
+                <h2>Account Status</h2>
+                <p style="padding-top: .5em;"><a href="#" class="button"><span class="icon-segoe-symbol">&#x1F4B3</span></a> <a href="#" class="icon-link">Pay-as-you-go</a></p>
+                <p><a href="#">https://contoso.visualstudio.com</a></p>
+                <p>Your account is active and ready to use. Please save the above Url for your records.</p>
+                <table>
+                    <tr>
+                        <th colspan="2">1 user</th>
+                        <th><a href="#">Manage users</a></th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="https://en.gravatar.com/userimage/16948269/ae054dbad79b4b436920c597aa4ab749.jpg" title="Jim Lamb" style="vertical-align: middle" />
+                        </td>
+                        <td class="add">
+                            <a href="#" title="Add free user"><span class="icon-segoe-symbol">&#xE1E2</span></a>
+                        </td>
+                        <td class="balance">1 / 5 free</td>
+                    </tr>
+                </table>
+                <table class="quota">
+                    <tr>
+                        <th>600 build minutes</th>
+                        <th><a href="#">Manage resource</a></th>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="balance">0 / 600 min</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="clearfooter"></div>
+    </div>
+    <div id="footer">
+        <ul class="categories">
+            <li>ABOUT
+                <ul class="items">
+                    <li><a href="#">News</a></li>
+                    <li><a href="#">Service Status</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Legal</a></li>
+                </ul>
+            <li>COMMUNITY
+                <ul class="items">
+                    <li><a href="#">Forums</a></li>
+                    <li><a href="#">CodePlex</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">UserVoice</a></li>
+                    <li><a href="#">Report a bug</a></li>
+                </ul>
+            <li>GET STARTED
+                <ul class="items">
+                    <li><a href="#">Visual Studio</a></li>
+                    <li><a href="#">Visual Studio + Git</a></li>
+                    <li><a href="#">Eclipse</a></li>
+                    <li><a href="#">Xcode</a></li>
+                </ul>
+            <li>LEARN
+                <ul class="items">
+                    <li><a href="#">Start</a></li>
+                    <li><a href="#">Code</a></li>
+                    <li><a href="#">Build</a></li>
+                    <li><a href="#">Test</a></li>
+                    <li><a href="#">Collaborate</a></li>
+                </ul>
+        </ul>
+    </div>
+</body>
+</html>

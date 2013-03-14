@@ -171,6 +171,18 @@ ul.tiles {
     ul.tiles li span.label {
         /* font-size: 14px; */
     }
+
+    ul.tiles li span.work {
+        background-color: #008A00;
+    }
+
+    ul.tiles li span.code {
+        background-color: #68217A;
+    }
+    
+    ul.tiles li span.build {
+        background-color: #00188F;
+    }
     
 .dingbat {
     font-family: Webdings;

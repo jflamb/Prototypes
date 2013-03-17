@@ -4,33 +4,197 @@
 <head>
     <meta charset="utf-8" />
     <title>Team Foundation Service</title>
-    <link rel="stylesheet" href="styles.min.css" type="text/css" />
-</head>
-<body class="account">
 
-    <div class="contextBar">
-        <ul class="accountContext">
-            <li><a href="#"><img src="images/vslogo-small.png" />&nbsp;Team Foundation Service</a></li>
-            <li>/</li>
-            <li><a href="#"><strong>Contoso</strong>&nbsp;<span class="dingbat">6</span></a></li>
-        </ul>
-        <ul class="identityContext">
-            <li><a href="#">Jim Lamb&nbsp;<span class="dingbat">6</span></a></li>
-            <li>|</li>
-            <li><a href="#">Help</a></li>
-            <li class="symbol"><a href="#">&#xE115;</a></li>
-            <li class="symbol"><a href="#">&#x1F60A;</a></li>
-        </ul>
-    </div>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     
-    <div class="hubs">
-        <ul>
-            <li class="active">Account</li>
-            <li><a href="#">Rooms</a></li>
-            <li><a href="#">Users</a></li>
-            <li><a href="#">Feedback</a></li>
-        </ul>
-    </div>
+    <script type="text/javascript" src="scripts/jquery.easy-pie-chart.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles/jquery.easy-pie-chart.css" />
 
-</body>
+    <link rel="stylesheet" href="styles/styles.min.css" type="text/css" />
+</head>
+    <body class="account">
+
+        <div class="contextBar">
+            <ul class="accountContext">
+                <li><a href="#">
+                    <img src="images/vslogo-small.png" />&nbsp;Team Foundation Service</a></li>
+                <li>/</li>
+                <li><a href="#"><strong>Contoso</strong>&nbsp;<span class="dingbat">6</span></a></li>
+            </ul>
+            <ul class="identityContext">
+                <li><a href="#">Jim Lamb&nbsp;<span class="dingbat">6</span></a></li>
+                <li>|</li>
+                <li><a href="#">Help</a></li>
+                <li class="symbol"><a href="#">&#xE115;</a></li>
+                <li class="symbol"><a href="#">&#x1F60A;</a></li>
+            </ul>
+        </div>
+
+        <div class="hubs">
+            <ul>
+                <li class="active">Account</li>
+                <li><a href="#">Rooms</a></li>
+                <li><a href="#">Users</a></li>
+                <li><a href="#">Feedback</a></li>
+            </ul>
+        </div>
+
+        <div class="content">
+            <div class="primary">
+                <section class="starting">
+                    <h2>Getting Started</h2>
+                    <ul class="tiles">
+                        <li>
+                            <a href="#" class="tools">
+                                <h3>Download the tools</h3>
+                                <p>Get Visual Studio and more</p>
+                            </a>
+                        </li><li>
+                                 <a href="#" class="work">
+                                     <h3>Plan your work</h3>
+                                     <p>Create a backlog and plan your first spring</p>
+                                 </a>
+                             </li><li>
+                                      <a href="#" class="code">
+                                          <h3>Check in your code</h3>
+                                          <p>Get your code base under version control</p>
+                                      </a>
+                                  </li><li>
+                                           <ul class="commands">
+                                               <li>
+                                                   <a href="#" class="grow">
+                                                       <strong>Grow your team</strong>&nbsp;
+                                                       <span class="symbol">&#xE0B6</span>
+                                                   </a>
+                                               </li><li>
+                                                        <a href="#" class="create">
+                                                            <strong>Create a project</strong>&nbsp;
+                                                            <span class="dingbat">6</span>
+                                                        </a>
+                                                    </li>
+                                           </ul>
+                                       </li>
+                    </ul>
+                </section>
+                <br />
+                <section class="recent">
+                    <h2>Recent projects, teams &amp; rooms</h2>
+                    <p class="actions">
+                        <a href="#">Browse</a>
+                        <a href="#">New project <span class="dingbat">6</span></a>
+                        <a href="#">New room</a>
+                    </p>
+                    <h3>Today</h3>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <span class="symbol">&#xE188</span>
+                                <span><strong>Freezing Fog</strong></span>
+                                <span class="subdued">Git - Scrum</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="symbol">&#xE125</span>
+                                <span><strong>Freezing Fog</strong> / <strong>Front-end</strong></span>
+                                <span class="subdued">5 member team</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <h3>Yesterday</h3>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <span class="symbol">&#xE188</span>
+                                <span><strong>Sudden Storm</strong></span>
+                                <span class="subdued">Git - Agile</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="symbol">&#x1F4AC</span>
+                                <span><strong>Freezing Fog Team Room</strong></span>
+                                <span class="subdued">Who can work on this bug?</span>
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+                <section class="favorites">
+                    <h2>Favorites</h2>
+                    <h3>Freezing Fog</h3>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <span>12</span>
+                                <span><strong>Active Bugs</strong></span>
+                                <span class="subdued">12 active</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="symbol">&#x1F4E5</span>
+                                <span><strong>Continuous Delivery</strong></span>
+                                <span class="subdued">succeeded for Jim Lamb</span>
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+            <aside>
+                <div class="news">
+                    <h2>News</h2>
+                    <h3><a href="http://blogs.msdn.com/b/visualstudioalm/archive/2013/03/14/fixed-the-incorrect-order-of-the-first-column-on-the-kanban-board-on-the-service.aspx" class="newsflash">
+                            Fixed the incorrect order of the first column on the Kanban board on the service<time>Mar 14</time>
+                        </a></h3>
+                    <p><a href="http://blogs.msdn.com/b/visualstudioalm/archive/tags/tfservice/">View all news <span class="symbol showOnHover">&#xE143</span></a></p>
+                </div>
+                <div class="account">
+                    <h2>Account</h2>
+                    <h3><a href="#" class="url">http://contoso.visualstudio.com <span>bookmark</span></a></h3>
+                    <p class="subdued">Your account is active and ready to use. Please save the above Url for your records.</p>
+                </div>
+                <div class="users">
+                    <h2>Users</h2>
+                    <table class="avatars">
+                        <tbody>
+                            <tr>
+                                <td class="medium" ><a href="#"><img src="http://en.gravatar.com/userimage/16948269/ae054dbad79b4b436920c597aa4ab749.jpeg"/></a></td>
+                                <td class="medium" colspan="2"><a href="#"><img src="https://secure.gravatar.com/avatar/6857db6b426c36caa9617fff0accbf28.jpeg" /></a></td>
+                            </tr>
+                            <tr>
+                                <td class="medium" rowspan="2"><a href="#"><img src="http://m.c.lnkd.licdn.com/media/p/1/000/099/1a7/1fb8c50.jpg" /></a></td>
+                                <td class="small blank">&nbsp;</td>
+                                <td class="small blank">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td class="small blank">&nbsp;</td>
+                                <td class="small"><a href="#" class="symbol command">&#xE1E2</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="resources">
+                    <h2>Build usage</h2>
+                    <div class="chart" data-percent="66">400 min</div>
+                </div>
+            </aside>
+        </div>
+    </body>
+    <script type="text/javascript">
+        $(function () {
+            try {
+                $('.chart').easyPieChart({
+                    animate: 1000,
+                    barColor: '#595959',
+                    lineCap: 'square',
+                    lineWidth: 16,
+                    scaleColor: false,
+                    size: 96,
+                });
+            }
+            catch (e) {
+                alert(e.message);
+            }
+        });
+    </script>
 </html>

@@ -8,6 +8,7 @@
 @buildColor: #595959;
 @codeColor: #B4009E;
 @workColor: #FF8C00;
+@workHoverColor: #dc3c00;
 @witColor: #77933C;
 @growColor: #68217A;
 @createColor: #007ACC;
@@ -287,7 +288,7 @@ div.content {
                     a:hover > span.build { background-color: darken(@buildColor, 10%); }
 
                     a > span.work { background-color: @workColor; }
-                    a:hover > span.work { background-color: darken(@workColor, 10%); }
+                    a:hover > span.work { background-color: @workHoverColor; }
 
                     a:hover span.subdued {
                         color: #444;
@@ -501,7 +502,7 @@ table.avatars {
 a.tools { background-color: @lightBlue; }
 a.tools:hover { background-color: darken(@lightBlue, 10%); }
 a.work { background-color: @workColor; }
-a.work:hover { background-color: #dc3c00; }
+a.work:hover { background-color: @workHoverColor; }
 a.code { background-color: @codeColor; }
 a.code:hover { background-color: darken(@codeColor, 10%); }
 a.create { background-color: @createColor; }

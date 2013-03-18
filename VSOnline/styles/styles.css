@@ -362,6 +362,9 @@ a:hover span.showOnHover {
   display: inherit;
   text-decoration: none;
 }
+p.actions {
+  line-height: 100%;
+}
 p.actions a {
   padding-right: 10px;
 }

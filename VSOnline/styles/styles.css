@@ -362,6 +362,19 @@ a:hover span.showOnHover {
   display: inherit;
   text-decoration: none;
 }
+a.url {
+  text-decoration: none;
+}
+a.url span:first-child {
+  color: #000;
+}
+a.url span:last-child {
+  display: none;
+}
+a.url:hover span:last-child {
+  text-decoration: underline;
+  display: inherit;
+}
 p.actions {
   line-height: 100%;
 }

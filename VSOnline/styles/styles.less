@@ -441,6 +441,25 @@ a:hover {
     }
 }
 
+a.url {
+    text-decoration: none;
+
+    span:first-child {
+        color: #000;
+    }
+
+    span:last-child {
+        display: none;
+    }
+}
+
+a.url:hover {
+    span:last-child {
+        text-decoration: underline;
+        display: inherit;
+    }
+}
+
 p.actions {
     line-height: 100%;
 

@@ -57,6 +57,9 @@ a:visited {
 .success {
   color: green;
 }
+.failure {
+  color: darkred;
+}
 .symbol {
   font-family: 'Segoe UI Symbol';
 }
@@ -184,7 +187,7 @@ div.content div.primary section.favorites h3 {
 }
 div.content div.primary section.recent ul li,
 div.content div.primary section.favorites ul li {
-  line-height: 130%;
+  line-height: 110%;
   margin-bottom: 10px;
 }
 div.content div.primary section.recent ul li a,

@@ -95,7 +95,7 @@ div.contextBar {
     background-color: @lightBlue;
     color: white;
     overflow: hidden;
-    padding: 0 1em;
+    padding: 0;
 
     img {
         vertical-align: top;
@@ -110,14 +110,15 @@ div.contextBar {
     }
 
     ul {
-        padding: .5em 0;
-
         li {
             display: inline;
-            vertical-align: middle;
 
             a {
-                padding: .5em .5em .7em .5em;
+                /* padding: .5em .5em .7em .5em; */
+                padding: 0 .5em;
+                height: 32px;
+                line-height: 32px;
+                display: inline-block;
             }
 
             a, a:hover {
@@ -130,7 +131,8 @@ div.contextBar {
             }
 
             img {
-                vertical-align: top;
+                vertical-align: middle;
+                padding-bottom: 4px;
             }
         }
     }
@@ -185,6 +187,14 @@ div.content {
         float: left;
         margin-right: @gutter;
         width: @primary-width;
+
+        section:nth-child(2) {
+            clear: both;
+        }
+
+        section.starting {
+            margin-bottom: @gutter;
+        }
 
         section.starting ul.tiles > li {
             display: inline-block;
@@ -341,10 +351,10 @@ div.content {
                     color: #ccc;
                     font-size: 10px;
                     display: block;
-	                -ms-transform: rotate(90deg);
-	                -webkit-transform: rotate(90deg);
-	                -moz-transform: rotate(90deg);
-	                -o-transform: rotate(90deg);
+                    -ms-transform: rotate(90deg);
+                    -webkit-transform: rotate(90deg);
+                    -moz-transform: rotate(90deg);
+                    -o-transform: rotate(90deg);
                     transform: rotate(90deg);
                     padding: 2px 1px;
                 } 
@@ -399,6 +409,16 @@ h2 {
     font-weight: 100;
     padding-bottom: .3em;
     border-bottom: solid 1px #DDD;
+
+    a.sectionCloser {
+        float: right;
+        color: #000;
+    }
+
+    a.sectionCloser:hover {
+        color: @lightBlue;
+        cursor: pointer;
+    }
 }
 
 a {
@@ -507,11 +527,17 @@ ul.commands {
     }
 }
 
-div.popUp {
+div.popUp, div.menu, div.profileTip {
     position: absolute; 
+    display: none;
+    border: solid 1px #bbb;
+    -webkit-box-shadow: 0 5px 10px #888;
+    box-shadow: 0 5px 10px #888;
+}
+
+div.popUp {
     background-color: #ddd; 
     border: solid 1px #bbb;
-    display: none;
     padding: @gutter / 2;
 
     p {
@@ -528,5 +554,53 @@ div.popUp {
         height: 32px;
         width: 32px;
         margin-right: @gutter / 2;
+    }
+}
+
+div.menu {
+    background-color: #fff;
+    padding-bottom: 6px;
+    border-bottom: solid 5px @lightBlue;
+
+    ul li a {
+        color: @darkGray;
+        display: inline-block;
+        padding: (@gutter / 2);
+    }
+
+    ul li a:hover {
+        color: @lightBlue;
+    }
+}
+
+div.profileTip {
+    background-color: #fff;
+
+    div.container {
+        margin-bottom: 1.75 * @gutter;
+        padding: @gutter;
+    }
+
+    ul li a {
+        color: @darkGray;
+        display: inline-block;
+        padding: (@gutter / 4) (@gutter / 2);
+    }
+
+    ul li a:hover {
+        color: @lightBlue;
+    }
+
+    img {
+        float: left;
+        margin-right: @gutter / 2;
+    }
+
+    p.identity {
+        clear: both;
+        background-color: @lightBlue;
+        color: #fff;
+        margin: 0;
+        padding: (@gutter / 4) (@gutter / 2);
     }
 }

@@ -203,6 +203,11 @@ div.content {
             display: inline-block;
             margin-right: @gutter;
             vertical-align: top;
+            line-height: 120%;
+
+            p {
+                margin: (@gutter / 2) 0 (@gutter / 2) 0;
+            }
 
             a {
                 display: block;
@@ -437,7 +442,7 @@ a {
 a:hover {
     text-decoration: none;
 
-    span.underlineOnHover {
+    .underlineOnHover {
         text-decoration: underline;
     }
 
@@ -635,5 +640,14 @@ div.profileTip {
         color: #fff;
         margin: 0;
         padding: (@gutter / 4) (@gutter / 2);
+    }
+}
+
+p.acquisition {
+    line-height: 120%;
+
+    img {
+        float: left; 
+        padding-right: 10px;
     }
 }

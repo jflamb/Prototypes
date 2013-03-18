@@ -155,6 +155,10 @@ div.content div.primary section.starting ul.tiles > li {
   display: inline-block;
   margin-right: 20px;
   vertical-align: top;
+  line-height: 120%;
+}
+div.content div.primary section.starting ul.tiles > li p {
+  margin: 10px 0 10px 0;
 }
 div.content div.primary section.starting ul.tiles > li a {
   display: block;
@@ -364,7 +368,7 @@ a span.showOnHover {
 a:hover {
   text-decoration: none;
 }
-a:hover span.underlineOnHover {
+a:hover .underlineOnHover {
   text-decoration: underline;
 }
 a:hover span.showOnHover {
@@ -540,4 +544,11 @@ div.profileTip p.identity {
   color: #fff;
   margin: 0;
   padding: 5px 10px;
+}
+p.acquisition {
+  line-height: 120%;
+}
+p.acquisition img {
+  float: left;
+  padding-right: 10px;
 }

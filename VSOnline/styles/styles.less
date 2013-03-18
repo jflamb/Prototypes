@@ -13,7 +13,7 @@
 @growColor: #68217A;
 @createColor: #007ACC;
 @vcColor: #604A7B;
-@width: 1024px;
+@width: 970px;
 @smallAvatar: 24px;
 
 /* set page width to 1024px and center */
@@ -351,7 +351,7 @@ div.content {
             .bar {
                 color: white;
                 background-color: @buildColor;
-                width: 14px;
+                width: 11px;
 
                 a {
                     color: #ccc;
@@ -362,7 +362,7 @@ div.content {
                     -moz-transform: rotate(90deg);
                     -o-transform: rotate(90deg);
                     transform: rotate(90deg);
-                    padding: 2px 1px;
+                    padding: 0 2px;
                 } 
             }
         }
@@ -380,7 +380,7 @@ div.content {
             a.newsflash {
                 color: #fff;
                 display: block;
-                padding: (@gutter / 2) - 1;
+                padding: (@gutter / 3) (@gutter / 2);
                 background-color: @darkGray;
                 text-decoration: none;
 
@@ -545,9 +545,8 @@ section.starting ul.tiles > li > a {
     }
 
     span.symbol {
-        float:right; 
+        float: right; 
         font-size: 20px;
-        padding-top: 4px;
     }
 }
 

@@ -75,7 +75,7 @@ div.contextBar {
   background-color: #007acc;
   color: white;
   overflow: hidden;
-  padding: 0;
+  padding-left: 10px;
 }
 div.contextBar img {
   vertical-align: top;
@@ -90,9 +90,7 @@ div.contextBar ul li {
   display: inline;
 }
 div.contextBar ul li a {
-  /* padding: .5em .5em .7em .5em; */
-
-  padding: 0 .5em;
+  padding: 0 10px;
   height: 32px;
   line-height: 32px;
   display: inline-block;

@@ -98,7 +98,7 @@ div.contextBar {
     background-color: @lightBlue;
     color: white;
     overflow: hidden;
-    padding: 0;
+    padding-left: (@gutter / 2);
 
     img {
         vertical-align: top;
@@ -117,8 +117,7 @@ div.contextBar {
             display: inline;
 
             a {
-                /* padding: .5em .5em .7em .5em; */
-                padding: 0 .5em;
+                padding: 0 (@gutter/2);
                 height: 32px;
                 line-height: 32px;
                 display: inline-block;

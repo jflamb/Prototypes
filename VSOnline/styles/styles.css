@@ -1,9 +1,6 @@
 ﻿/* Color Palette */
 /* set page width to 1024px and center */
 html {
-  min-width: 1024px;
-  max-width: 1024px;
-  margin: 0 auto;
   background-color: white;
 }
 /* styling resets */
@@ -13,6 +10,10 @@ body {
   font: 13px "Segoe UI", Arial, Helvetica, Garuda, sans-serif;
   *font-size: small;
   *font: x-small;
+}
+div.content {
+  max-width: 1024px;
+  margin-left: 20px;
 }
 h1,
 h2,

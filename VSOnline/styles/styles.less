@@ -18,9 +18,6 @@
 
 /* set page width to 1024px and center */
 html {
-    min-width: @width;
-    max-width: @width;
-    margin: 0 auto;
     background-color: white;
 }
 
@@ -32,6 +29,11 @@ body {
     font: 13px "Segoe UI", Arial, Helvetica, Garuda, sans-serif;
     *font-size: small;
     *font: x-small;
+}
+
+div.content {
+    max-width: @width;
+    margin-left: @gutter;
 }
 
 h1, h2, h3, h4, h5, h6, ul, li, em, strong, pre, code {

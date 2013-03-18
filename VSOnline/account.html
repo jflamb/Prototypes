@@ -45,17 +45,17 @@
                     <h2>Getting Started</h2>
                     <ul class="tiles">
                         <li>
-                            <a href="#" class="tools">
+                            <a href="http://go.microsoft.com/fwlink/?LinkId=227805" class="tools">
                                 <h3>Download the tools</h3>
                                 <p>Get Visual Studio and more</p>
                             </a>
                         </li><li>
-                                 <a href="#" class="work">
+                                 <a href="http://msdn.microsoft.com/en-us/library/tfs/dd286619.aspx" class="work">
                                      <h3>Plan your work</h3>
                                      <p>Create a backlog and plan your first spring</p>
                                  </a>
                              </li><li>
-                                      <a href="#" class="code">
+                                      <a href="http://tfs.visualstudio.com/en-us/learn/code/upload-source-with-vs/" class="code">
                                           <h3>Check in your code</h3>
                                           <p>Get your code base under version control</p>
                                       </a>
@@ -125,14 +125,14 @@
                     <ul>
                         <li>
                             <a href="#">
-                                <span>12</span>
+                                <span class="work">12</span>
                                 <span><strong>Active Bugs</strong></span>
                                 <span class="subdued">12 active</span>
                             </a>
                         </li>
                         <li>
                             <a href="#">
-                                <span class="symbol">&#x1F4E5</span>
+                                <span class="symbol build">&#x1F4E5</span>
                                 <span><strong>Continuous Delivery</strong></span>
                                 <span class="subdued"><span class="symbol success">&#xE0E7</span> succeeded for Jim Lamb</span>
                             </a>
@@ -142,21 +142,21 @@
                     <ul>
                         <li>
                             <a href="#">
-                                <span>3</span>
+                                <span class="work">3</span>
                                 <span><strong>Active Bugs</strong></span>
                                 <span class="subdued">3 active</span>
                             </a>
                         </li>
                         <li>
                             <a href="#">
-                                <span>10</span>
+                                <span class="work">10</span>
                                 <span><strong>Backlog</strong></span>
                                 <span class="subdued">3 new, 7 in progress</span>
                             </a>
                         </li>
                         <li>
                             <a href="#">
-                                <span class="symbol">&#x1F4E5</span>
+                                <span class="symbol build">&#x1F4E5</span>
                                 <span><strong>Nightly</strong></span>
                                 <span class="subdued"><span class="symbol failure">&#x2716</span> failed 9h ago</span>
                             </a>
@@ -200,6 +200,12 @@
                 <div class="resources">
                     <h2>Build usage</h2>
                     <div class="chart" data-percent="66">400 min</div>
+                    <div class="histogram">
+                        <div class="spacer">&nbsp;</div>
+                        <div style="height: 75%;" class="bar"></div>
+                        <div style="height: 66%;" class="bar"></div>
+                        <div style="height: 33%;" class="bar"></div>
+                    </div>
                 </div>
             </aside>
         </div>
@@ -211,7 +217,7 @@
                     animate: 1000,
                     barColor: '#595959',
                     lineCap: 'square',
-                    lineWidth: 16,
+                    lineWidth: 12,
                     scaleColor: false,
                     size: 96,
                 });

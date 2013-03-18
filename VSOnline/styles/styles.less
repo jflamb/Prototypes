@@ -269,8 +269,14 @@ div.content {
                         background-color: darken(@lightBlue, 10%);
                     }
 
+                    a > span.build { background-color: @buildColor; }
+                    a:hover > span.build { background-color: darken(@buildColor, 10%); }
+
+                    a > span.work { background-color: @workColor; }
+                    a:hover > span.work { background-color: darken(@workColor, 10%); }
+
                     a:hover span.subdued {
-                            color: #444;
+                        color: #444;
                     }
                 }
 
@@ -302,6 +308,39 @@ div.content {
         .resources {
             float: left;
             width: @resource-width;
+        }
+
+        .chart {
+            float: left;
+        }
+
+        .histogram {
+            display: inline-block;
+            height: @smallAvatar * 4;
+
+            div {
+                display: inline-block;
+                position: relative;
+                vertical-align: bottom;
+            }
+
+            .spacer {
+                height: @smallAvatar * 4;
+            }
+            
+            .bar {
+                color: white;
+                background-color: @buildColor;
+                width: 12px;
+                margin: 0 2px 0 0;
+                /*
+	            -ms-transform: rotate(90deg);
+	            -webkit-transform: rotate(90deg);
+	            -moz-transform: rotate(90deg);
+	            -o-transform: rotate(90deg);
+                transform: rotate(90deg);
+                    */
+            }
         }
 
         div > p:last-child {

@@ -217,6 +217,22 @@ div.content div.primary section.recent ul li a:hover > span:first-child,
 div.content div.primary section.favorites ul li a:hover > span:first-child {
   background-color: #005b99;
 }
+div.content div.primary section.recent ul li a > span.build,
+div.content div.primary section.favorites ul li a > span.build {
+  background-color: #595959;
+}
+div.content div.primary section.recent ul li a:hover > span.build,
+div.content div.primary section.favorites ul li a:hover > span.build {
+  background-color: #3f3f3f;
+}
+div.content div.primary section.recent ul li a > span.work,
+div.content div.primary section.favorites ul li a > span.work {
+  background-color: #ff8c00;
+}
+div.content div.primary section.recent ul li a:hover > span.work,
+div.content div.primary section.favorites ul li a:hover > span.work {
+  background-color: #cc7000;
+}
 div.content div.primary section.recent ul li a:hover span.subdued,
 div.content div.primary section.favorites ul li a:hover span.subdued {
   color: #444;
@@ -243,6 +259,35 @@ div.content aside .users {
 div.content aside .resources {
   float: left;
   width: 154px;
+}
+div.content aside .chart {
+  float: left;
+}
+div.content aside .histogram {
+  display: inline-block;
+  height: 96px;
+}
+div.content aside .histogram div {
+  display: inline-block;
+  position: relative;
+  vertical-align: bottom;
+}
+div.content aside .histogram .spacer {
+  height: 96px;
+}
+div.content aside .histogram .bar {
+  color: white;
+  background-color: #595959;
+  width: 12px;
+  margin: 0 2px 0 0;
+  /*
+	            -ms-transform: rotate(90deg);
+	            -webkit-transform: rotate(90deg);
+	            -moz-transform: rotate(90deg);
+	            -o-transform: rotate(90deg);
+                transform: rotate(90deg);
+                    */
+
 }
 div.content aside div > p:last-child {
   margin-bottom: 20px;

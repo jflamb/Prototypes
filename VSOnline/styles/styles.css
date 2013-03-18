@@ -217,6 +217,10 @@ div.content div.primary section.recent ul li a:hover > span:first-child,
 div.content div.primary section.favorites ul li a:hover > span:first-child {
   background-color: #005b99;
 }
+div.content div.primary section.recent ul li a:hover > span:nth-child(2),
+div.content div.primary section.favorites ul li a:hover > span:nth-child(2) {
+  text-decoration: underline;
+}
 div.content div.primary section.recent ul li a > span.build,
 div.content div.primary section.favorites ul li a > span.build {
   background-color: #595959;
@@ -278,31 +282,21 @@ div.content aside .histogram .spacer {
 div.content aside .histogram .bar {
   color: white;
   background-color: #595959;
-  width: 12px;
-  margin: 0 2px 0 0;
-  /*
-	            -ms-transform: rotate(90deg);
-	            -webkit-transform: rotate(90deg);
-	            -moz-transform: rotate(90deg);
-	            -o-transform: rotate(90deg);
-                transform: rotate(90deg);
-                    */
-
+  width: 14px;
+}
+div.content aside .histogram .bar a {
+  color: #ccc;
+  font-size: 10px;
+  display: block;
+  -ms-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+  padding: 2px 1px;
 }
 div.content aside div > p:last-child {
   margin-bottom: 20px;
-}
-div.content aside a.url {
-  color: #000;
-  text-decoration: none;
-}
-div.content aside a.url span {
-  display: none;
-}
-div.content aside a.url:hover span {
-  color: #007acc;
-  display: inherit;
-  text-decoration: underline;
 }
 div.content aside div.news h3 {
   margin: 0;
@@ -345,10 +339,14 @@ a span.showOnHover {
   display: none;
 }
 a:hover {
+  text-decoration: none;
+}
+a:hover span.underlineOnHover {
   text-decoration: underline;
 }
 a:hover span.showOnHover {
   display: inherit;
+  text-decoration: none;
 }
 p.actions a {
   padding-right: 10px;
@@ -401,7 +399,7 @@ a.work {
   background-color: #ff8c00;
 }
 a.work:hover {
-  background-color: #cc7000;
+  background-color: #dc3c00;
 }
 a.code {
   background-color: #b4009e;
@@ -419,7 +417,7 @@ a.grow {
   background-color: #68217a;
 }
 a.grow:hover {
-  background-color: #461652;
+  background-color: #442359;
 }
 section.starting ul.tiles > li > a {
   text-decoration: none;
@@ -431,4 +429,24 @@ section.starting ul.tiles > li > a h3 {
 ul.commands li a {
   color: white;
   text-decoration: none;
+}
+div.popUp {
+  position: absolute;
+  background-color: #ddd;
+  border: solid 1px #bbb;
+  display: none;
+  padding: 10px;
+}
+div.popUp p {
+  margin: 0;
+}
+div.popUp ul li {
+  padding-top: 10px;
+  clear: both;
+}
+div.popUp img.icon {
+  float: left;
+  height: 32px;
+  width: 32px;
+  margin-right: 10px;
 }

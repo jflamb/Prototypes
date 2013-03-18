@@ -67,7 +67,7 @@
                                                        <span class="symbol">&#xE0B6</span>
                                                    </a>
                                                </li><li>
-                                                        <a href="#" class="create">
+                                                        <a href="#" class="create newProject">
                                                             <strong>Create a project</strong>&nbsp;
                                                             <span class="dingbat">6</span>
                                                         </a>
@@ -80,9 +80,9 @@
                 <section class="recent">
                     <h2>Recent projects, teams &amp; rooms</h2>
                     <p class="actions">
-                        <a href="#">Browse</a>
-                        <a href="#">New project <span class="dingbat">6</span></a>
-                        <a href="#">New room</a>
+                        <a href="#"><span class="underlineOnHover">Browse</span></a>
+                        <a href="#" class="newProject"><span class="underlineOnHover">New project</span> <span class="dingbat">6</span></a>
+                        <a href="#"><span class="underlineOnHover">New room</span></a>
                     </p>
                     <h3>Today</h3>
                     <ul>
@@ -170,11 +170,11 @@
                     <h3><a href="http://blogs.msdn.com/b/visualstudioalm/archive/2013/03/14/fixed-the-incorrect-order-of-the-first-column-on-the-kanban-board-on-the-service.aspx" class="newsflash">
                             Fixed the incorrect order of the first column on the Kanban board on the service<time>Mar 14</time>
                         </a></h3>
-                    <p><a href="http://blogs.msdn.com/b/visualstudioalm/archive/tags/tfservice/">View all news <span class="symbol showOnHover">&#xE143</span></a></p>
+                    <p><a href="http://blogs.msdn.com/b/visualstudioalm/archive/tags/tfservice/"><span class="underlineOnHover">View all news</span> <span class="symbol showOnHover">&#xE143</span></a></p>
                 </div>
                 <div class="account">
                     <h2>Account</h2>
-                    <h3><a href="#" class="url">http://contoso.visualstudio.com <span>bookmark</span></a></h3>
+                    <h3><a href="#" class="url"><span class="underlineOnHover">http://contoso.visualstudio.com</span> <span class="showOnHover">bookmark</span></a></h3>
                     <p class="subdued">Your account is active and ready to use. Please save the above Url for your records.</p>
                 </div>
                 <div class="users">
@@ -202,12 +202,27 @@
                     <div class="chart" data-percent="66">400 min</div>
                     <div class="histogram">
                         <div class="spacer">&nbsp;</div>
-                        <div style="height: 75%;" class="bar"></div>
-                        <div style="height: 66%;" class="bar"></div>
-                        <div style="height: 33%;" class="bar"></div>
+                        <div style="height: 75%;" class="bar"><a href="#">FEB</a></div>
+                        <div style="height: 66%;" class="bar"><a href="#">JAN</a></div>
+                        <div style="height: 33%;" class="bar"><a href="#">DEC</a></div>
                     </div>
                 </div>
             </aside>
+        </div>
+        <div id="newProjectPopup" class="popUp">
+            <p>Choose the version control provider <br />to use with your new project:</p>
+            <ul>
+                <li><a href="#">
+                        <img src="images/Git-Icon-32px.png" alt="Git" class="icon" />
+                        <span class="underlineOnHover"><strong>Use Git</strong></span><br />
+                        <span class="subdued">distributed</span>
+                    </a></li>
+                <li><a href="#">
+                        <img src="images/vs-icon-32px.png" alt="Team Foundation Version Control" class="icon" />
+                        <span class="underlineOnHover"><strong>New Team Foundation</strong></span><br />
+                        <span class="subdued">centralized</span>
+                    </a></li>
+            </ul>
         </div>
     </body>
     <script type="text/javascript">
@@ -217,13 +232,31 @@
                     animate: 1000,
                     barColor: '#595959',
                     lineCap: 'square',
-                    lineWidth: 12,
+                    lineWidth: 14,
                     scaleColor: false,
                     size: 96,
                 });
             }
             catch (e) {
                 alert(e.message);
+            }
+        });
+        
+        $('a.newProject').click(function (e) {
+            var offset = $(this).offset();
+            var height = $(this).height();
+            $('#newProjectPopup').css('left', offset.left);
+            $('#newProjectPopup').css('top', offset.top + height);
+            $('#newProjectPopup').addClass('activePopup').fadeIn();
+            e.stopPropagation();
+        });
+
+        $('body').click(function () {
+            var activePopup = $('.activePopup');
+            
+            if (activePopup) {
+                activePopup.fadeOut().removeClass('activePopup');
+                e.stopPropagation();
             }
         });
     </script>

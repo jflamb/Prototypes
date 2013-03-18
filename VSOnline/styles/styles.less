@@ -269,6 +269,10 @@ div.content {
                         background-color: darken(@lightBlue, 10%);
                     }
 
+                    a:hover > span:nth-child(2) {
+                        text-decoration: underline;
+                    }
+
                     a > span.build { background-color: @buildColor; }
                     a:hover > span.build { background-color: darken(@buildColor, 10%); }
 
@@ -331,38 +335,24 @@ div.content {
             .bar {
                 color: white;
                 background-color: @buildColor;
-                width: 12px;
-                margin: 0 2px 0 0;
-                /*
-	            -ms-transform: rotate(90deg);
-	            -webkit-transform: rotate(90deg);
-	            -moz-transform: rotate(90deg);
-	            -o-transform: rotate(90deg);
-                transform: rotate(90deg);
-                    */
+                width: 14px;
+
+                a {
+                    color: #ccc;
+                    font-size: 10px;
+                    display: block;
+	                -ms-transform: rotate(90deg);
+	                -webkit-transform: rotate(90deg);
+	                -moz-transform: rotate(90deg);
+	                -o-transform: rotate(90deg);
+                    transform: rotate(90deg);
+                    padding: 2px 1px;
+                } 
             }
         }
 
         div > p:last-child {
             margin-bottom: @gutter;
-        }
-
-        a.url {
-            color: #000;
-            text-decoration: none;
-            
-            span {
-                display: none;
-            }
-        }
-
-        a.url:hover {
-
-            span {
-                color: @lightBlue;
-                display: inherit;
-                text-decoration: underline;
-            }
         }
 
         div.news {
@@ -420,10 +410,15 @@ a {
 }
 
 a:hover {
-    text-decoration: underline;
+    text-decoration: none;
+
+    span.underlineOnHover {
+        text-decoration: underline;
+    }
 
     span.showOnHover {
         display: inherit;
+        text-decoration: none;
     }
 }
 
@@ -486,13 +481,13 @@ table.avatars {
 a.tools { background-color: @lightBlue; }
 a.tools:hover { background-color: darken(@lightBlue, 10%); }
 a.work { background-color: @workColor; }
-a.work:hover { background-color: darken(@workColor, 10%); }
+a.work:hover { background-color: #dc3c00; }
 a.code { background-color: @codeColor; }
 a.code:hover { background-color: darken(@codeColor, 10%); }
 a.create { background-color: @createColor; }
 a.create:hover { background-color: darken(@createColor, 10%); }
 a.grow { background-color: @growColor; }
-a.grow:hover { background-color: darken(@growColor, 10%); }
+a.grow:hover { background-color: #442359; }
 
 section.starting ul.tiles > li > a {
     text-decoration: none;
@@ -509,5 +504,29 @@ ul.commands {
             color: white;
             text-decoration: none;
         }
+    }
+}
+
+div.popUp {
+    position: absolute; 
+    background-color: #ddd; 
+    border: solid 1px #bbb;
+    display: none;
+    padding: @gutter / 2;
+
+    p {
+        margin: 0;
+    }
+
+    ul li {
+        padding-top: @gutter / 2;
+        clear: both;
+    }
+
+    img.icon {
+        float: left;
+        height: 32px;
+        width: 32px;
+        margin-right: @gutter / 2;
     }
 }

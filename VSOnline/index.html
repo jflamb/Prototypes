@@ -166,7 +166,7 @@
                 <div class="news">
                     <h2>News</h2>
                     <h3><a href="http://blogs.msdn.com/b/visualstudioalm/archive/2013/03/14/fixed-the-incorrect-order-of-the-first-column-on-the-kanban-board-on-the-service.aspx" class="newsflash">
-                            Fixed the incorrect order of the first column on the Kanban board on the service<time>Mar 14</time>
+                            Fixed the incorrect order of the first column on the Kanban board on the service &ndash; <time>Mar 14</time>
                         </a></h3>
                     <p><a href="http://blogs.msdn.com/b/visualstudioalm/archive/tags/tfservice/"><span class="underlineOnHover">View all news</span> <span class="symbol showOnHover">&#xE143</span></a></p>
                 </div>
@@ -200,9 +200,9 @@
                     <div class="chart" data-percent="66">400 min</div>
                     <div class="histogram">
                         <div class="spacer">&nbsp;</div>
-                        <div style="height: 75%;" class="bar"><a href="#">FEB</a></div>
-                        <div style="height: 66%;" class="bar"><a href="#">JAN</a></div>
-                        <div style="height: 33%;" class="bar"><a href="#">DEC</a></div>
+                        <div style="height: 75%;" class="bar" title="February 2013 - 403 minutes"><a href="#">FEB</a></div>
+                        <div style="height: 66%;" class="bar" title="January 2013 - 347 minutes"><a href="#">JAN</a></div>
+                        <div style="height: 33%;" class="bar" title="December 2012 - 149 minutes"><a href="#">DEC</a></div>
                     </div>
                 </div>
             </aside>
@@ -261,13 +261,31 @@
 
         $('a.popUpParent').click(function (e) {
             closeActivePopup();
-            var offset = $(this).offset();
-            var height = $(this).height();
+
             var popUpId = $(this).data('popup');
-            $(popUpId).css('left', offset.left);
-            $(popUpId).css('top', offset.top + height);
-            $(popUpId).addClass('activePopup').fadeIn();
-            e.stopPropagation();
+            var popUp = $(popUpId);
+
+            try {
+                if (popUp) {
+                    var offset = $(this).offset();
+                    var height = $(this).height();
+                    var width = $(this).width();
+
+                    if ((offset.left + popUp.width()) > $('body').width()) {
+                        popUp.css('left', offset.left + width - popUp.width() + 12);
+                    }
+                    else {
+                        popUp.css('left', offset.left);
+                    }
+
+                    popUp.css('top', offset.top + height);
+                    popUp.addClass('activePopup').fadeIn();
+                    e.stopPropagation();
+                }
+            }
+            catch (e) {
+                alert(e.message);
+            }
         });
 
         $(document).click(function () {

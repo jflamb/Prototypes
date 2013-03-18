@@ -52,7 +52,10 @@ a:visited {
 }
 /* mix-ins */
 .subdued {
-  color: #bbbbbb;
+  color: #999999;
+}
+.success {
+  color: green;
 }
 .symbol {
   font-family: 'Segoe UI Symbol';
@@ -186,14 +189,15 @@ div.content div.primary section.favorites ul li {
 }
 div.content div.primary section.recent ul li a,
 div.content div.primary section.favorites ul li a {
+  padding: 0;
   text-decoration: none;
 }
-div.content div.primary section.recent ul li a span,
-div.content div.primary section.favorites ul li a span {
+div.content div.primary section.recent ul li a > span,
+div.content div.primary section.favorites ul li a > span {
   display: block;
 }
-div.content div.primary section.recent ul li a span:first-child,
-div.content div.primary section.favorites ul li a span:first-child {
+div.content div.primary section.recent ul li a > span:first-child,
+div.content div.primary section.favorites ul li a > span:first-child {
   color: #fff;
   font-size: 18px;
   display: block;
@@ -206,9 +210,13 @@ div.content div.primary section.favorites ul li a span:first-child {
   text-align: center;
   vertical-align: middle;
 }
-div.content div.primary section.recent ul li a:hover span:first-child,
-div.content div.primary section.favorites ul li a:hover span:first-child {
+div.content div.primary section.recent ul li a:hover > span:first-child,
+div.content div.primary section.favorites ul li a:hover > span:first-child {
   background-color: #005b99;
+}
+div.content div.primary section.recent ul li a:hover span.subdued,
+div.content div.primary section.favorites ul li a:hover span.subdued {
+  color: #444;
 }
 div.content div.primary section.recent ul li:last-child,
 div.content div.primary section.favorites ul li:last-child {

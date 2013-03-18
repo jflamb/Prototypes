@@ -3,7 +3,7 @@
 @darkCyan: #0E639C;
 @gitOrange: #F05033;
 @lightGray: #F1F1F1;
-@gray: #bbb;
+@gray: #999;
 @darkGray: #7F7F7F;
 @buildColor: #595959;
 @codeColor: #B4009E;
@@ -67,6 +67,10 @@ a, a:visited {
 
 .subdued {
     color: @gray;
+}
+
+.success {
+    color: green;
 }
 
 .symbol {
@@ -235,29 +239,34 @@ div.content {
                     margin-bottom: (@gutter / 2);
 
                     a {
+                        padding: 0;
                         text-decoration: none;
-
-                        span {
-                            display: block;
-                        }
-
-                        span:first-child {
-                            color: #fff;
-                            font-size: 18px;
-                            display: block;
-                            float: left;
-                            height: 32px;
-                            line-height: 32px;
-                            width: 32px;
-                            margin-right: (@gutter / 3);
-                            background-color: @lightBlue;
-                            text-align: center;
-                            vertical-align: middle;
-                        }
                     }
 
-                    a:hover span:first-child {
+                    a > span {
+                        display: block;
+                    }
+
+                    a > span:first-child {
+                        color: #fff;
+                        font-size: 18px;
+                        display: block;
+                        float: left;
+                        height: 32px;
+                        line-height: 32px;
+                        width: 32px;
+                        margin-right: (@gutter / 3);
+                        background-color: @lightBlue;
+                        text-align: center;
+                        vertical-align: middle;
+                    }
+
+                    a:hover > span:first-child {
                         background-color: darken(@lightBlue, 10%);
+                    }
+
+                    a:hover span.subdued {
+                            color: #444;
                     }
                 }
 

@@ -510,7 +510,7 @@ div.menu {
 div.menu ul li a {
   color: #7f7f7f;
   display: inline-block;
-  padding: 10px;
+  padding: 10px 40px 10px 10px;
 }
 div.menu ul li a:hover {
   color: #007acc;

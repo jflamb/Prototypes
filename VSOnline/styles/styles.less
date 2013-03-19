@@ -332,7 +332,37 @@ div.content {
 
         .resources {
             float: left;
-            width: @resource-width;
+            width: @column-width;
+
+            p.subdued {
+                margin: (@gutter / 4) 0;
+            }
+        }
+
+        .build-resource {
+            display: block; 
+            height: @gutter; 
+            width: 100%; 
+            background-color: #dedede;
+
+            span:first-child {
+                display: inline-block; 
+                height: 100%; 
+                width: 66%; 
+                padding-left: 4px;
+                float: left; 
+                background-color: @buildColor; 
+                color: #fff; 
+                vertical-align: middle;
+            }
+
+            span:last-child {
+                display: inline-block; 
+                height: 100%;
+                width: 6%; 
+                border-right: solid 4px #888; 
+                float: left;
+            }
         }
 
         .chart {

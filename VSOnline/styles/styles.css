@@ -282,7 +282,33 @@ div.content aside .users {
 }
 div.content aside .resources {
   float: left;
-  width: 145px;
+  width: 310px;
+}
+div.content aside .resources p.subdued {
+  margin: 5px 0;
+}
+div.content aside .build-resource {
+  display: block;
+  height: 20px;
+  width: 100%;
+  background-color: #dedede;
+}
+div.content aside .build-resource span:first-child {
+  display: inline-block;
+  height: 100%;
+  width: 66%;
+  padding-left: 4px;
+  float: left;
+  background-color: #595959;
+  color: #fff;
+  vertical-align: middle;
+}
+div.content aside .build-resource span:last-child {
+  display: inline-block;
+  height: 100%;
+  width: 6%;
+  border-right: solid 4px #888;
+  float: left;
 }
 div.content aside .chart {
   float: left;

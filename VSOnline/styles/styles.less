@@ -345,23 +345,30 @@ div.content {
             width: 100%; 
             background-color: #dedede;
 
-            span:first-child {
+            span {
                 display: inline-block; 
                 height: 100%; 
+                float: left;
+            }
+
+            span.empty {
+                width: 97%;
+                text-align: right;
+                border-left: solid 4px #888;
+                color: @gray;
+            }
+
+            span.used {
                 width: 66%; 
                 padding-left: 4px;
-                float: left; 
                 background-color: @buildColor; 
                 color: #fff; 
                 vertical-align: middle;
             }
 
-            span:last-child {
-                display: inline-block; 
-                height: 100%;
+            span.quota {
                 width: 6%; 
                 border-right: solid 4px #888; 
-                float: left;
             }
         }
 

@@ -293,22 +293,27 @@ div.content aside .build-resource {
   width: 100%;
   background-color: #dedede;
 }
-div.content aside .build-resource span:first-child {
+div.content aside .build-resource span {
   display: inline-block;
   height: 100%;
+  float: left;
+}
+div.content aside .build-resource span.empty {
+  width: 97%;
+  text-align: right;
+  border-left: solid 4px #888;
+  color: #999999;
+}
+div.content aside .build-resource span.used {
   width: 66%;
   padding-left: 4px;
-  float: left;
   background-color: #595959;
   color: #fff;
   vertical-align: middle;
 }
-div.content aside .build-resource span:last-child {
-  display: inline-block;
-  height: 100%;
+div.content aside .build-resource span.quota {
   width: 6%;
   border-right: solid 4px #888;
-  float: left;
 }
 div.content aside .chart {
   float: left;

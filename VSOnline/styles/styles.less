@@ -70,6 +70,7 @@ a, a:visited {
 
 .subdued {
     color: @gray;
+    font-size: 90%;
 }
 
 .success {
@@ -115,11 +116,12 @@ div.contextBar {
     ul {
         li {
             display: inline;
+            vertical-align: middle;
 
             a {
-                padding: 0 (@gutter/2);
-                height: 32px;
-                line-height: 32px;
+                margin: 0;
+                padding: 0 8px;
+                line-height: 30px;
                 display: inline-block;
             }
 
@@ -449,8 +451,8 @@ div.content {
 /* presentation */
 
 strong {
-    font-family: 'Segoe UI Semibold', Arial, Helvetica, Garuda, sans-serif;
-    font-weight: 600;
+    /* font-family: 'Segoe UI Semibold', Arial, Helvetica, Garuda, sans-serif; */
+    font-weight: 500;
 }
 
 h2 {
@@ -644,6 +646,7 @@ div.menu {
         color: @darkGray;
         display: inline-block;
         padding: (@gutter / 2) (2 * @gutter) (@gutter / 2) (@gutter / 2);
+        white-space: nowrap;
     }
 
     ul li a:hover {

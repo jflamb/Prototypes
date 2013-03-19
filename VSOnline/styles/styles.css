@@ -54,6 +54,7 @@ a:visited {
 /* mix-ins */
 .subdued {
   color: #999999;
+  font-size: 90%;
 }
 .success {
   color: green;
@@ -88,11 +89,12 @@ div.contextBar ul.identityContext {
 }
 div.contextBar ul li {
   display: inline;
+  vertical-align: middle;
 }
 div.contextBar ul li a {
-  padding: 0 10px;
-  height: 32px;
-  line-height: 32px;
+  margin: 0;
+  padding: 0 8px;
+  line-height: 30px;
   display: inline-block;
 }
 div.contextBar ul li a,
@@ -377,8 +379,9 @@ div.content h2 {
 }
 /* presentation */
 strong {
-  font-family: 'Segoe UI Semibold', Arial, Helvetica, Garuda, sans-serif;
-  font-weight: 600;
+  /* font-family: 'Segoe UI Semibold', Arial, Helvetica, Garuda, sans-serif; */
+
+  font-weight: 500;
 }
 h2 {
   font-size: 18px;
@@ -555,6 +558,7 @@ div.menu ul li a {
   color: #7f7f7f;
   display: inline-block;
   padding: 10px 40px 10px 10px;
+  white-space: nowrap;
 }
 div.menu ul li a:hover {
   color: #007acc;

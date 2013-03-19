@@ -201,7 +201,7 @@ div.content div.primary section.favorites h3 {
 }
 div.content div.primary section.recent ul li,
 div.content div.primary section.favorites ul li {
-  line-height: 120%;
+  line-height: 130%;
   margin-bottom: 10px;
 }
 div.content div.primary section.recent ul li a,
@@ -262,6 +262,10 @@ div.content div.primary section.favorites ul li a:hover > span.code {
 div.content div.primary section.recent ul li a:hover span.subdued,
 div.content div.primary section.favorites ul li a:hover span.subdued {
   color: #444;
+}
+div.content div.primary section.recent ul li a span img,
+div.content div.primary section.favorites ul li a span img {
+  vertical-align: top;
 }
 div.content div.primary section.recent ul li:last-child,
 div.content div.primary section.favorites ul li:last-child {

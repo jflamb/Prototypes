@@ -180,7 +180,7 @@ div.hubs {
 
 /* layout */
 
-@gutter: 20px;
+@gutter: 16px;
 @column-width: ((@width - (2 * @gutter)) / 3);
 @resource-width: ((@column-width - @gutter) / 2);
 @primary-width: ((2 * @column-width) + @gutter);
@@ -262,7 +262,7 @@ div.content {
             ul {
 
                 li {
-                    line-height: 130%;
+                    line-height: 125%;
                     margin-bottom: (@gutter / 2);
 
                     a {
@@ -350,7 +350,7 @@ div.content {
 
         .build-resource {
             display: block; 
-            height: @gutter; 
+            height: 1.5em; 
             width: 100%; 
             background-color: #dedede;
 
@@ -451,7 +451,7 @@ div.content {
     }
 
     h2 {
-        margin-bottom: @gutter;
+        margin-bottom: @gutter; /* / 2; */
     }
 }
 

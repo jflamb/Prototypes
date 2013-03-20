@@ -13,7 +13,7 @@ body {
 }
 div.content {
   max-width: 970px;
-  margin-left: 20px;
+  margin-left: 16px;
 }
 h1,
 h2,
@@ -76,7 +76,7 @@ div.contextBar {
   background-color: #007acc;
   color: white;
   overflow: hidden;
-  padding-left: 10px;
+  padding-left: 8px;
 }
 div.contextBar img {
   vertical-align: top;
@@ -112,7 +112,7 @@ div.contextBar ul li img {
 /* navigation hubs */
 div.hubs {
   background-color: #f1f1f1;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 div.hubs ul {
   margin: 0 .5em;
@@ -144,18 +144,18 @@ div.content {
 }
 div.content div.primary {
   float: left;
-  margin-right: 20px;
-  width: 640px;
+  margin-right: 16px;
+  width: 641.3333333333334px;
 }
 div.content div.primary section:nth-child(2) {
   clear: both;
 }
 div.content div.primary section.starting {
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 div.content div.primary section.starting ul.tiles > li {
   display: inline-block;
-  margin-right: 20px;
+  margin-right: 16px;
   vertical-align: top;
   line-height: 120%;
   background-image: url('../images/Go-arrow.png');
@@ -163,13 +163,13 @@ div.content div.primary section.starting ul.tiles > li {
   background-position: right bottom;
 }
 div.content div.primary section.starting ul.tiles > li p {
-  margin: 10px 0 10px 0;
+  margin: 8px 0 8px 0;
 }
 div.content div.primary section.starting ul.tiles > li a {
   display: block;
-  padding: 10px;
-  height: 83.33333333333333px;
-  width: 125px;
+  padding: 8px;
+  height: 88.22222222222223px;
+  width: 132.33333333333334px;
 }
 div.content div.primary section.starting ul.tiles > li a br {
   margin: 24px;
@@ -183,29 +183,29 @@ div.content div.primary section.starting ul.tiles > li:last-child ul.commands li
   display: block;
 }
 div.content div.primary section.starting ul.tiles > li:last-child ul.commands li a {
-  padding: 0 10px;
+  padding: 0 8px;
   display: block;
-  height: 41.666666666666664px;
-  line-height: 41.666666666666664px;
-  width: 125px;
+  height: 44.111111111111114px;
+  line-height: 44.111111111111114px;
+  width: 132.33333333333334px;
   vertical-align: middle;
 }
 div.content div.primary section.starting ul.tiles > li:last-child ul.commands li:first-child {
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 div.content div.primary section.recent,
 div.content div.primary section.favorites {
-  width: 310px;
+  width: 312.6666666666667px;
   float: left;
 }
 div.content div.primary section.recent h3,
 div.content div.primary section.favorites h3 {
-  padding-bottom: 10px;
+  padding-bottom: 8px;
 }
 div.content div.primary section.recent ul li,
 div.content div.primary section.favorites ul li {
-  line-height: 130%;
-  margin-bottom: 10px;
+  line-height: 125%;
+  margin-bottom: 8px;
 }
 div.content div.primary section.recent ul li a,
 div.content div.primary section.favorites ul li a {
@@ -225,7 +225,7 @@ div.content div.primary section.favorites ul li a > span:first-child {
   height: 32px;
   line-height: 32px;
   width: 32px;
-  margin-right: 6.666666666666667px;
+  margin-right: 5.333333333333333px;
   background-color: #007acc;
   text-align: center;
   vertical-align: middle;
@@ -272,33 +272,33 @@ div.content div.primary section.favorites ul li a span img {
 }
 div.content div.primary section.recent ul li:last-child,
 div.content div.primary section.favorites ul li:last-child {
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 div.content div.primary section.recent {
-  margin-right: 20px;
+  margin-right: 16px;
 }
 div.content div.primary br {
   clear: both;
 }
 div.content aside {
   float: left;
-  width: 310px;
+  width: 312.6666666666667px;
 }
 div.content aside .users {
   float: left;
-  width: 145px;
-  margin-right: 20px;
+  width: 148.33333333333334px;
+  margin-right: 16px;
 }
 div.content aside .resources {
   float: left;
-  width: 310px;
+  width: 312.6666666666667px;
 }
 div.content aside .resources p.subdued {
-  margin: 5px 0;
+  margin: 4px 0;
 }
 div.content aside .build-resource {
   display: block;
-  height: 20px;
+  height: 1.5em;
   width: 100%;
   background-color: #dedede;
 }
@@ -356,7 +356,7 @@ div.content aside .histogram .bar a {
   padding: 0 2px;
 }
 div.content aside div > p:last-child {
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 div.content aside div.news h3 {
   margin: 0;
@@ -382,7 +382,9 @@ div.content aside div.news a.newsflash:hover {
   background-color: #666666;
 }
 div.content h2 {
-  margin-bottom: 20px;
+  margin-bottom: 16px;
+  /* / 2; */
+
 }
 /* presentation */
 strong {
@@ -437,7 +439,7 @@ p.actions {
   line-height: 100%;
 }
 p.actions a {
-  padding-right: 10px;
+  padding-right: 8px;
 }
 table.avatars {
   border-collapse: collapse;
@@ -541,20 +543,20 @@ div.profileTip {
 div.popUp {
   background-color: #ddd;
   border: solid 1px #bbb;
-  padding: 10px;
+  padding: 8px;
 }
 div.popUp p {
   margin: 0;
 }
 div.popUp ul li {
-  padding-top: 10px;
+  padding-top: 8px;
   clear: both;
 }
 div.popUp img.icon {
   float: left;
   height: 32px;
   width: 32px;
-  margin-right: 10px;
+  margin-right: 8px;
 }
 div.menu {
   background-color: #fff;
@@ -564,7 +566,7 @@ div.menu {
 div.menu ul li a {
   color: #7f7f7f;
   display: inline-block;
-  padding: 10px 40px 10px 10px;
+  padding: 8px 32px 8px 8px;
   white-space: nowrap;
 }
 div.menu ul li a:hover {
@@ -575,27 +577,27 @@ div.profileTip {
   width: 220px;
 }
 div.profileTip div.container {
-  margin-bottom: 35px;
-  padding: 20px;
+  margin-bottom: 28px;
+  padding: 16px;
 }
 div.profileTip ul li a {
   color: #7f7f7f;
   display: inline-block;
-  padding: 5px 10px;
+  padding: 4px 8px;
 }
 div.profileTip ul li a:hover {
   color: #007acc;
 }
 div.profileTip img {
   float: left;
-  margin-right: 10px;
+  margin-right: 8px;
 }
 div.profileTip p.identity {
   clear: both;
   background-color: #007acc;
   color: #fff;
   margin: 0;
-  padding: 5px 10px;
+  padding: 4px 8px;
 }
 p.acquisition {
   line-height: 120%;

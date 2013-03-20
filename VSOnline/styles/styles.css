@@ -76,7 +76,7 @@ div.contextBar {
   background-color: #007acc;
   color: white;
   overflow: hidden;
-  padding-left: 8px;
+  padding-left: 5.333333333333333px;
 }
 div.contextBar img {
   vertical-align: top;
@@ -115,11 +115,11 @@ div.hubs {
   margin-bottom: 16px;
 }
 div.hubs ul {
-  margin: 0 .5em;
+  margin: 0;
 }
 div.hubs ul li {
   display: inline-block;
-  margin: 0 1em;
+  margin: 0 16px;
   padding: .7em 0;
   text-transform: uppercase;
 }
@@ -171,26 +171,27 @@ div.content div.primary section.starting ul.tiles > li a {
   height: 88.22222222222223px;
   width: 132.33333333333334px;
 }
-div.content div.primary section.starting ul.tiles > li a br {
-  margin: 24px;
+div.content div.primary section.starting ul.tiles > li:nth-child(4) {
+  margin-right: 0;
 }
-div.content div.primary section.starting ul.tiles > li:last-child {
+div.content div.primary section.starting ul.tiles > li.commands {
   margin-right: 0;
   padding: 0;
   background-color: inherit;
 }
-div.content div.primary section.starting ul.tiles > li:last-child ul.commands li {
+div.content div.primary section.starting ul.tiles > li.commands ul li {
   display: block;
 }
-div.content div.primary section.starting ul.tiles > li:last-child ul.commands li a {
-  padding: 0 8px;
+div.content div.primary section.starting ul.tiles > li.commands ul li a {
+  padding: 0;
   display: block;
   height: 44.111111111111114px;
   line-height: 44.111111111111114px;
   width: 132.33333333333334px;
   vertical-align: middle;
+  text-align: center;
 }
-div.content div.primary section.starting ul.tiles > li:last-child ul.commands li:first-child {
+div.content div.primary section.starting ul.tiles > li.commands ul li:first-child {
   margin-bottom: 16px;
 }
 div.content div.primary section.recent,
@@ -527,7 +528,7 @@ section.starting ul.tiles > li > a span.symbol {
   float: right;
   font-size: 20px;
 }
-ul.commands li a {
+li.commands ul li a {
   color: white;
   text-decoration: none;
 }

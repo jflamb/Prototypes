@@ -99,7 +99,7 @@ div.contextBar {
     background-color: @lightBlue;
     color: white;
     overflow: hidden;
-    padding-left: (@gutter / 2);
+    padding-left: (@gutter / 3);
 
     img {
         vertical-align: top;
@@ -149,11 +149,11 @@ div.hubs {
     margin-bottom: @gutter;
 
     ul {
-        margin: 0 .5em;
+        margin: 0;
 
         li {
             display: inline-block;
-            margin: 0 1em;
+            margin: 0 (@gutter);
             padding: .7em 0;
             text-transform: uppercase;
 
@@ -219,34 +219,35 @@ div.content {
                 padding: (@gutter / 2);
                 height: ((@primary-width - (7 * @gutter)) / 6);
                 width: ((@primary-width - (7 * @gutter)) / 4);
-
-                br {
-                    margin: 24px;
-                }
             }
         }
 
-        section.starting ul.tiles > li:last-child {
+        section.starting ul.tiles > li:nth-child(4) {
+            margin-right: 0;
+        }
+
+        section.starting ul.tiles > li.commands {
             margin-right: 0;
             padding: 0;
             background-color: inherit;
 
-            ul.commands {
+            ul {
                 li {
                     display: block;
 
                     a {
-                        padding: 0 (@gutter / 2);
+                        padding: 0;
                         display: block;
                         height: ((@primary-width - (7 * @gutter)) / 12);
                         line-height: ((@primary-width - (7 * @gutter)) / 12);
                         width: ((@primary-width - (7 * @gutter)) / 4);
                         vertical-align: middle;
+                        text-align: center;
                     }
                 }
             }
 
-            ul.commands li:first-child {
+            ul li:first-child {
                 margin-bottom: @gutter;
             }
         }
@@ -574,9 +575,6 @@ table.avatars {
     }
 }
 
-.tools, .work, .code, .build, .create, .grow {
-}
-
 li.tools { background-color: @lightBlue; }
 li.tools:hover { background-color: darken(@lightBlue, 10%); }
 li.work { background-color: @workColor; }
@@ -605,7 +603,7 @@ section.starting ul.tiles > li > a {
     }
 }
 
-ul.commands {
+li.commands ul {
     li {
         a {
             color: white;

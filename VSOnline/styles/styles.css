@@ -158,6 +158,9 @@ div.content div.primary section.starting ul.tiles > li {
   margin-right: 20px;
   vertical-align: top;
   line-height: 120%;
+  background-image: url('../images/Go-arrow.png');
+  background-repeat: no-repeat;
+  background-position: right bottom;
 }
 div.content div.primary section.starting ul.tiles > li p {
   margin: 10px 0 10px 0;
@@ -474,28 +477,28 @@ table.avatars tr td.medium img {
   height: 48px;
   width: 48px;
 }
-a.tools {
+li.tools {
   background-color: #007acc;
 }
-a.tools:hover {
+li.tools:hover {
   background-color: #005b99;
 }
-a.work {
+li.work {
   background-color: #ff8c00;
 }
-a.work:hover {
+li.work:hover {
   background-color: #dc3c00;
 }
-a.code {
+li.code {
   background-color: #b4009e;
 }
-a.code:hover {
+li.code:hover {
   background-color: #810071;
 }
-a.build {
+li.build {
   background-color: #595959;
 }
-a.build:hover {
+li.build:hover {
   background-color: #3f3f3f;
 }
 a.create {

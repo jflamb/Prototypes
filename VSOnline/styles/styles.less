@@ -206,6 +206,9 @@ div.content {
             margin-right: @gutter;
             vertical-align: top;
             line-height: 120%;
+            background-image: url('../images/Go-arrow.png');
+            background-repeat: no-repeat;
+            background-position: right bottom;
 
             p {
                 margin: (@gutter / 2) 0 (@gutter / 2) 0;
@@ -574,14 +577,14 @@ table.avatars {
 .tools, .work, .code, .build, .create, .grow {
 }
 
-a.tools { background-color: @lightBlue; }
-a.tools:hover { background-color: darken(@lightBlue, 10%); }
-a.work { background-color: @workColor; }
-a.work:hover { background-color: @workHoverColor; }
-a.code { background-color: @codeColor; }
-a.code:hover { background-color: darken(@codeColor, 10%); }
-a.build { background-color: @buildColor }
-a.build:hover { background-color: darken(@buildColor, 10%); }
+li.tools { background-color: @lightBlue; }
+li.tools:hover { background-color: darken(@lightBlue, 10%); }
+li.work { background-color: @workColor; }
+li.work:hover { background-color: @workHoverColor; }
+li.code { background-color: @codeColor; }
+li.code:hover { background-color: darken(@codeColor, 10%); }
+li.build { background-color: @buildColor }
+li.build:hover { background-color: darken(@buildColor, 10%); }
 a.create { background-color: @createColor; }
 a.create:hover { background-color: darken(@createColor, 10%); }
 a.grow { background-color: @growColor; }

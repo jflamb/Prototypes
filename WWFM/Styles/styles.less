@@ -1,0 +1,91 @@
+﻿@dark: #333;
+@light: #fff;
+@normalText: #000;
+@subduedText: #888;
+@primaryLight: #7AC142;
+@primary: #00853E;
+@accent: #EF4035;
+
+body {
+    background: url(images/fabric_of_squares_gray.png) repeat;
+}
+
+header {
+    background: @dark;
+    color: @light;
+    height: 1.7em;
+    display: block;
+    padding: .5em;
+    font-size: 90%;
+
+    h1 {
+        float:  left;
+        font-weight: normal;
+
+        img.icon {
+            width: 1.5em;
+            height: 1.5em;
+            margin-right: .5em;
+            vertical-align: text-bottom;
+        }
+    }
+
+    form {
+        float: right;
+
+        .actions {
+            margin-right: .5em;
+        }
+
+        input {
+        }
+    }
+
+    a {
+        color: @light;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: @primaryLight;
+        text-decoration: underline;
+    }
+}
+
+aside {
+    width: 14em;
+    padding: 2em 1em 2em 2em;
+    float: left;
+    
+    img.logo {
+        width: 12em;
+    }
+}
+
+div.main {
+    padding: 2em 2em 2em 1em;
+
+    ul.navigation {
+        list-style-type: none;
+
+        li {
+            display: inline-block;
+            text-transform: uppercase;
+
+            a {
+                color: @normalText;
+                text-decoration: none;
+                border-left: solid .4em @primaryLight;
+                padding: .1em 1em .1em .5em;
+            }
+
+            a.active, a:hover {
+                border-left: solid .4em @primary;
+            }
+        }
+    }
+}
+
+.subdued {
+    color: @subduedText;
+}

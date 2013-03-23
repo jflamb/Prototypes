@@ -1,0 +1,66 @@
+﻿body {
+  background: url(images/fabric_of_squares_gray.png) repeat;
+}
+header {
+  background: #333333;
+  color: #ffffff;
+  height: 1.7em;
+  display: block;
+  padding: .5em;
+  font-size: 90%;
+}
+header h1 {
+  float: left;
+  font-weight: normal;
+}
+header h1 img.icon {
+  width: 1.5em;
+  height: 1.5em;
+  margin-right: .5em;
+  vertical-align: text-bottom;
+}
+header form {
+  float: right;
+}
+header form .actions {
+  margin-right: .5em;
+}
+header a {
+  color: #ffffff;
+  text-decoration: none;
+}
+header a:hover {
+  color: #7ac142;
+  text-decoration: underline;
+}
+aside {
+  width: 14em;
+  padding: 2em 1em 2em 2em;
+  float: left;
+}
+aside img.logo {
+  width: 12em;
+}
+div.main {
+  padding: 2em 2em 2em 1em;
+}
+div.main ul.navigation {
+  list-style-type: none;
+}
+div.main ul.navigation li {
+  display: inline-block;
+  text-transform: uppercase;
+}
+div.main ul.navigation li a {
+  color: #000000;
+  text-decoration: none;
+  border-left: solid 0.4em #7ac142;
+  padding: .1em 1em .1em .5em;
+}
+div.main ul.navigation li a.active,
+div.main ul.navigation li a:hover {
+  border-left: solid 0.4em #00853e;
+}
+.subdued {
+  color: #888888;
+}

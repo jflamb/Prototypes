@@ -50,15 +50,17 @@ div.main ul.navigation {
 div.main ul.navigation li {
   display: inline-block;
   text-transform: uppercase;
+  font-weight: 600;
 }
 div.main ul.navigation li a {
-  color: #000000;
+  color: #888888;
   text-decoration: none;
   border-left: solid 0.4em #7ac142;
   padding: .1em 1em .1em .5em;
 }
 div.main ul.navigation li a.active,
 div.main ul.navigation li a:hover {
+  color: #000000;
   border-left: solid 0.4em #00853e;
 }
 .subdued {

@@ -71,15 +71,17 @@ div.main {
         li {
             display: inline-block;
             text-transform: uppercase;
+            font-weight: 600;
 
             a {
-                color: @normalText;
+                color: @subduedText;
                 text-decoration: none;
                 border-left: solid .4em @primaryLight;
                 padding: .1em 1em .1em .5em;
             }
 
             a.active, a:hover {
+                color: @normalText;
                 border-left: solid .4em @primary;
             }
         }

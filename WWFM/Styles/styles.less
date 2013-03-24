@@ -6,6 +6,10 @@
 @primary: #00853E;
 @accent: #EF4035;
 
+html, body {
+    height: 100%;
+}
+
 body {
     background: url(images/fabric_of_squares_gray.png) repeat;
 }
@@ -17,6 +21,7 @@ header {
     display: block;
     padding: .5em;
     font-size: 90%;
+    margin: 0 0 2em 0;
 
     h1 {
         float:  left;
@@ -52,40 +57,94 @@ header {
     }
 }
 
-aside {
-    width: 14em;
-    padding: 2em 1em 2em 2em;
-    float: left;
+div.main {
+    max-width: 60em;
+    min-width: 42em;
+    margin: 0 auto;
+    min-height: 100%;
+    margin-bottom: -10em;
+    position: relative;
+
+    aside {
+        width: 25%;
+        max-width: 15em;
+        padding: 0;
+        /* padding: 2em 1em 2em 2em; */
+        float: left;
     
-    img.logo {
-        width: 12em;
+        img.logo {
+            width: 85%;
+        }
+    }
+
+    .content {
+        padding: 0;
+        float: right;
+        width: 75%;
+        max-width: 45em;
+
+        ul.navigation {
+            list-style-type: none;
+
+            li {
+                display: inline-block;
+                text-transform: uppercase;
+                font-weight: 600;
+
+                a {
+                    color: @subduedText;
+                    text-decoration: none;
+                    border-left: solid .4em @primaryLight;
+                    padding: .1em 1em .1em .5em;
+                }
+
+                a.active, a:hover {
+                    color: @normalText;
+                    border-left: solid .4em @primary;
+                }
+            }
+        }
+
+        p {
+            margin-bottom: .5em;
+        }
+
+        .vevent {
+            padding: .5em 0 0 0;
+            font-size: 200%;
+
+            a.url {
+                color: @normalText;
+                text-decoration: none;
+
+                .summary { display: none; }
+                .location { display: none; }
+            }
+        }
+
+        .adr {
+            .country-name {display: none; }
+        }
     }
 }
 
-div.main {
-    padding: 2em 2em 2em 1em;
+div.footer, footer {
+    height: 10em;
+}
 
-    ul.navigation {
-        list-style-type: none;
+footer {
+    position: relative;
+    background-color: @dark;
+}
 
-        li {
-            display: inline-block;
-            text-transform: uppercase;
-            font-weight: 600;
+h3 {
+    color: @primary;
+    font-size: 125%;
+    margin-top: .5em;
+}
 
-            a {
-                color: @subduedText;
-                text-decoration: none;
-                border-left: solid .4em @primaryLight;
-                padding: .1em 1em .1em .5em;
-            }
-
-            a.active, a:hover {
-                color: @normalText;
-                border-left: solid .4em @primary;
-            }
-        }
-    }
+.clear { 
+    clear: both; 
 }
 
 .subdued {

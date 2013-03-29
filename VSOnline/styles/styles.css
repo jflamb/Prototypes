@@ -195,30 +195,36 @@ div.content div.primary section.starting ul.tiles > li.commands ul li:first-chil
   margin-bottom: 16px;
 }
 div.content div.primary section.recent,
-div.content div.primary section.favorites {
+div.content div.primary section.favorites,
+div.content div.primary section.collections {
   width: 312.6666666666667px;
   float: left;
 }
 div.content div.primary section.recent h3,
-div.content div.primary section.favorites h3 {
+div.content div.primary section.favorites h3,
+div.content div.primary section.collections h3 {
   padding-bottom: 8px;
 }
 div.content div.primary section.recent ul li,
-div.content div.primary section.favorites ul li {
+div.content div.primary section.favorites ul li,
+div.content div.primary section.collections ul li {
   line-height: 125%;
   margin-bottom: 8px;
 }
 div.content div.primary section.recent ul li a,
-div.content div.primary section.favorites ul li a {
+div.content div.primary section.favorites ul li a,
+div.content div.primary section.collections ul li a {
   padding: 0;
   text-decoration: none;
 }
 div.content div.primary section.recent ul li a > span,
-div.content div.primary section.favorites ul li a > span {
+div.content div.primary section.favorites ul li a > span,
+div.content div.primary section.collections ul li a > span {
   display: block;
 }
 div.content div.primary section.recent ul li a > span:first-child,
-div.content div.primary section.favorites ul li a > span:first-child {
+div.content div.primary section.favorites ul li a > span:first-child,
+div.content div.primary section.collections ul li a > span:first-child {
   color: #fff;
   font-size: 18px;
   display: block;
@@ -232,55 +238,68 @@ div.content div.primary section.favorites ul li a > span:first-child {
   vertical-align: middle;
 }
 div.content div.primary section.recent ul li a:hover > span:first-child,
-div.content div.primary section.favorites ul li a:hover > span:first-child {
+div.content div.primary section.favorites ul li a:hover > span:first-child,
+div.content div.primary section.collections ul li a:hover > span:first-child {
   background-color: #005b99;
 }
 div.content div.primary section.recent ul li a:hover > span:nth-child(2),
-div.content div.primary section.favorites ul li a:hover > span:nth-child(2) {
+div.content div.primary section.favorites ul li a:hover > span:nth-child(2),
+div.content div.primary section.collections ul li a:hover > span:nth-child(2) {
   text-decoration: underline;
 }
 div.content div.primary section.recent ul li a > span.build,
-div.content div.primary section.favorites ul li a > span.build {
+div.content div.primary section.favorites ul li a > span.build,
+div.content div.primary section.collections ul li a > span.build {
   background-color: #595959;
 }
 div.content div.primary section.recent ul li a:hover > span.build,
-div.content div.primary section.favorites ul li a:hover > span.build {
+div.content div.primary section.favorites ul li a:hover > span.build,
+div.content div.primary section.collections ul li a:hover > span.build {
   background-color: #3f3f3f;
 }
 div.content div.primary section.recent ul li a > span.work,
-div.content div.primary section.favorites ul li a > span.work {
+div.content div.primary section.favorites ul li a > span.work,
+div.content div.primary section.collections ul li a > span.work {
   background-color: #ff8c00;
 }
 div.content div.primary section.recent ul li a:hover > span.work,
-div.content div.primary section.favorites ul li a:hover > span.work {
+div.content div.primary section.favorites ul li a:hover > span.work,
+div.content div.primary section.collections ul li a:hover > span.work {
   background-color: #dc3c00;
 }
 div.content div.primary section.recent ul li a > span.code,
-div.content div.primary section.favorites ul li a > span.code {
+div.content div.primary section.favorites ul li a > span.code,
+div.content div.primary section.collections ul li a > span.code {
   background-color: #b4009e;
 }
 div.content div.primary section.recent ul li a:hover > span.code,
-div.content div.primary section.favorites ul li a:hover > span.code {
+div.content div.primary section.favorites ul li a:hover > span.code,
+div.content div.primary section.collections ul li a:hover > span.code {
   background-color: #810071;
 }
 div.content div.primary section.recent ul li a > span.collection,
-div.content div.primary section.favorites ul li a > span.collection {
+div.content div.primary section.favorites ul li a > span.collection,
+div.content div.primary section.collections ul li a > span.collection {
   background-color: #008a00;
 }
 div.content div.primary section.recent ul li a:hover > span.collection,
-div.content div.primary section.favorites ul li a:hover > span.collection {
+div.content div.primary section.favorites ul li a:hover > span.collection,
+div.content div.primary section.collections ul li a:hover > span.collection {
   background-color: #005700;
 }
 div.content div.primary section.recent ul li a:hover span.subdued,
-div.content div.primary section.favorites ul li a:hover span.subdued {
+div.content div.primary section.favorites ul li a:hover span.subdued,
+div.content div.primary section.collections ul li a:hover span.subdued {
   color: #444;
 }
 div.content div.primary section.recent ul li a span img,
-div.content div.primary section.favorites ul li a span img {
+div.content div.primary section.favorites ul li a span img,
+div.content div.primary section.collections ul li a span img {
   vertical-align: top;
 }
 div.content div.primary section.recent ul li:last-child,
-div.content div.primary section.favorites ul li:last-child {
+div.content div.primary section.favorites ul li:last-child,
+div.content div.primary section.collections ul li:last-child {
   margin-bottom: 16px;
 }
 div.content div.primary section.recent {

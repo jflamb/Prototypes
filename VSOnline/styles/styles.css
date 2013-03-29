@@ -263,6 +263,14 @@ div.content div.primary section.recent ul li a:hover > span.code,
 div.content div.primary section.favorites ul li a:hover > span.code {
   background-color: #810071;
 }
+div.content div.primary section.recent ul li a > span.collection,
+div.content div.primary section.favorites ul li a > span.collection {
+  background-color: #008a00;
+}
+div.content div.primary section.recent ul li a:hover > span.collection,
+div.content div.primary section.favorites ul li a:hover > span.collection {
+  background-color: #005700;
+}
 div.content div.primary section.recent ul li a:hover span.subdued,
 div.content div.primary section.favorites ul li a:hover span.subdued {
   color: #444;

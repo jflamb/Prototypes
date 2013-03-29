@@ -15,6 +15,7 @@
 @vcColor: #604A7B;
 @width: 970px;
 @smallAvatar: 24px;
+@collectionColor: #008A00;
 
 /* set page width to 1024px and center */
 html {
@@ -305,6 +306,9 @@ div.content {
 
                     a > span.code { background-color: @codeColor; }
                     a:hover > span.code { background-color: darken(@codeColor, 10%); }
+
+                    a > span.collection { background-color: @collectionColor; }
+                    a:hover > span.collection { background-color: darken(@collectionColor, 10%); }
 
                     a:hover span.subdued {
                         color: #444;

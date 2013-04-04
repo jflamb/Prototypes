@@ -7,11 +7,28 @@
     <link rel="SHORTCUT ICON" href="favicon.ico"/>
 
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript" src="scripts/jquery.tmpl.min.js"></script>
+    <script type="text/javascript" src="scripts/data.js"></script>
     
-    <script type="text/javascript" src="scripts/jquery.easy-pie-chart.js"></script>
-    <link rel="stylesheet" type="text/css" href="styles/jquery.easy-pie-chart.css" />
-
     <link rel="stylesheet" href="styles/styles.min.css" type="text/css" />
+
+    <script id="itemTemplate" type="text/x-jquery-tmpl">
+        <ul>
+            {{each items}}
+            <li>
+                <a href="#">
+                    <span class="symbol" title="${type}">${symbol}</span>
+                    <span><strong>${name}</strong></span>
+                    <span class="subdued">${description}</span>
+                </a>
+            </li>
+            {{/each}}
+        </ul>
+    </script>
+    <script id="groupTemplate" type="text/x-jquery-tmpl">
+        <h3>${group}</h3>
+        {{tmpl($data) "#itemTemplate"}}
+    </script>
 </head>
 <body class="account">
     <div class="contextBar">
@@ -83,40 +100,6 @@ Select Help, Getting started to see it again.">&#xE0E1</a></h2>
                     <a href="#" class="popUpParent" data-popup="#newProjectPopUp"><span class="underlineOnHover">New project</span> <span class="dingbat">6</span></a>
                     <a href="#"><span class="underlineOnHover">New room</span></a>
                 </p>
-                <h3>Today</h3>
-                <ul>
-                    <li>
-                        <a href="#">
-                            <span class="symbol" title="Team project">&#xE188</span>
-                            <span><strong>Rapid Rain</strong></span>
-                            <span class="subdued">7 members</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <span class="symbol" title="Team">&#xE125</span>
-                            <span><strong>Freezing Fog</strong> / <strong>Front-end</strong></span>
-                            <span class="subdued">5 member team</span>
-                        </a>
-                    </li>
-                </ul>
-                <h3>Yesterday</h3>
-                <ul>
-                    <li>
-                        <a href="#">
-                            <span class="symbol" title="Team project">&#xE188</span>
-                            <span><strong>Sudden Storm</strong></span>
-                            <span class="subdued">11 members</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <span class="symbol" title="Discussion room">&#x1F4AC</span>
-                            <span><strong>Freezing Fog Team Room</strong></span>
-                            <span class="subdued">Who can work on this bug?</span>
-                        </a>
-                    </li>
-                </ul>
             </section>
             <section class="favorites">
                 <h2>Favorites</h2>
@@ -274,19 +257,7 @@ Account owner"><img src="http://en.gravatar.com/userimage/16948269/ae054dbad79b4
 </body>
 <script type="text/javascript">
     $(function () {
-        try {
-            $('.chart').easyPieChart({
-                animate: 1000,
-                barColor: '#595959',
-                lineCap: 'square',
-                lineWidth: 12,
-                scaleColor: false,
-                size: 96,
-            });
-        }
-        catch (e) {
-            alert(e.message);
-        }
+        $("#groupTemplate").tmpl(recentItems).appendTo("section.recent");
     });
 
     $('a.popUpParent').click(function (e) {

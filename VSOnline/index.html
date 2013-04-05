@@ -17,9 +17,18 @@
             {{each items}}
             <li>
                 <a href="#">
-                    <span class="symbol" title="${type}">${symbol}</span>
+                    {{if typeof(symbol) != "undefined"}}
+                    <span class='symbol' title='${type}'>${symbol}</span>
+                    {{else typeof(count) != "undefined"}}
+                    <span class='${type}'>${count}</span>
+                    {{/if}}
                     <span><strong>${name}</strong></span>
-                    <span class="subdued">${description}</span>
+                    <span class="subdued">
+                        {{if typeof(image) != "undefined"}}
+                        <img src='${image}' />
+                        {{/if}}
+                        ${description}
+                    </span>
                 </a>
             </li>
             {{/each}}
@@ -103,54 +112,6 @@ Select Help, Getting started to see it again.">&#xE0E1</a></h2>
             </section>
             <section class="favorites">
                 <h2>Favorites</h2>
-                <h3>Freezing Fog</h3>
-                <ul>
-                    <li>
-                        <a href="#">
-                            <span class="work">12</span>
-                            <span><strong>Active Bugs</strong></span>
-                            <span class="subdued">12 active</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <span class="symbol build">&#x1F4E5</span>
-                            <span><strong>Continuous Delivery</strong></span>
-                            <span class="subdued"><img src="images/StatusAnnotations_Complete_and_ok_16xMD_color.png" /> succeeded for Jim Lamb</span>
-                        </a>
-                    </li>
-                </ul>
-                <h3>Sudden Storm</h3>
-                <ul>
-                    <li>
-                        <a href="#">
-                            <span class="work">3</span>
-                            <span><strong>Active Bugs</strong></span>
-                            <span class="subdued">3 active</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <span class="work">10</span>
-                            <span><strong>Backlog</strong></span>
-                            <span class="subdued">3 new, 7 in progress</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <span class="symbol build">&#x1F4E5</span>
-                            <span><strong>Nightly</strong></span>
-                            <span class="subdued"><img src="images/StatusAnnotations_Critical_16xMD_color.png" /> failed 9h ago</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <span class="code">5</span>
-                            <span><strong>Solutions/</strong></span>
-                            <span class="subdued">Updated dependencies to latest</span>
-                        </a>
-                    </li>
-                </ul>
             </section>
         </div>
         <aside>
@@ -258,6 +219,7 @@ Account owner"><img src="http://en.gravatar.com/userimage/16948269/ae054dbad79b4
 <script type="text/javascript">
     $(function () {
         $("#groupTemplate").tmpl(recentItems).appendTo("section.recent");
+        $("#groupTemplate").tmpl(favoriteItems).appendTo("section.favorites");
     });
 
     $('a.popUpParent').click(function (e) {

@@ -34,3 +34,54 @@ var recentItems = [
         ]
     }
 ];
+
+var favoriteItems = [
+    {
+        "group": "Freezing Fog",
+        "items": [
+            {
+                "count": "12",
+                "type": "work",
+                "name": "Active Bugs",
+                "description": "12 active"
+            },
+            {
+                "symbol": "&#x1F4E5",
+                "type": "Build definition",
+                "name": "Continuous Delivery",
+                "image": "images/StatusAnnotations_Complete_and_ok_16xMD_color.png",
+                "description": "succeeded for Jim Lamb"
+            }
+        ]
+    },
+    {
+        "group": "Sudden Storm",
+        "items": [
+            {
+                "count": "3",
+                "type": "work",
+                "name": "Active Bugs",
+                "description": "3 active"
+            },
+            {
+                "count": "10",
+                "type": "work",
+                "name": "Backlog",
+                "description": "3 new, 7 in progress"
+            },
+            {
+                "symbol": "&#x1F4E5",
+                "type": "Build definition",
+                "name": "Nightly",
+                "image": "images/StatusAnnotations_Critical_16xMD_color.png",
+                "description": "failed 9h ago"
+            },
+            {
+                "count": "5",
+                "type": "code",
+                "name": "Solutions\\",
+                "description": "Updated dependencies to latest"
+            }
+        ]
+    }
+];

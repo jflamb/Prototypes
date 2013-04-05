@@ -200,6 +200,29 @@ div.content div.primary section.collections {
   width: 312.6666666666667px;
   float: left;
 }
+div.content div.primary section.recent div.heading,
+div.content div.primary section.favorites div.heading,
+div.content div.primary section.collections div.heading {
+  padding-bottom: 5.333333333333333px;
+  margin-bottom: 16px;
+  border-bottom: solid 1px #DDD;
+  width: 100%;
+  display: inline-block;
+  vertical-align: text-bottom;
+}
+div.content div.primary section.recent div.heading h2,
+div.content div.primary section.favorites div.heading h2,
+div.content div.primary section.collections div.heading h2 {
+  display: inline;
+  border-bottom: 0;
+}
+div.content div.primary section.recent div.heading p.actions,
+div.content div.primary section.favorites div.heading p.actions,
+div.content div.primary section.collections div.heading p.actions {
+  margin-left: 16px;
+  display: inline;
+  clear: both;
+}
 div.content div.primary section.recent h3,
 div.content div.primary section.favorites h3,
 div.content div.primary section.collections h3 {
@@ -311,6 +334,23 @@ div.content div.primary br {
 div.content aside {
   float: left;
   width: 312.6666666666667px;
+}
+div.content aside div.news div.heading {
+  padding-bottom: 5.333333333333333px;
+  margin-bottom: 0;
+  border-bottom: solid 1px #DDD;
+  display: inline-block;
+  vertical-align: text-bottom;
+  width: 100%;
+}
+div.content aside div.news div.heading h2 {
+  display: inline;
+  border-bottom: 0;
+}
+div.content aside div.news div.heading p.actions {
+  margin-left: 8px;
+  display: inline;
+  clear: both;
 }
 div.content aside .users {
   float: left;
@@ -569,12 +609,20 @@ div.profileTip {
   box-shadow: 0 5px 10px #888;
 }
 div.popUp {
-  background-color: #ddd;
-  border: solid 1px #bbb;
-  padding: 8px;
+  background-color: #fff;
+  padding-bottom: 6px;
+  border-bottom: solid 5px #007acc;
+  padding: 16px;
+}
+div.popUp h2 {
+  clear: both;
+  border: 0;
 }
 div.popUp p {
   margin: 0;
+}
+div.popUp ul {
+  padding-bottom: 24px;
 }
 div.popUp ul li {
   padding-top: 8px;

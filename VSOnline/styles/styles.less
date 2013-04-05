@@ -257,6 +257,26 @@ div.content {
             width: @column-width;
             float: left;
 
+            div.heading {
+                padding-bottom: (@gutter / 3);
+                margin-bottom: @gutter;
+                border-bottom: solid 1px #DDD;
+                width: 100%;
+                display: inline-block; 
+                vertical-align: text-bottom;
+
+                h2 {
+                    display: inline;
+                    border-bottom: 0;
+                }
+
+                p.actions {
+                    margin-left: @gutter;
+                    display: inline; 
+                    clear: both;
+                }
+            }
+
             h3 {
                 padding-bottom: (@gutter / 2);
             }
@@ -337,6 +357,28 @@ div.content {
     aside {
         float: left;
         width: @column-width;
+
+        div.news {
+            div.heading {
+                padding-bottom: (@gutter / 3);
+                margin-bottom: 0;
+                border-bottom: solid 1px #DDD;
+                display: inline-block; 
+                vertical-align: text-bottom;
+                width: 100%;
+
+                h2 {
+                    display: inline;
+                    border-bottom: 0;
+                }
+
+                p.actions {
+                    margin-left: @gutter / 2;
+                    display: inline; 
+                    clear: both;
+                }
+            }
+        }
 
         .users {
             float: left;
@@ -625,17 +667,27 @@ div.popUp, div.menu, div.profileTip {
 }
 
 div.popUp {
-    background-color: #ddd; 
-    border: solid 1px #bbb;
-    padding: @gutter / 2;
+    background-color: #fff;
+    padding-bottom: 6px;
+    border-bottom: solid 5px @lightBlue;
+    padding: @gutter;
+
+    h2 {
+        clear: both;
+        border: 0;
+    }
 
     p {
         margin: 0;
     }
 
-    ul li {
-        padding-top: @gutter / 2;
-        clear: both;
+    ul {
+        padding-bottom: (3 * @gutter) / 2;
+
+        li {
+            padding-top: @gutter / 2;
+            clear: both;
+        }
     }
 
     img.icon {

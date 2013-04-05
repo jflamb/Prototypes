@@ -1,0 +1,33 @@
+﻿<script id="itemTemplate" type="text/x-jquery-tmpl">
+    <ul>
+        {{each items}}
+        <li>
+            <a href='#'>
+                {{if typeof(symbol) != 'undefined'}}
+                <span class='symbol' title='${type}'>${symbol}</span>
+                {{else typeof(count) != 'undefined'}}
+                <span class='${type}'>${count}</span>
+                {{/if}}
+                <span><strong>${name}</strong></span>
+                <span class='subdued'>
+                    {{if typeof(image) != 'undefined'}}
+                    <img src='${image}' />
+                    {{/if}}
+                    ${description}
+                </span>
+            </a>
+        </li>
+        {{/each}}
+    </ul>
+</script>
+
+<script id="groupTemplate" type="text/x-jquery-tmpl">
+    <h3>${group}</h3>
+    {{tmpl($data) "#itemTemplate"}}
+</script>
+
+<script id="newsTemplate" type="text/x-jquery-templ">
+    <p><a href='${url}' target="_blank">
+        <span class="underlineOnHover">${title}</span> <span class="symbol showOnHover">&#xE143</span></a><br />
+        <span class="subdued">${age}</span></p>    
+</script>

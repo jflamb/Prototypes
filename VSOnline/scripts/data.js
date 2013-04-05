@@ -1,3 +1,24 @@
+var itemTemplate = "<ul>\
+{{each items}}\
+<li>\
+    <a href='#'>\
+        {{if typeof(symbol) != 'undefined'}}\
+        <span class='symbol' title='${type}'>${symbol}</span>\
+{{else typeof(count) != 'undefined'}}\
+<span class='${type}'>${count}</span>\
+{{/if}}\
+<span><strong>${name}</strong></span>\
+<span class='subdued'>\
+    {{if typeof(image) != 'undefined'}}\
+    <img src='${image}' />\
+    {{/if}}\
+    ${description}\
+</span>\
+</a>\
+</li>\
+{{/each}}\
+</ul>";
+
 var recentItems = [
     {
         "group": "Today",
@@ -83,5 +104,18 @@ var favoriteItems = [
                 "description": "Updated dependencies to latest"
             }
         ]
+    }
+];
+
+var newsItems = [
+    {
+        "title": "Fixed the incorrect order of the first column on the Kanban board on the service",
+        "url": "http://blogs.msdn.com/b/visualstudioalm/archive/2013/03/14/fixed-the-incorrect-order-of-the-first-column-on-the-kanban-board-on-the-service.aspx",
+        "age": "4 days ago"
+    },
+    {
+        "title": "Team Foundation Service Updates",
+        "url": "http://tfs.visualstudio.com/en-us/home/news/2013/mar-4/",
+        "age": "2 weeks ago"
     }
 ];

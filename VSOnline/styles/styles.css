@@ -139,6 +139,29 @@ div.hubs ul li.active {
   border-bottom: solid 0.4em #007acc;
 }
 /* layout */
+div.configure {
+  position: fixed;
+  bottom: 0;
+  bottom: 16px;
+  right: 16px;
+}
+div.configure a {
+  display: inline-block;
+  background-color: #ddd;
+  color: #fff;
+  font-weight: bold;
+  padding: 5.333333333333333px 8px;
+  margin-right: 5.333333333333333px;
+}
+div.configure a.active {
+  background-color: #007acc;
+}
+div.configure a:hover {
+  background-color: #aaa;
+}
+div.configure a.active:hover {
+  background-color: #005b99;
+}
 div.content {
   width: 100%;
 }
@@ -223,6 +246,11 @@ div.content div.primary section.collections div.heading p.actions {
   display: inline;
   clear: both;
 }
+div.content div.primary section.recent p.new,
+div.content div.primary section.favorites p.new,
+div.content div.primary section.collections p.new {
+  margin: 0 0 1em 0;
+}
 div.content div.primary section.recent h3,
 div.content div.primary section.favorites h3,
 div.content div.primary section.collections h3 {
@@ -258,7 +286,7 @@ div.content div.primary section.collections ul li a > span:first-child {
   height: 32px;
   line-height: 32px;
   width: 32px;
-  margin-right: 5.333333333333333px;
+  margin-right: 8px;
   background-color: #007acc;
   text-align: center;
   vertical-align: middle;
@@ -312,6 +340,16 @@ div.content div.primary section.recent ul li a:hover > span.collection,
 div.content div.primary section.favorites ul li a:hover > span.collection,
 div.content div.primary section.collections ul li a:hover > span.collection {
   background-color: #005700;
+}
+div.content div.primary section.recent ul li a > span.offline,
+div.content div.primary section.favorites ul li a > span.offline,
+div.content div.primary section.collections ul li a > span.offline {
+  background-color: #595959;
+}
+div.content div.primary section.recent ul li a:hover > span.offline,
+div.content div.primary section.favorites ul li a:hover > span.offline,
+div.content div.primary section.collections ul li a:hover > span.offline {
+  background-color: #3f3f3f;
 }
 div.content div.primary section.recent ul li a:hover span.subdued,
 div.content div.primary section.favorites ul li a:hover span.subdued,

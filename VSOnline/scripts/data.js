@@ -1,3 +1,7 @@
+function hasParameter(name) {
+    return (window.location.search.indexOf(name) > 0);
+}
+
 var today = new Date();
 
 function addDate(dateObject, numDays) {
@@ -106,6 +110,55 @@ var favoriteItems = [
                 "type": "code",
                 "name": "Solutions\\",
                 "description": "Updated all NuGet dependencies to their latest versions"
+            }
+        ]
+    }
+];
+
+var collectionItems = [
+    {
+        "group": "Online",
+        "items": [
+            {
+                "count": "1",
+                "type": "collection",
+                "name": "DevDiv_Projects2",
+                "description": "Projects that don't relate to VS but live on the DevDiv server"
+            },
+            {
+                "count": "1",
+                "type": "collection",
+                "name": "SDK",
+                "description": "Source for various SDKs"
+            },
+            {
+                "count": "1",
+                "type": "collection",
+                "name": "TEE",
+                "description": "Team Explorer Everywhere"
+            },
+            {
+                "count": "1",
+                "type": "collection",
+                "name": "TfsOpsCollection",
+                "description": "Tools maintained by the Ops team"
+            },
+            {
+                "count": "6",
+                "type": "collection",
+                "name": "VSTSDF",
+                "description": "Visual Studio related projects"
+            }
+        ]
+    },
+    {
+        "group": "Offline",
+        "items": [
+            {
+                "count": "1",
+                "type": "offline",
+                "name": "TestCollection1",
+                "description": "For testing purposes only"
             }
         ]
     }

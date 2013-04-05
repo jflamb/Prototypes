@@ -8,9 +8,7 @@
 
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     <script type="text/javascript" src="scripts/jquery.tmpl.min.js"></script>
-    <script type="text/javascript" src="scripts/jquery.timeago.js"></script>
     <script type="text/javascript" src="scripts/moment.min.js"></script>
-    <script type="text/javascript" src="scripts/pretty.js"></script>
     <script type="text/javascript" src="scripts/data.js"></script>
     
     <link rel="stylesheet" href="styles/styles.min.css" type="text/css" />
@@ -48,199 +46,287 @@
     </script>
 
     <script id="newsTemplate" type="text/x-jquery-templ">
-        <p><a href='${url}' target="_blank">
-            <span class="underlineOnHover">${title}</span> <span class="symbol showOnHover">&#xE143</span></a><br />
-            <span class="subdued">${age}</span></p>    
-    </script>
+    <p><a href='${url}' target="_blank">
+        <span class="underlineOnHover">${title}</span> <span class="symbol showOnHover">&#xE143</span></a><br />
+        <span class="subdued">${age}</span></p>    
+</script>
 
 </head>
-<body class="account">
-    <div class="contextBar">
-        <ul class="accountContext">
-            <li><a href="https://tfs.visualstudio.com/" title="Team Foundation Service Welcome Portal">
-                <img src="images/vslogo-small.png" />&nbsp;Team Foundation Service</a></li>
-            <li>/</li>
-            <li><a href="#" class="popUpParent" data-popup="#accountMenu"><strong>Contoso</strong>&nbsp;<span class="dingbat">6</span></a></li>
-        </ul>
-        <ul class="identityContext">
-            <li><a href="#" class="popUpParent" data-popup="#profilePopUp">Jim Lamb&nbsp;<span class="dingbat">6</span></a></li>
-            <li>|</li>
-            <li><a href="#"><img src="images/Settings_7343_16x_white.png" /></a>
-            </li><li><a id="helpAccess" class="popUpParent" data-popup="#helpMenu" href="#"><img src="images/StatusAnnotations_Help_and_inconclusive_white.png" /></a></li>
-        </ul>
-    </div>
-
-    <div class="hubs">
-        <ul>
-            <li class="active">Account</li>
-            <li><a href="#">Rooms</a></li>
-            <li><a href="#">Users</a></li>
-            <li><a href="#">Feedback</a></li>
-        </ul>
-    </div>
-
-    <div class="content">
-        <div class="primary">
-            <section class="starting" id="gettingStarted">
-                <h2 class="tight">Getting started <a class="symbol sectionCloser" title="Hide the Getting Started section.
-Select Help, Getting started to see it again.">&#xE0E1</a></h2>
-                <ul class="tiles">
-                    <li class="tools">
-                        <a href="https://tfs.visualstudio.com/en-us/learn/code/connect-vs/" target="_blank">
-                            <h3>Get Connected</h3>
-                            <p>Connect your account to Visual Studio</p>
-                        </a>
-                    </li><li class="code" >
-                        <a href="http://tfs.visualstudio.com/en-us/learn/code/upload-source-with-vs/" target="_blank">
-                            <h3>Upload your code</h3>
-                            <p>Get your code under version control</p>
-                        </a>
-                    </li><li class="work" >
-                        <a href="https://tfs.visualstudio.com/en-us/learn/collaborate/plan-your-sprint/" target="_blank">
-                            <h3>Plan your sprint</h3>
-                            <p>Create a backlog and plan your first sprint</p>
-                        </a>
-                    </li><li class="commands">
-                        <ul>
-                            <li>
-                                <a href="#" class="create popUpParent" data-popup="#newProjectPopUp">
-                                    <strong>Create a project</strong>&nbsp;
-                                    <span class="dingbat">6</span>
-                                </a>
-                            </li><li>
-                                <a href="#" class="grow">
-                                    <strong>Grow your team</strong>&nbsp;
-                                    <span class="symbol">&#xE0B6</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </section>
-            <section class="recent">
-                <div class="heading">
-                    <h2>Recent</h2>
-                    <p class="actions">
-                        <a href="#"><span class="underlineOnHover">Browse</span></a>
-                        <a href="#" class="popUpParent" data-popup="#newProjectPopUp"><span class="underlineOnHover">New </span> <span class="dingbat">6</span></a>
-                    </p>
-                </div>
-            </section>
-            <section class="favorites">
-                <div class="heading">
-                    <h2>Favorites</h2>
-                    <p class="actions"></p>
-                </div>
-            </section>
+    <body class="account">
+        <div class="configure">
+            <a href="#" class="new">New</a>
+            <a href="#" class="admin">Admin</a>
+            <a href="#" class="app">App</a>
         </div>
-        <aside>
-            <div class="news">
-                <div class="heading">
-                    <h2>News</h2>
-                    <p class="actions">
-                        <a href="http://blogs.msdn.com/b/visualstudioalm/archive/tags/tfservice/" target="_blank">
-                            <span class="underlineOnHover">View all news</span> <span class="symbol showOnHover">&#xE143</span></a>
-                    </p>
-                </div>
-            </div>
-            <div class="account">
-                <h2>Dev machine tools</h2>
-                <p class="acquisition">
-                    <a href="#" title="Open Visual Studio and connect Team Explorer to this account">
-                        <img src="images/vs-icon-32px.png" />
-                        <strong class="underlineOnHover">Open in Visual Studio</strong><br />
-                        <span class="subdued">Requires local install of Visual Studio 2012+</span></a>
-                </p>
-
-                <p><a href="http://go.microsoft.com/fwlink/?LinkId=227805" target="_blank">
-                    <span class="underlineOnHover">Download Visual Studio and other tools</span> <span class="symbol showOnHover">&#xE143</span></a></p>
-            </div>
-            <!--
-            <div class="users">
-                <h2>Users</h2>
-                <table class="avatars">
-                    <tbody>
-                        <tr>
-                            <td class="medium" ><a href="#" title="Jim Lamb
-Account owner"><img src="http://en.gravatar.com/userimage/16948269/ae054dbad79b4b436920c597aa4ab749.jpeg" alt="Jim Lamb"/></a></td>
-                            <td class="medium" colspan="2"><a href="user.html" title="Jamie Cool"><img src="https://secure.gravatar.com/avatar/6857db6b426c36caa9617fff0accbf28.jpeg" /></a></td>
-                        </tr>
-                        <tr>
-                            <td class="medium" rowspan="2"><a href="new.html" title="Matt Mitrik"><img src="http://m.c.lnkd.licdn.com/media/p/1/000/099/1a7/1fb8c50.jpg" /></a></td>
-                            <td class="small blank">&nbsp;</td>
-                            <td class="small blank">&nbsp;</td>
-                        </tr>
-                        <tr>
-                            <td class="small blank">&nbsp;</td>
-                            <td class="small"><a href="#" class="symbol command" title="Add user">&#xE1E2</a></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            -->
-            <div class="resources">
-                <h2>Build usage</h2>
-                <a href="#" title="Manage build resources">
-                    <div class="build-resource">
-                        <span class="used">66% of 600 minutes</span>
-                        <span class="quota"></span>
-                    </div>
-                </a>
-                <p class="subdued">7% under target</p>
-            </div>
-        </aside>
-    </div>
-    <div id="newProjectPopUp" class="popUp">
-        <h2>Project</h2>
-        <p>Choose a version control provider:</p>
-        <ul>
-            <li><a href="#">
-                    <img src="images/Git-Icon-32px.png" alt="Git" class="icon" />
-                    <span class="underlineOnHover"><strong>Git</strong></span><br />
-                    <span class="subdued">distributed</span>
-                </a></li>
-            <li><a href="#">
-                    <img src="images/vs-icon-32px.png" alt="Team Foundation Version Control" class="icon" />
-                    <span class="underlineOnHover"><strong>Team Foundation Version Control</strong></span><br />
-                    <span class="subdued">centralized</span>
-                </a></li>
-        </ul>
-        <h2>Room</h2>
-        <p><a href="#">Create a new discussion room</a></p>
-    </div>
-    <div id="accountMenu" class="menu">
-        <ul>
-            <li><a href="#">Contoso</a></li>
-            <li><a href="#">Jim Lamb</a></li>
-            <li><a href="#">Slate Labs</a></li>
-        </ul>
-    </div>
-    <div id="profilePopUp" class="profileTip">
-        <div class="container">
-            <img src="http://en.gravatar.com/userimage/16948269/ae054dbad79b4b436920c597aa4ab749.jpeg" />
-            <ul>
-                <li><a href="#">My profile</a></li>
-                <li><a href="#">Sign out</a></li>
+        <div class="contextBar">
+            <ul class="accountContext">
+                <li><a href="https://tfs.visualstudio.com/" title="Team Foundation Service Welcome Portal">
+                        <img src="images/vslogo-small.png" />&nbsp;Team Foundation Service</a></li>
+                <li class="account">/</li>
+                <li class="account"><a href="#" class="popUpParent" data-popup="#accountMenu"><strong>Contoso</strong>&nbsp;<span class="dingbat">6</span></a></li>
+            </ul>
+            <ul class="identityContext">
+                <li><a href="#" class="popUpParent" data-popup="#profilePopUp">Jim Lamb&nbsp;<span class="dingbat">6</span></a></li>
+                <li>|</li>
+                <li><a href="#" class="settings"><img src="images/Settings_7343_16x_white.png" /></a>
+                </li><li><a id="helpAccess" class="popUpParent" data-popup="#helpMenu" href="#"><img src="images/StatusAnnotations_Help_and_inconclusive_white.png" /></a></li>
             </ul>
         </div>
-        <p class="identity">jimlamb@live.com</p>
-    </div>
-    <div id="helpMenu" class="menu">
-        <ul>
-            <li><a href="#" class="visibilityToggle" data-element="#gettingStarted" title="Toggle the visibility of the Getting Started section">Getting Started</a></li>
-            <li><a href="http://msdn.microsoft.com/en-us/library/tfs/fda2bad5(v=vs.110)" target="_blank">MSDN</a></li>
-            <li><a href="https://tfs.visualstudio.com/en-us/community/meet-the-community/" target="_blank">Community</a></li>
-            <li><a href="https://tfs.visualstudio.com/en-us/support/current-service-status/" target="_blank">Support</a></li>
-            <li><a href="http://go.microsoft.com/fwlink/?LinkId=225082" target="_blank">Make a suggestion</a></li>
-            <li><a href="https://tfs.visualstudio.com/en-us/support/legal/privacy-policy/" target="_blank">Privacy Policy</a></li>
-        </ul>
-    </div>
-</body>
+
+        <div class="hubs">
+            <ul>
+                <li class="active">Account</li>
+                <li><a href="#">Rooms</a></li>
+                <li><a href="#">Users</a></li>
+                <li><a href="#">Feedback</a></li>
+            </ul>
+        </div>
+
+        <div class="content">
+            <div class="primary">
+                <section class="starting" id="gettingStarted">
+                    <h2 class="tight">Getting started <a class="symbol sectionCloser" title="Hide the Getting Started section.
+Select Help, Getting started to see it again.">&#xE0E1</a></h2>
+                    <ul class="tiles">
+                        <li class="tools">
+                            <a href="https://tfs.visualstudio.com/en-us/learn/code/connect-vs/" target="_blank">
+                                <h3>Get Connected</h3>
+                                <p>Connect your account to Visual Studio</p>
+                            </a>
+                        </li><li class="code" >
+                                 <a href="http://tfs.visualstudio.com/en-us/learn/code/upload-source-with-vs/" target="_blank">
+                                     <h3>Upload your code</h3>
+                                     <p>Get your code under version control</p>
+                                 </a>
+                             </li><li class="work" >
+                                      <a href="https://tfs.visualstudio.com/en-us/learn/collaborate/plan-your-sprint/" target="_blank">
+                                          <h3>Plan your sprint</h3>
+                                          <p>Create a backlog and plan your first sprint</p>
+                                      </a>
+                                  </li><li class="build">
+                                           <a href="http://tfs.visualstudio.com/en-us/learn/build/setup-ci-build-in-vs/" target="_blank">
+                                               <h3>Automate your build</h3>
+                                               <p>Setup a continuous integration build in the cloud</p>
+                                           </a>
+                                       </li><li class="commands">
+                                                <ul>
+                                                    <li>
+                                                        <a href="#" class="create popUpParent" data-popup="#newProjectPopUp">
+                                                            <strong>Create a project</strong>&nbsp;
+                                                            <span class="dingbat">6</span>
+                                                        </a>
+                                                    </li><li>
+                                                             <a href="#" class="grow">
+                                                                 <strong>Grow your team</strong>&nbsp;
+                                                                 <span class="symbol">&#xE0B6</span>
+                                                             </a>
+                                                         </li>
+                                                </ul>
+                                            </li>
+                    </ul>
+                </section>
+                <section class="recent">
+                    <div class="heading">
+                        <h2>Recent</h2>
+                        <p class="actions">
+                            <a href="#"><span class="underlineOnHover">Browse</span></a>
+                            <a href="#" class="popUpParent new" data-popup="#newProjectPopUp"><span class="underlineOnHover">New </span> <span class="dingbat">6</span></a>
+                        </p>
+                    </div>
+                    <p class="subdued new">
+                        You don't have any projects yet!</p>
+                    <p class="subdued new"><a href="javascript:alert('Invokes Create New Team Project dialog');"><span class="underlineOnHover">Create your first project</span></a> or<br />
+                        <a href="https://tfs.visualstudio.com/en-us/learn/start/get-started/"><span class="underlineOnHover">learn more about Team Foundation Service</span> <span class="symbol showOnHover">&#xE143</span></a></p>
+                </section>
+                <section class="favorites">
+                    <div class="heading">
+                        <h2>Favorites</h2>
+                        <p class="actions"></p>
+                    </div>
+                    <p class="subdued new">
+                        When you add work items queries, build definitions and version control folders to your favorites, they'll show up here.
+                    </p> 
+                </section>
+                <section class="collections"> 
+                    <div class="heading">
+                        <h2>Collections</h2>
+                    </div>
+                </section>
+            </div>
+            <aside>
+                <div class="news">
+                    <div class="heading">
+                        <h2>News</h2>
+                        <p class="actions">
+                            <a href="https://tfs.visualstudio.com/en-us/home/news/" target="_blank">
+                                <span class="underlineOnHover">View all news</span> <span class="symbol showOnHover">&#xE143</span></a>
+                        </p>
+                    </div>
+                </div>
+                <div class="tools">
+                    <h2>Dev machine tools</h2>
+                    <p class="acquisition">
+                        <a href="#" title="Open Visual Studio and connect Team Explorer to this account">
+                            <img src="images/vs-icon-32px.png" />
+                            <strong class="underlineOnHover">Open in Visual Studio</strong><br />
+                            <span class="subdued">Requires local install of Visual Studio 2012+</span></a>
+                    </p>
+
+                    <p><a href="http://go.microsoft.com/fwlink/?LinkId=227805" target="_blank">
+                           <span class="underlineOnHover">Download Visual Studio and other tools</span> <span class="symbol showOnHover">&#xE143</span></a></p>
+                </div>
+                <!--
+                    <div class="users">
+                        <h2>Users</h2>
+                        <table class="avatars">
+                            <tbody>
+                                <tr>
+                                    <td class="medium" ><a href="#" title="Jim Lamb
+Account owner"><img src="http://en.gravatar.com/userimage/16948269/ae054dbad79b4b436920c597aa4ab749.jpeg" alt="Jim Lamb"/></a></td>
+                                    <td class="medium" colspan="2"><a href="user.html" title="Jamie Cool"><img src="https://secure.gravatar.com/avatar/6857db6b426c36caa9617fff0accbf28.jpeg" /></a></td>
+                                </tr>
+                                <tr>
+                                    <td class="medium" rowspan="2"><a href="new.html" title="Matt Mitrik"><img src="http://m.c.lnkd.licdn.com/media/p/1/000/099/1a7/1fb8c50.jpg" /></a></td>
+                                    <td class="small blank">&nbsp;</td>
+                                    <td class="small blank">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td class="small blank">&nbsp;</td>
+                                    <td class="small"><a href="#" class="symbol command" title="Add user">&#xE1E2</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    -->
+                <div class="resources">
+                    <h2>Build usage</h2>
+                    <a href="#" title="Manage build resources">
+                        <div class="build-resource"> 
+                            <span class="used">66% of 600 minutes</span>
+                            <span class="quota"></span>
+                        </div>
+                    </a>
+                    <p class="subdued">7% under target</p>
+                </div>
+            </aside>
+        </div>
+        <div id="newProjectPopUp" class="popUp">
+            <h2>Project</h2>
+            <p>Choose a version control provider:</p>
+            <ul>
+                <li><a href="#">
+                        <img src="images/Git-Icon-32px.png" alt="Git" class="icon" />
+                        <span class="underlineOnHover"><strong>Git</strong></span><br />
+                        <span class="subdued">distributed</span>
+                    </a></li>
+                <li><a href="#">
+                        <img src="images/vs-icon-32px.png" alt="Team Foundation Version Control" class="icon" />
+                        <span class="underlineOnHover"><strong>Team Foundation Version Control</strong></span><br />
+                        <span class="subdued">centralized</span>
+                    </a></li>
+            </ul>
+            <h2>Room</h2>
+            <p><a href="#">Create a new discussion room</a></p>
+        </div>
+        <div id="accountMenu" class="menu">
+            <ul>
+                <li><a href="#">Contoso</a></li>
+                <li><a href="#">Jim Lamb</a></li>
+                <li><a href="#">Slate Labs</a></li>
+            </ul>
+        </div>
+        <div id="profilePopUp" class="profileTip">
+            <div class="container">
+                <img src="http://en.gravatar.com/userimage/16948269/ae054dbad79b4b436920c597aa4ab749.jpeg" />
+                <ul>
+                    <li><a href="#">My profile</a></li>
+                    <li><a href="#">Sign out</a></li>
+                </ul>
+            </div>
+            <p class="identity">jimlamb@live.com</p>
+        </div>
+        <div id="helpMenu" class="menu">
+            <ul>
+                <li><a href="#" class="visibilityToggle" data-element="#gettingStarted" title="Toggle the visibility of the Getting Started section">Getting Started</a></li>
+                <li><a href="http://msdn.microsoft.com/en-us/library/tfs/fda2bad5(v=vs.110)" target="_blank">MSDN</a></li>
+                <li><a href="https://tfs.visualstudio.com/en-us/community/meet-the-community/" target="_blank">Community</a></li>
+                <li><a href="https://tfs.visualstudio.com/en-us/support/current-service-status/" target="_blank">Support</a></li>
+                <li><a href="http://go.microsoft.com/fwlink/?LinkId=225082" target="_blank">Make a suggestion</a></li>
+                <li><a href="https://tfs.visualstudio.com/en-us/support/legal/privacy-policy/" target="_blank">Privacy Policy</a></li>
+            </ul>
+        </div>
+    </body>
 <script type="text/javascript">
     $(function () {
-        $("#groupTemplate").tmpl(recentItems).appendTo("section.recent");
-        $("#groupTemplate").tmpl(favoriteItems).appendTo("section.favorites");
+        if (hasParameter('admin')) {
+            $('ul.tiles li.build').hide();
+            $('.configure a.admin').addClass('active');
+        } else {
+            $('ul.tiles li.commands').hide();
+            $('p.actions a.new').hide();
+        }
+        
+        if (hasParameter('new')) {
+            $('.configure a.new').addClass('active');
+            /*
+            $('.build-resource span.used').css('width', '0');
+            $('.build-resource span.used').text('0% of 600 minutes');
+            */
+        } else {
+            $('section p.new').hide();
+            $("#groupTemplate").tmpl(recentItems).appendTo("section.recent");
+        }
+
+        if (hasParameter('app')) {
+            $('.configure a.app').addClass('active');
+            $('div.contextBar ul.accountContext li.account').hide();
+            $('div.hubs').hide();
+            $('div.content').css('margin-top', '1em');
+            $('section.starting').hide();
+            $('section.favorites').hide();
+            $('div.tools').hide();
+            $("#groupTemplate").tmpl(collectionItems).appendTo("section.collections");
+        } else {
+            $('section.collections').hide();
+            
+            if (!hasParameter('new')) {
+                $("#groupTemplate").tmpl(favoriteItems).appendTo("section.favorites");
+            }
+        }
+
         $("#newsTemplate").tmpl(newsItems).appendTo("div.news");
+    });
+
+    function toggleConfiguration(configName) {
+        if (hasParameter(configName)) {
+            url = window.location.href;
+            url = url.replace("&" + configName, "");
+            url = url.replace("?" + configName, "");
+            url = url.replace(".html&", ".html?")
+            window.location.replace(url);
+        } else {
+            var url = window.location.href;
+
+            if (url[url.length - 1] == '#') {
+                url = url.substring(0, url.length - 1);
+            }
+
+            if (url.indexOf('?') > 0) {
+                window.location.replace(url + "&" + configName);
+            } else {
+                window.location.replace(url + "?" + configName);
+            }
+        }
+    }
+
+    $('.configure a.new').click(function (e) {
+        toggleConfiguration('new');
+    });
+    $('.configure a.admin').click(function (e) {
+        toggleConfiguration('admin');
+    });
+    $('.configure a.app').click(function (e) {
+        toggleConfiguration('app');
     });
 
     $('a.popUpParent').click(function (e) {

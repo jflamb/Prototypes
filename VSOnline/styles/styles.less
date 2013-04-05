@@ -186,6 +186,34 @@ div.hubs {
 @resource-width: ((@column-width - @gutter) / 2);
 @primary-width: ((2 * @column-width) + @gutter);
 
+div.configure {
+    position: fixed;
+    bottom: 0;
+    bottom: @gutter;
+    right: @gutter;
+
+    a {
+        display: inline-block;
+        background-color: #ddd;
+        color: #fff;
+        font-weight: bold;
+        padding: (@gutter / 3) (@gutter / 2);
+        margin-right: @gutter / 3;
+    }
+    
+    a.active {
+        background-color: @lightBlue;
+    }
+
+    a:hover {
+        background-color: #aaa;
+    }
+
+    a.active:hover {
+        background-color: darken(@lightBlue, 10%);
+    }
+}
+
 div.content {
     width: 100%;
 
@@ -277,6 +305,8 @@ div.content {
                 }
             }
 
+            p.new { margin: 0 0 1em 0; }
+
             h3 {
                 padding-bottom: (@gutter / 2);
             }
@@ -307,7 +337,7 @@ div.content {
                         height: 32px;
                         line-height: 32px;
                         width: 32px;
-                        margin-right: (@gutter / 3);
+                        margin-right: (@gutter / 2);
                         background-color: @lightBlue;
                         text-align: center;
                         vertical-align: middle;
@@ -332,6 +362,9 @@ div.content {
 
                     a > span.collection { background-color: @collectionColor; }
                     a:hover > span.collection { background-color: darken(@collectionColor, 10%); }
+
+                    a > span.offline { background-color: @buildColor; }
+                    a:hover > span.offline { background-color: darken(@buildColor, 10%); }
 
                     a:hover span.subdued {
                         color: #444;

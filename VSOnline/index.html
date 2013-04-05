@@ -40,7 +40,7 @@
 
     <script id="groupTemplate" type="text/x-jquery-tmpl">
         {{if typeof(date) != 'undefined'}}
-        <h3><time class="timeago" datetime="${date.toISOString()}">${prettyDate(date.toLocaleDateString())}</time></h3>
+        <h3><time class="timeago" datetime="${date.toISOString()}">${friendlyDate(date)}</time></h3>
         {{else}}
         <h3>${group}</h3>
         {{/if}}

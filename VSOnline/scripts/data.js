@@ -5,6 +5,13 @@ function addDate(dateObject, numDays) {
     return dateObject;
 }
 
+function friendlyDate(date) {
+    var result = moment(date.toISOString()).calendar();
+    var i = result.indexOf("at");
+    if (i > 0) result = result.substring(0, i - 1);
+    return result;
+}
+
 var recentItems = [
     {
         "date": new Date(),

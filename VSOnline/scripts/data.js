@@ -1,27 +1,13 @@
-var itemTemplate = "<ul>\
-{{each items}}\
-<li>\
-    <a href='#'>\
-        {{if typeof(symbol) != 'undefined'}}\
-        <span class='symbol' title='${type}'>${symbol}</span>\
-{{else typeof(count) != 'undefined'}}\
-<span class='${type}'>${count}</span>\
-{{/if}}\
-<span><strong>${name}</strong></span>\
-<span class='subdued'>\
-    {{if typeof(image) != 'undefined'}}\
-    <img src='${image}' />\
-    {{/if}}\
-    ${description}\
-</span>\
-</a>\
-</li>\
-{{/each}}\
-</ul>";
+var today = new Date();
+
+function addDate(dateObject, numDays) {
+    dateObject.setDate(dateObject.getDate() + numDays);
+    return dateObject;
+}
 
 var recentItems = [
     {
-        "group": "Today",
+        "date": new Date(),
         "items": [
             {
                 "symbol": "&#xE188",
@@ -38,7 +24,7 @@ var recentItems = [
         ]
     },
     {
-        "group": "Yesterday",
+        "date": new Date(addDate(today, -3)),
         "items": [
             {
                 "symbol": "&#xE188",
@@ -51,6 +37,17 @@ var recentItems = [
                 "type": "Room",
                 "name": "Freezing Fog Team Room",
                 "description": "Who can work on this bug?"
+            }
+        ]
+    },
+    {
+        "date": new Date(addDate(today, -7)),
+        "items": [
+            {
+                "symbol": "&#xE125",
+                "type": "Team",
+                "name": "Freezing Fog / Really, extremely long team name",
+                "description": "4 member team"
             }
         ]
     }
@@ -101,7 +98,7 @@ var favoriteItems = [
                 "count": "5",
                 "type": "code",
                 "name": "Solutions\\",
-                "description": "Updated dependencies to latest"
+                "description": "Updated all NuGet dependencies to their latest versions"
             }
         ]
     }

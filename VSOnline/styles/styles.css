@@ -244,6 +244,9 @@ div.content div.primary section.recent ul li a > span,
 div.content div.primary section.favorites ul li a > span,
 div.content div.primary section.collections ul li a > span {
   display: block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 div.content div.primary section.recent ul li a > span:first-child,
 div.content div.primary section.favorites ul li a > span:first-child,

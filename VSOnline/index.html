@@ -8,6 +8,9 @@
 
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     <script type="text/javascript" src="scripts/jquery.tmpl.min.js"></script>
+    <script type="text/javascript" src="scripts/jquery.timeago.js"></script>
+    <script type="text/javascript" src="scripts/moment.min.js"></script>
+    <script type="text/javascript" src="scripts/pretty.js"></script>
     <script type="text/javascript" src="scripts/data.js"></script>
     
     <link rel="stylesheet" href="styles/styles.min.css" type="text/css" />
@@ -20,10 +23,10 @@
                     {{if typeof(symbol) != 'undefined'}}
                     <span class='symbol' title='${type}'>${symbol}</span>
                     {{else typeof(count) != 'undefined'}}
-                    <span class='${type}'>${count}</span>
+                    <span class='${type}' title='${name}'>${count}</span>
                     {{/if}}
-                    <span><strong>${name}</strong></span>
-                    <span class='subdued'>
+                    <span title='${name}'><strong>${name}</strong></span>
+                    <span class='subdued' title='${description}'>
                         {{if typeof(image) != 'undefined'}}
                         <img src='${image}' />
                         {{/if}}
@@ -36,7 +39,11 @@
     </script>
 
     <script id="groupTemplate" type="text/x-jquery-tmpl">
+        {{if typeof(date) != 'undefined'}}
+        <h3><time class="timeago" datetime="${date.toISOString()}">${prettyDate(date.toLocaleDateString())}</time></h3>
+        {{else}}
         <h3>${group}</h3>
+        {{/if}}
         {{tmpl($data) "#itemTemplate"}}
     </script>
 

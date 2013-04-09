@@ -54,9 +54,9 @@
 </head>
     <body class="account">
         <div class="configure">
-            <a href="#" class="new">New</a>
-            <a href="#" class="admin">Admin</a>
-            <a href="#" class="app">App</a>
+            <a href="#" class="new" title="See the page with(out) data">New</a>
+            <a href="#" class="admin" title="Toggle administrator mode">Admin</a>
+            <a href="#" class="app" title="Toggle the server/app-level version">App</a>
         </div>
         <div class="contextBar">
             <ul class="accountContext">
@@ -215,14 +215,14 @@ Account owner"><img src="http://en.gravatar.com/userimage/16948269/ae054dbad79b4
             <p>Choose a version control provider:</p>
             <ul>
                 <li><a href="#">
-                        <img src="images/Git-Icon-32px.png" alt="Git" class="icon" />
-                        <span class="underlineOnHover"><strong>Git</strong></span><br />
-                        <span class="subdued">distributed</span>
-                    </a></li>
-                <li><a href="#">
                         <img src="images/vs-icon-32px.png" alt="Team Foundation Version Control" class="icon" />
                         <span class="underlineOnHover"><strong>Team Foundation Version Control</strong></span><br />
                         <span class="subdued">centralized</span>
+                    </a></li>
+                <li><a href="#">
+                        <img src="images/Git-Icon-32px.png" alt="Git" class="icon" />
+                        <span class="underlineOnHover"><strong>Git</strong></span><br />
+                        <span class="subdued">distributed</span>
                     </a></li>
             </ul>
             <h2>Room</h2>
@@ -230,9 +230,18 @@ Account owner"><img src="http://en.gravatar.com/userimage/16948269/ae054dbad79b4
         </div>
         <div id="accountMenu" class="menu">
             <ul>
-                <li><a href="#">Contoso</a></li>
                 <li><a href="#">Jim Lamb</a></li>
                 <li><a href="#">Slate Labs</a></li>
+                <!-- -->
+                <li><a href="#">Account #3</a></li>
+                <li><a href="#">Account #4</a></li>
+                <li><a href="#">Account #5</a></li>
+                <li><a href="#">Account #6</a></li>
+                <li><a href="#">Account #7</a></li>
+                <li><a href="#">Account #8</a></li>
+                <li><a href="#">Account #9</a></li>
+                <li><a href="#">Account #10</a></li>
+                <li class="new_group"><a href="#">View all</a></li>
             </ul>
         </div>
         <div id="profilePopUp" class="profileTip">
@@ -248,11 +257,12 @@ Account owner"><img src="http://en.gravatar.com/userimage/16948269/ae054dbad79b4
         <div id="helpMenu" class="menu">
             <ul>
                 <li><a href="#" class="visibilityToggle" data-element="#gettingStarted" title="Toggle the visibility of the Getting Started section">Getting Started</a></li>
-                <li><a href="http://msdn.microsoft.com/en-us/library/tfs/fda2bad5(v=vs.110)" target="_blank">MSDN</a></li>
-                <li><a href="https://tfs.visualstudio.com/en-us/community/meet-the-community/" target="_blank">Community</a></li>
-                <li><a href="https://tfs.visualstudio.com/en-us/support/current-service-status/" target="_blank">Support</a></li>
+                <li><a href="http://go.microsoft.com/fwlink/?LinkId=256363" target="_blank">MSDN</a></li>
+                <li><a href="http://go.microsoft.com/fwlink/?LinkId=253552" target="_blank">Community</a></li>
+                <li><a href="http://go.microsoft.com/fwlink/?LinkId=253553" target="_blank">Support</a></li>
                 <li><a href="http://go.microsoft.com/fwlink/?LinkId=225082" target="_blank">Make a suggestion</a></li>
-                <li><a href="https://tfs.visualstudio.com/en-us/support/legal/privacy-policy/" target="_blank">Privacy Policy</a></li>
+                <li class="hosted_only"><a href="https://tfs.visualstudio.com/en-us/support/legal/privacy-policy/" target="_blank">Privacy Policy</a></li>
+                <li class="onprem_only"><a href="#">About Team Foundation Server</a></li>
             </ul>
         </div>
     </body>

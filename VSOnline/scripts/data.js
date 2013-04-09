@@ -11,7 +11,7 @@ function addDate(dateObject, numDays) {
 
 function friendlyDate(date) {
     var result = moment(date.toISOString()).calendar();
-    var i = result.indexOf("at");
+    var i = result.indexOf("at ");
     if (i > 0) result = result.substring(0, i - 1);
     return result;
 }

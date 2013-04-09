@@ -689,12 +689,16 @@ div.menu ul li a {
 div.menu ul li a:hover {
   color: #007acc;
 }
+div.menu ul li.new_group {
+  border-top: solid 1px #888;
+  margin-top: .5em;
+}
 div.profileTip {
   background-color: #fff;
   width: 220px;
 }
 div.profileTip div.container {
-  margin-bottom: 28px;
+  margin-bottom: 36px;
   padding: 16px;
 }
 div.profileTip ul li a {

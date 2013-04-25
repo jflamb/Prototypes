@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Page not Found</title>
+    <link rel="SHORTCUT ICON" href="favicon.ico"/>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript" src="scripts/shared.js"></script>
+    
+    <link rel="stylesheet" href="styles/styles.min.css" type="text/css" />
+</head>
+<body class="404">
+    <div class="contextBar">
+        <ul class="accountContext">
+            <li><a href="https://tfs.visualstudio.com/" title="Team Foundation Service Welcome Portal">
+                    <img src="images/vslogo-small.png" />&nbsp;Team Foundation Service</a></li>
+        </ul>
+        <ul class="identityContext">
+            <li><a href="#" class="popUpParent" data-popup="#profilePopUp">Jim Lamb&nbsp;<span class="dingbat">6</span></a></li>
+            <li>|</li>
+            <li><a href="#" class="settings"><img src="images/Settings_7343_16x_white.png" /></a>
+            </li><li><a id="helpAccess" class="popUpParent" data-popup="#helpMenu" href="#"><img src="images/StatusAnnotations_Help_and_inconclusive_white.png" /></a></li>
+        </ul>
+    </div>
+    
+    <div class="error" style="margin: 10em auto; width: 45em;">
+        <h1 style="font-size: 15em; font-family: 'Impact'; color: #999; float: left; margin-right: .2em;">404</h1>
+        <p style="padding-top: .45em; text-transform: uppercase; font-size: 2em; margin-bottom: 0;">Page not found</p>
+        <p>Sorry, we can't find the page you are looking for.</p>
+        <p style="font-size: 1.5em;">Go Home <img src="images/Go-arrow-black.png" style="vertical-align: text-bottom; padding-left: .3em;" alt="go" /></p>
+        <p><a href="https://tfs.visualstudio.com/en-us/support/current-service-status/">Service status</a> | <a href="http://twitter.com/tfservice">@TFService</a></p>
+    </div>
+    
+
+    <div id="profilePopUp" class="profileTip">
+        <div class="container">
+            <img src="http://en.gravatar.com/userimage/16948269/ae054dbad79b4b436920c597aa4ab749.jpeg" />
+            <ul>
+                <li><a href="#">My profile</a></li>
+                <li><a href="#">Sign out</a></li>
+            </ul>
+        </div>
+        <p class="identity">jimlamb@live.com</p>
+    </div>
+    <div id="helpMenu" class="menu">
+        <ul>
+            <li><a href="#" class="visibilityToggle" data-element="#gettingStarted" title="Toggle the visibility of the Getting Started section">Getting Started</a></li>
+            <li><a href="http://go.microsoft.com/fwlink/?LinkId=256363" target="_blank">MSDN</a></li>
+            <li><a href="http://go.microsoft.com/fwlink/?LinkId=253552" target="_blank">Community</a></li>
+            <li><a href="http://go.microsoft.com/fwlink/?LinkId=253553" target="_blank">Support</a></li>
+            <li><a href="http://go.microsoft.com/fwlink/?LinkId=225082" target="_blank">Make a suggestion</a></li>
+            <li class="hosted_only"><a href="https://tfs.visualstudio.com/en-us/support/legal/privacy-policy/" target="_blank">Privacy Policy</a></li>
+            <li class="onprem_only"><a href="#">About Team Foundation Server</a></li>
+        </ul>
+    </div>
+</body>
+<script type="text/javascript">
+    $(function () {
+    });
+</script>
+</html>

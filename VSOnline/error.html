@@ -126,10 +126,12 @@
                 $('p.detail').html('Sorry, we can&rsquo;t find the page you are looking for.');
             }
             else if (statusCode == 500) {
-                $('p.message').text('Sorry, but the server has failed unexpectedly.');
+                $('p.message').text('Server error');
+                $('p.detail').text('Sorry, but the server has failed unexpectedly.');
             }
             else if (statusCode == 503) {
-                $('p.message').text('Sorry, but the service is unavailable at this time.');
+                $('p.message').text('Service unavailable');
+                $('p.detail').text('Sorry, but the service is unavailable at this time.');
             }
         });
      </script>

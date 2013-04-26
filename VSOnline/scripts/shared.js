@@ -1,4 +1,8 @@
-﻿function closeActivePopup() {
+﻿function hasParameter(name) {
+    return (window.location.search.indexOf(name) > 0);
+}
+
+function closeActivePopup() {
     var activePopup = $('.activePopup');
 
     if (activePopup) {

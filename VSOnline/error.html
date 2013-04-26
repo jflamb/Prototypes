@@ -9,6 +9,36 @@
     <script type="text/javascript" src="scripts/shared.js"></script>
     
     <link rel="stylesheet" href="styles/styles.min.css" type="text/css" />
+    
+    <style type="text/css">
+        p.message {
+            padding-top: .45em; 
+            text-transform: uppercase; 
+            font-size: 2em; 
+            margin-bottom: 0;
+        }
+
+        div.error {
+            margin: 10em auto 3em auto; 
+            width: 51em;
+        }
+        
+        div.actions {
+            clear: both;
+            padding-top: 1em;
+            margin: 0 auto;
+            width: 51em;
+        }
+
+        div.actions ul li {
+            list-style-type: square;
+            margin: 0 0 1em 2em;
+        }
+
+        li.s401, li.s403, li.s404, li.s500, li.s503 {
+            display: none;
+        }
+    </style>
 </head>
 <body class="404">
     <div class="contextBar">
@@ -24,19 +54,26 @@
         </ul>
     </div>
     
-    <div class="error" style="margin: 10em auto 3em auto; width: 45em;">
-        <h1 style="font-size: 15em; font-family: 'Impact'; color: #999; float: left; margin-right: .2em;">404</h1>
-        <p style="padding-top: .45em; text-transform: uppercase; font-size: 2em; margin-bottom: 0;">Page not found</p>
+    <div class="error">
+        <h1 class="status" style="font-size: 15em; font-family: 'Impact'; color: #999; float: left; margin-right: .2em;">404</h1>
+        <p class="message">Page not found</p>
         <p>Sorry, we can't find the page you are looking for.</p>
         <p style="font-size: 1.5em;"><a href="/">Go Home <img src="images/Go-arrow-black.png" style="vertical-align: text-bottom; padding-left: .3em;" alt="go" /></a></p>
         <p><a href="https://tfs.visualstudio.com/en-us/support/current-service-status/">Service status</a> | <a href="http://twitter.com/tfservice">@TFService</a></p>
     </div>
     
-    <div class="actions" style="margin: 0 auto; width: 45em;">
+    <div class="actions">
         <p>Check the following:</p>
-        <ul style="list-style-type:square; margin-left: 2em;">
-            <li>Is the URL you entered correct?</li>
+        <ul>
+            <li class="s401 s403 s404">Is the URL you entered correct?</li>
+            <li class="s401">Is <strong>jimlamb@live.com</strong> the identity you meant to sign in with? 
+                If not, you can <a href="#">sign out</a> and sign back in with the correct identity.
+                Otherwise, you can ask the account owner to give you access.</li>
+            <li class="s500">View the <a href="#">exception details</a>.</li>
+            <li class="s500"><a href="#">Contact support</a>.</li>
+            <li class="s503"><a href="#">View service status</a>.</li>
         </ul>
+
     </div>
 
     <div id="profilePopUp" class="profileTip">
@@ -61,8 +98,35 @@
         </ul>
     </div>
 </body>
-<script type="text/javascript">
-    $(function () {
-    });
-</script>
+    <script type="text/javascript">
+        var statusCode = 404;
+        
+        $(function () {
+            var pattern = /#([45]0[0134])$/;
+            var match = pattern.exec(window.location);
+
+            if (match.length > 0) {
+                statusCode = Number(match[1]);
+            }
+
+            $('h1.status').text(statusCode);
+            $('li.s' + statusCode).show();
+            
+            if (statusCode == 401) {
+                $('p.message').text('Unauthorized');
+            }
+            else if (statusCode == 403) {
+                $('p.message').text('Forbidden');
+            }
+            else if (statusCode == 404) {
+                $('p.message').text('Page not found');
+            }
+            else if (statusCode == 500) {
+                $('p.message').text('Internal server error');
+            }
+            else if (statusCode == 503) {
+                $('p.message').text('Service unavailable');
+            }
+        });
+     </script>
 </html>

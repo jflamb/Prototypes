@@ -1,7 +1,3 @@
-function hasParameter(name) {
-    return (window.location.search.indexOf(name) > 0);
-}
-
 var today = new Date();
 
 function addDate(dateObject, numDays) {

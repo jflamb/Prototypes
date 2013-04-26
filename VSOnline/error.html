@@ -57,7 +57,7 @@
     <div class="error">
         <h1 class="status" style="font-size: 15em; font-family: 'Impact'; color: #999; float: left; margin-right: .2em;">404</h1>
         <p class="message">Page not found</p>
-        <p>Sorry, we can't find the page you are looking for.</p>
+        <p class="detail">Sorry, we can't find the page you are looking for.</p>
         <p style="font-size: 1.5em;"><a href="/">Go Home <img src="images/Go-arrow-black.png" style="vertical-align: text-bottom; padding-left: .3em;" alt="go" /></a></p>
         <p><a href="https://tfs.visualstudio.com/en-us/support/current-service-status/">Service status</a> | <a href="http://twitter.com/tfservice">@TFService</a></p>
     </div>
@@ -72,6 +72,7 @@
             <li class="s500">View the <a href="#">exception details</a>.</li>
             <li class="s500"><a href="#">Contact support</a>.</li>
             <li class="s503"><a href="#">View service status</a>.</li>
+            <li class="s503">Try again later.</li>
         </ul>
 
     </div>
@@ -114,18 +115,21 @@
             
             if (statusCode == 401) {
                 $('p.message').text('Unauthorized');
+                $('p.detail').html('Sorry, but you aren&rsquo;t authorized to access this page.');
             }
             else if (statusCode == 403) {
                 $('p.message').text('Forbidden');
+                $('p.detail').html('Sorry, but this page is not available.');
             }
             else if (statusCode == 404) {
                 $('p.message').text('Page not found');
+                $('p.detail').html('Sorry, we can&rsquo;t find the page you are looking for.');
             }
             else if (statusCode == 500) {
-                $('p.message').text('Internal server error');
+                $('p.message').text('Sorry, but the server has failed unexpectedly.');
             }
             else if (statusCode == 503) {
-                $('p.message').text('Service unavailable');
+                $('p.message').text('Sorry, but the service is unavailable at this time.');
             }
         });
      </script>

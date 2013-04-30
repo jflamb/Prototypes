@@ -1,63 +1,95 @@
 ﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <meta charset="utf-8" />
-    <title>Nathan&rsquo;s Brain Games</title>
-    <style type="text/css">
-        body {
-            background-color: #A0A0A0;
-        }
+    <head>
+        <meta charset="utf-8" />
+        <title>Nathan&rsquo;s Brain Games</title>
+        <style type="text/css">
+            body {
+                background-color: #A0A0A0;
+            }
             
-        p {
-            font-family: Georgia, Times, serif;
-            font-size: 20px;
-            font-weight: bold;
-            text-align: center;
-            width: 100%;
+            p {
+                font-family: Georgia, Times, serif;
+                font-size: 20px;
+                font-weight: bold;
+                text-align: center;
+                width: 100%;
+            }
+
+            p.color {
+                font-size: xx-large;
+            }
+        </style>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    </head>
+    <body>
+        <p>Say the color of each word:</p>
+        <hr/>
+        <div id="colors"></div>
+        <hr/>
+        <p id="elapsedTime">&nbsp;</p>
+        <p><a href="javascript:stopTimer();">Finished!</a> | 
+            <a href="javascript:window.location.reload();">Shuffle</a> | 
+            <a href="index.html">Home</a>
+        </p>
+    </body>
+    <script type="text/javascript">
+        var start;
+        var elapsed = 0.e0;
+        var timeout;
+        var timer_is_on = 0;
+
+        function shuffle(o) {
+            for (var j, x, i = o.length; i; j = parseInt(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
+            return o;
+        };
+
+        function startTimer() {
+            if (!timer_is_on) {
+                start = new Date().getTime();
+                timer_is_on = 1;
+                timedCount();
+            }
         }
 
-        p.color {
-            font-size: xx-large;
+        function timedCount() {
+            var time = new Date().getTime() - start;
+            elapsed = Math.floor(time / 100) / 10;
+            if (Math.round(elapsed) == elapsed) { elapsed += '.0'; }
+            $('#elapsedTime').text(elapsed);
+            timeout = setTimeout("timedCount()", 50);
         }
-    </style>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-</head>
-<body>
-    <p>Say the color of each word:</p>
-    <hr/>
-    <div id="colors"></div>
-    <hr/>
-    <p><a href="javascript:window.location.reload();">Shuffle</a> | <a href="index.html">Home</a></p>
-</body>
-<script type="text/javascript">
-    function shuffle(o) {
-        for (var j, x, i = o.length; i; j = parseInt(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
-        return o;
-    };
+
+        function stopTimer() {
+            clearTimeout(timeout);
+            timer_is_on=0;
+        }        
         
-    function fisherYates(anArray) {
-        var i = anArray.length, j, tempi, tempj;
-        if (i === 0) return false;
-        while (--i) {
-            j = Math.floor(Math.random() * (i + 1));
-            tempi = anArray[i];
-            tempj = anArray[j];
-            anArray[i] = tempj;
-            anArray[j] = tempi;
+        function fisherYates(anArray) {
+            var i = anArray.length, j, tempi, tempj;
+            if (i === 0) return false;
+            while (--i) {
+                j = Math.floor(Math.random() * (i + 1));
+                tempi = anArray[i];
+                tempj = anArray[j];
+                anArray[i] = tempj;
+                anArray[j] = tempi;
+            }
+            return anArray;
         }
-        return anArray;
-    }
 
-    $(document).ready(function () {
-        var colors = shuffle(['blue', 'red', 'green', 'orange', 'yellow', 'purple']);
-        var styles = shuffle(['blue', 'red', 'green', 'orange', 'yellow', 'purple']);
-        var colorsHtml = '';
+        $(document).ready(function () {
+            var colors = fisherYates(['blue', 'red', 'green', 'orange', 'yellow', 'purple', 'white']);
+            var styles = fisherYates(['blue', 'red', 'green', 'orange', 'yellow', 'purple', 'white']);
+            var colorsHtml = '';
             
-        for (var i = 0; i <= 5; i++) {
-            colorsHtml += "<p class='color' style='color:" + styles[i] + "'>" + colors[i] + "</p>";
-        }
+            for (var i = 0; i < colors.length; i++) {
+                colorsHtml += "<p class='color' style='color:" + styles[i] + "'>" + colors[i] + "</p>";
+            }
 
-        $('#colors').html(colorsHtml);
-    });
-</script>
+            $('#colors').html(colorsHtml);
+
+            startTimer();
+        });
+    </script>
 </html>

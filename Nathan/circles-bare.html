@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Nathan's Brain Games</title>
+    <style type="text/css">
+        body {
+            background-color: #808080;     
+        }
+
+        img.circles {
+            width: 100%;
+            position: relative;
+            left: 0;
+            top: 0;
+        }
+
+        p {
+            color: #fff;
+            font-size: 24px;
+            font-family: Georgia, Times, serif;
+            width: 100%;
+            text-align: center;
+        }
+    </style>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+</head>
+<body>
+    <div>
+        <img src="images/circles-black.png" class="circles" alt="" />
+        <img src="images/circles-white.png" class="circles" style="display: none;" alt="" />
+    </div>            
+    <p>Is the blinking of the inner circles alternating or synchronized?</p>
+    <p><a href="circles.html">Show outer circles</a></p>
+</body>
+<script type="text/javascript">
+    $(document).ready(function () {
+        setInterval(function () {
+            $('.circles').toggle();
+        }, 250);
+    });
+</script>
+</html>
